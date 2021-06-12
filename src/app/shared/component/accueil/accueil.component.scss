@@ -1,0 +1,98 @@
+//::ng-deep .mat-card{
+//  //border-color: red;
+//  //border-image: linear-gradient(0deg, red, blue);
+//  //border-radius: 30px;
+//}
+//
+//::ng-deep .mat-card:not([class*=mat-elevation-z]) {
+//  // position x y, flou, taille, couleur
+//  box-shadow: 0 0 3px 3px rgb(238, 0, 255, 0.5);
+//}
+
+.card {
+  margin: 42vh 35vw;
+}
+
+.text-card {
+  text-align: center;
+  //color: black;
+  font-weight: bold;
+  // trouver un moyen de faire baisser la taille
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.image {
+  //position: fixed;
+}
+
+.devant {
+  z-index: 3;
+  filter: blur(4px);
+}
+
+.derrière {
+  z-index: 2;
+  filter: drop-shadow(12px 20px 10px rgba(0, 0, 0, .3));
+}
+
+#cursor {
+  position: fixed;
+  top: 400px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: url(../../../../assets/images/object-cursor.png);
+  background-size: cover;
+}
+
+#photo {
+  position: fixed;
+  top: 400px;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background: url(../../../../assets/images/object-photo.png);
+  background-size: cover;
+}
+
+#spring {
+  top: 400px;
+  left: 20%;
+  width: 100px;
+  height: 100px;
+  background: url(../../../../assets/images/object-spring.png);
+  background-size: cover;
+}
+
+#bulb {
+  top: 400px;
+  left: 30%;
+  width: 200px;
+  height: 200px;
+  background: url(../../../../assets/images/object-bulb.png);
+  background-size: cover;
+}
+
+#lightning {
+  top: 400px;
+  left: 40%;
+  width: 200px;
+  height: 200px;
+  background: url(../../../../assets/images/object-lightning.png);
+  background-size: cover;
+}
+
+.fleche {
+  position: static;
+  margin-top: 1%;
+  margin-left: 49.5%;
+  width: 1rem;
+  margin-bottom: 5%;
+  justify-content: center;
+  color: white;
+}
+
+section{
+  margin: 10% 0;
+}

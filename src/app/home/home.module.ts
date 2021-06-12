@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import {AccueilComponent} from '../shared/component/accueil/accueil.component';
+import {ParallaxDirective} from '../shared/directive/parallax.directive';
 
 
 @NgModule({
@@ -14,6 +16,6 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+    declarations: [HomePage, AccueilComponent, ParallaxDirective]
 })
 export class HomePageModule {}

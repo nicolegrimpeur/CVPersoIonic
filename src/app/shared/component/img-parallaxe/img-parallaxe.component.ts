@@ -49,17 +49,10 @@ export class ImgParallaxeComponent implements OnInit {
 
     el.style.setProperty('top', this.initialTop + 'px');
     el.style.setProperty('left', initialLeft + '%');
-
-    this.initialTop = Number(el.style.getPropertyValue('top').replace('px', ''));
   }
 
   eventScroll(event): void {
     const el = document.getElementById(this.objet);
-
-    if (this.initialTop === undefined) {
-      // this.initPos();
-    }
-
     el.style.setProperty('top', String(this.initialTop - (event.detail.currentY * this.ratio)) + 'px');
   }
 }

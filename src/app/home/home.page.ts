@@ -9,4 +9,8 @@ export class HomePage {
 
   constructor() {}
 
+
+  onScroll() {
+    console.log('scroll');
+  }
 }

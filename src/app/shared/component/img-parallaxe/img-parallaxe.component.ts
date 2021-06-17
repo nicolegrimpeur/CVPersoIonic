@@ -24,30 +24,31 @@ export class ImgParallaxeComponent implements OnInit {
 
     switch (this.objet) {
       case 'cursor':
-        this.initialTop = 200;
-        initialLeft = 0;
+        this.initialTop = 55;
+        initialLeft = 40;
         break;
       case 'photo':
-        this.initialTop = 400;
-        initialLeft = 10;
-        break;
-      case 'spring':
-        this.initialTop = 400;
+        this.initialTop = 20;
         initialLeft = 20;
         break;
+      case 'spring':
+        this.initialTop = 30;
+        initialLeft = 70;
+        break;
       case 'bulb':
-        this.initialTop = 400;
-        initialLeft = 30;
+        this.initialTop = 50;
+        initialLeft = 5;
         break;
       case 'lightning':
-        this.initialTop = 400;
-        initialLeft = 40;
+        this.initialTop = 65;
+        initialLeft = 75;
         break;
     }
 
-    this.initialTop += -window.innerHeight;
+    this.initialTop *= window.innerHeight / 100;
+    this.initialTop -= window.innerHeight;
 
-    el.style.setProperty('top', this.initialTop + 'px');
+    el.style.setProperty('top', this.initialTop + '%');
     el.style.setProperty('left', initialLeft + '%');
   }
 

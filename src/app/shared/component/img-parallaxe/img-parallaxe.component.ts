@@ -14,6 +14,7 @@ export class ImgParallaxeComponent implements OnInit {
   private deplaceX = 0;
   private deplaceY = 0;
   private largeurMax = 40;
+  private eventTime = undefined;
 
   constructor() {
   }
@@ -62,7 +63,9 @@ export class ImgParallaxeComponent implements OnInit {
     el.style.setProperty('left', this.initialLeft + 'px');
 
     // lance l'événement de déplacement
-    setInterval(() => this.eventDeplacement(), 50);
+    if (this.eventTime === undefined) {
+      this.eventTime = setInterval(() => this.eventDeplacement(), 50);
+    }
   }
 
   // déplacement de l'objet en fonction du scroll

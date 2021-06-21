@@ -13,7 +13,7 @@ export class ImgParallaxeComponent implements OnInit {
   private initialLeft = 0;
   private deplaceX = 0;
   private deplaceY = 0;
-  private largeurMax = 50;
+  private largeurMax = 40;
 
   constructor() {
   }
@@ -62,7 +62,7 @@ export class ImgParallaxeComponent implements OnInit {
     el.style.setProperty('left', this.initialLeft + 'px');
 
     // lance l'événement de déplacement
-    // setInterval(() => this.eventDeplacement(), 50);
+    setInterval(() => this.eventDeplacement(), 50);
   }
 
   // déplacement de l'objet en fonction du scroll
@@ -71,56 +71,39 @@ export class ImgParallaxeComponent implements OnInit {
     el.style.setProperty('top', String(this.initialTop - (event.detail.currentY * this.ratio)) + 'px');
   }
 
+  rand(): number {
+    return Math.floor(Math.random() - 0.5);
+  }
+
   // initialise la vitesse de déplacement
-  initDeplacement() {
-    const boolX = this.deplaceX >= 0;
-    const boolY = this.deplaceY >= 0;
-
-    this.deplaceX = Math.floor(Math.random() * 200 - 100) / 100;
-    this.deplaceY = Math.floor(Math.random() * 200 - 100) / 100;
-
-    if (boolX) {
-      if (this.deplaceX >= 0) {
-        this.deplaceX = -this.deplaceX;
-      }
+  initDeplacement(direction: string) {
+    if (direction === '') {
+      this.deplaceX = this.rand();
+      this.deplaceY = this.rand();
+      console.log(this.deplaceX, this.deplaceY);
+    } else if (direction === 'hauteur') {
+      this.deplaceY = -this.deplaceY;
+    } else if (direction === 'largeur') {
+      this.deplaceX = -this.deplaceX;
     }
-    else {
-      if (this.deplaceX <= 0) {
-        this.deplaceX = -this.deplaceX;
-      }
-    }
-
-    if (boolY) {
-      if (this.deplaceY >= 0) {
-        this.deplaceY = -this.deplaceY;
-      }
-    }
-    else {
-      if (this.deplaceY <= 0) {
-        this.deplaceY = -this.deplaceY;
-      }
-    }
-
-    console.log(this.deplaceX, this.deplaceY);
   }
 
   // event lié au déplacement aléatoire des objets
   eventDeplacement() {
     const el = document.getElementById(this.objet);
 
+    // initialisation des variables
     if (this.deplaceX === 0 && this.deplaceY === 0) {
-      this.initDeplacement();
-    }
-    else if (el.offsetTop + this.deplaceY >= this.initialTop + this.largeurMax || el.offsetTop + this.deplaceY <= this.initialTop - this.largeurMax) {
-      console.log('hauteur');
-      this.initDeplacement();
-    }
-    else if (el.offsetLeft + this.deplaceX >= this.initialLeft + this.largeurMax || el.offsetLeft + this.deplaceX <= this.initialLeft - this.largeurMax) {
-      console.log('largeur');
-      this.initDeplacement();
-    }
-    else {
-      // console.log('ok');
+      this.initDeplacement('');
+    } else if (el.offsetTop + this.deplaceY >= this.initialTop + this.largeurMax) {  // dépassement en bas
+      this.initDeplacement('hauteur');
+    } else if (el.offsetTop + this.deplaceY <= this.initialTop - this.largeurMax) {  // dépassement en haut
+      this.initDeplacement('hauteur');
+    } else if (el.offsetLeft + this.deplaceX >= this.initialLeft + this.largeurMax) {  // dépassement à droite
+      this.initDeplacement('largeur');
+    } else if (el.offsetLeft + this.deplaceX <= this.initialLeft - this.largeurMax) {  // dépassement à gauche
+      this.initDeplacement('largeur');
+    } else {  // sinon on déplace
       el.style.setProperty('top', (el.offsetTop + this.deplaceY) + 'px');
       el.style.setProperty('left', (el.offsetLeft + this.deplaceX) + 'px');
     }

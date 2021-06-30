@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import {AccueilComponent} from '../shared/component/accueil/accueil.component';
 import {ParallaxDirective} from '../shared/directive/parallax.directive';
 import {ImgParallaxeComponent} from "../shared/component/img-parallaxe/img-parallaxe.component";
+import {ContactComponent} from "../shared/component/contact/contact.component";
 
 
 @NgModule({
@@ -17,6 +18,6 @@ import {ImgParallaxeComponent} from "../shared/component/img-parallaxe/img-paral
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, AccueilComponent, ParallaxDirective, ImgParallaxeComponent]
+    declarations: [HomePage, AccueilComponent, ParallaxDirective, ImgParallaxeComponent, ContactComponent]
 })
 export class HomePageModule {}

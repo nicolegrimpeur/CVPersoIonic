@@ -1,9 +1,13 @@
 .texture {
-  position: absolute;
-  z-index: -1;
+  //position: absolute;
+  //z-index: -1;
   @apply bg-repeat;
   $interval-width: 15%;
   background-image: url(../../assets/bg.svg);
   background-size: $interval-width auto;
   background-position: 6%;
+}
+
+.title {
+  font-size: 2rem;
 }

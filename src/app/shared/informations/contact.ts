@@ -7,7 +7,7 @@ export const contact = [
   },
   {
     text: 'Mail',
-    info: 'nicolas.barrat@student.junia.com',
+    info: 'nicolas.barrat@student.formation.com',
     href: 'mailto:nicolas.barrat@student.junia.com',
     icon: 'mail-outline'
   },

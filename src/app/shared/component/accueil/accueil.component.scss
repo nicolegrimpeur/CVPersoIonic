@@ -9,8 +9,14 @@
 //  box-shadow: 0 0 3px 3px rgb(238, 0, 255, 0.5);
 //}
 
+//div {
+//  height: 100vh;
+//}
+
 .card {
-  margin: 42vh 35vw;
+  display: grid;
+  place-items: center;
+  height: 90vh;
 }
 
 .text-card {
@@ -22,20 +28,23 @@
   letter-spacing: 2px;
 }
 
-.image {
-  //position: fixed;
+.div_fleche {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
 }
 
 .fleche {
-  position: static;
-  margin-top: 1%;
-  margin-left: 49.5%;
+
+  //position: static;
+  //margin-top: 1%;
+  //margin-left: 49.5%;
   width: 1rem;
-  margin-bottom: 5%;
-  justify-content: center;
+  //margin-bottom: 5%;
+  //justify-content: center;
   color: white;
 }
 
 section{
-  margin: 10% 0;
+  margin: 10vh 0;
 }

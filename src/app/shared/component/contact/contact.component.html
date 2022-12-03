@@ -1,3 +1,27 @@
-<p>
-  contact works!
-</p>
+<br>
+<ion-card class="contact">
+  <ion-card-header>
+    <ion-card-title class="titre">Contact</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let carte of cartes">
+          <ion-card class="info">
+            <ion-card-header class="center">
+              <ion-card-title>{{carte.text}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="center">
+              <h5>{{carte.info}}</h5>
+              <ion-button title="{{carte.text}}" target="_blank" href="{{carte.href}}"
+                          color="medium" shape="round" fill="clear" size="large">
+                <ion-icon name="{{carte.icon}}"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,25 @@
+.contact {
+  margin: 2vh auto;
+  text-align: center;
+  border-radius: 1vh;
+  width: 90vw;
+}
+
+.titre {
+  font-size: 2rem;
+}
+
+ion-row {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.info {
+  background: none;
+  box-shadow: none;
+}

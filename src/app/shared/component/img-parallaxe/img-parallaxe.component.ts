@@ -83,7 +83,6 @@ export class ImgParallaxeComponent implements OnInit {
     if (direction === '') {
       this.deplaceX = this.rand();
       this.deplaceY = this.rand();
-      console.log(this.deplaceX, this.deplaceY);
     } else if (direction === 'hauteur') {
       this.deplaceY = -this.deplaceY;
     } else if (direction === 'largeur') {

@@ -36,7 +36,7 @@
               <ion-list>
                 <ion-item>
                   <ion-thumbnail slot="start">
-                    <img alt="Logo Campbridge" src="assets/certificats/cambridge.png"/>
+                    <img alt="Logo Cambridge" src="assets/certificats/cambridge.png"/>
                   </ion-thumbnail>
                   <ion-label class="ion-text-wrap">Cambridge First Certificate, score moyen 168 | 2021</ion-label>
                 </ion-item>
@@ -97,6 +97,38 @@
                   </ion-card>
                 </ion-col>
               </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="title">Compétences</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-list>
+                <ion-item *ngFor="let competence of competences">
+                  <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
+                  <ion-progress-bar [value]="competence.pourcentage / 100" style="width: 25vw" color="medium"></ion-progress-bar>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="title">Loisirs</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-list>
+                <ion-item *ngFor="let loisir of loisirs">
+                  <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
+                  <ion-progress-bar [value]="loisir.pourcentage / 100" style="width: 25vw" color="medium"></ion-progress-bar>
+                </ion-item>
+              </ion-list>
             </ion-card-content>
           </ion-card>
         </ion-col>

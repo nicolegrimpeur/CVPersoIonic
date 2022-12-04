@@ -36,39 +36,67 @@
               <ion-list>
                 <ion-item>
                   <ion-thumbnail slot="start">
-                    <img alt="Logo Campbridge" src="assets/certificats/cambridge.png" />
+                    <img alt="Logo Campbridge" src="assets/certificats/cambridge.png"/>
                   </ion-thumbnail>
-                  <ion-label>Cambridge First Certificate, score moyen 168 | 2021</ion-label>
+                  <ion-label class="ion-text-wrap">Cambridge First Certificate, score moyen 168 | 2021</ion-label>
                 </ion-item>
 
                 <ion-item>
                   <ion-thumbnail slot="start">
-                    <img alt="Logo Voltaire" src="assets/certificats/voltaire.png" />
+                    <img alt="Logo Voltaire" src="assets/certificats/voltaire.png"/>
                   </ion-thumbnail>
-                  <ion-label>Certificat Voltaire, niveau Professionnel | 2019</ion-label>
+                  <ion-label class="ion-text-wrap">Certificat Voltaire, niveau Professionnel | 2019</ion-label>
                 </ion-item>
 
                 <ion-item>
                   <ion-thumbnail slot="start">
-                    <img alt="BAFA" src="assets/certificats/bafa.png" />
+                    <img alt="BAFA" src="assets/certificats/bafa.png"/>
                   </ion-thumbnail>
-                  <ion-label>BAFA | 2019</ion-label>
+                  <ion-label class="ion-text-wrap">BAFA | 2019</ion-label>
                 </ion-item>
 
                 <ion-item>
                   <ion-thumbnail slot="start">
-                    <img alt="PSC1" src="assets/certificats/psc1.png" />
+                    <img alt="PSC1" src="assets/certificats/psc1.png"/>
                   </ion-thumbnail>
-                  <ion-label>PSC1 | 2019</ion-label>
+                  <ion-label class="ion-text-wrap">PSC1 | 2019</ion-label>
                 </ion-item>
 
                 <ion-item lines="none">
                   <ion-thumbnail slot="start">
-                    <img alt="Permis B" src="assets/certificats/permis.png" />
+                    <img alt="Permis B" src="assets/certificats/permis.png"/>
                   </ion-thumbnail>
-                  <ion-label>Permis B | 2018</ion-label>
+                  <ion-label class="ion-text-wrap">Permis B | 2018</ion-label>
                 </ion-item>
               </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="title">Mes expériences professionnelles</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row class="center">
+                <ion-col *ngFor="let experience of experiencesPro" size="12" size-md="6" size-lg="4" size-xl="2.4">
+                  <ion-card>
+                    <ion-card-header>
+                      <ion-card-title>{{experience.titre}}</ion-card-title>
+                      <ion-card-subtitle>
+                        {{experience.datesLieu}} <br>
+                        {{experience.entreprise}}
+                      </ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <p *ngFor="let information of experience.informations">{{information}}</p>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
             </ion-card-content>
           </ion-card>
         </ion-col>

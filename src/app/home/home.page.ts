@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {experiencesPro} from '../shared/informations/experiencesPro';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  public experiencesPro = experiencesPro;
 
-  constructor() {}
-
-
-  onScroll() {
-    console.log('scroll');
+  constructor() {
   }
 }

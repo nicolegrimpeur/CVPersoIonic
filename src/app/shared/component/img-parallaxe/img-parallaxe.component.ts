@@ -13,10 +13,6 @@ export class ImgParallaxeComponent implements OnInit {
   @ViewChild('image') image;
   private initialTop = 0;
   private initialLeft = 0;
-  private deplaceX = 0;
-  private deplaceY = 0;
-  private largeurMax = 40;
-  private eventTime = undefined;
 
   constructor(private animationCtrl: AnimationController) {
   }
@@ -24,6 +20,10 @@ export class ImgParallaxeComponent implements OnInit {
   ngOnInit() {
     // événement de scroll
     document.querySelector('ion-content').addEventListener('ionScroll', (e) => this.eventScroll(e));
+  }
+
+  rand(): number {
+    return Math.floor(Math.random() * 1920 / 200) * 1920 / 200;
   }
 
   // initialise la position de l'objet
@@ -34,23 +34,23 @@ export class ImgParallaxeComponent implements OnInit {
     switch (this.objet) {
       case 'cursor':
         this.initialTop = 55;
-        this.initialLeft = 40;
+        this.initialLeft = 35;
         break;
       case 'photo':
         this.initialTop = 20;
-        this.initialLeft = 20;
+        this.initialLeft = 10;
         break;
       case 'spring':
         this.initialTop = 30;
-        this.initialLeft = 70;
+        this.initialLeft = 75;
         break;
       case 'bulb':
-        this.initialTop = 50;
-        this.initialLeft = 5;
+        this.initialTop = 75;
+        this.initialLeft = 10;
         break;
       case 'lightning':
         this.initialTop = 65;
-        this.initialLeft = 75;
+        this.initialLeft = 60;
         break;
     }
 
@@ -65,16 +65,16 @@ export class ImgParallaxeComponent implements OnInit {
     el.style.setProperty('left', this.initialLeft + 'px');
 
     this.animationCtrl.create()
-      .addElement(this.image.nativeElement)
-      .duration(1500)
+      .addElement(this.image.el)
+      .duration(15000)
       .iterations(Infinity)
-      .fromTo('transform', 'translateX(0px)', 'translateX(100px)')
-      .fromTo('opacity', '1', '0.2');
-
-    // // lance l'événement de déplacement
-    // if (this.eventTime === undefined) {
-    //   this.eventTime = setInterval(() => this.eventDeplacement(), 100);
-    // }
+      .keyframes([
+        {offset: 0, transform: 'translate(0px, 0px)'},
+        {offset: 0.25, transform: 'translate(' + this.rand() + 'px,' + this.rand() + 'px)'},
+        {offset: 0.5, transform: 'translate(' + this.rand() + 'px,' + this.rand() + 'px)'},
+        {offset: 0.75, transform: 'translate(' + this.rand() + 'px,' + -this.rand() + 'px)'},
+        {offset: 1, transform: 'translate(0px, 0px)'}
+      ]).play().then();
   }
 
   // déplacement de l'objet en fonction du scroll
@@ -82,41 +82,4 @@ export class ImgParallaxeComponent implements OnInit {
     const el = document.getElementById(this.objet);
     el.style.setProperty('top', String(this.initialTop - (event.detail.currentY * this.ratio)) + 'px');
   }
-
-  // rand(): number {
-  //   return Math.floor(Math.random() - 0.5);
-  // }
-
-  // // initialise la vitesse de déplacement
-  // initDeplacement(direction: string) {
-  //   if (direction === '') {
-  //     this.deplaceX = this.rand();
-  //     this.deplaceY = this.rand();
-  //   } else if (direction === 'hauteur') {
-  //     this.deplaceY = -this.deplaceY;
-  //   } else if (direction === 'largeur') {
-  //     this.deplaceX = -this.deplaceX;
-  //   }
-  // }
-
-  // // event lié au déplacement aléatoire des objets
-  // eventDeplacement() {
-  //   const el = document.getElementById(this.objet);
-  //
-  //   // initialisation des variables
-  //   if (this.deplaceX === 0 && this.deplaceY === 0) {
-  //     this.initDeplacement('');
-  //   } else if (el.offsetTop + this.deplaceY >= this.initialTop + this.largeurMax) {  // dépassement en bas
-  //     this.initDeplacement('hauteur');
-  //   } else if (el.offsetTop + this.deplaceY <= this.initialTop - this.largeurMax) {  // dépassement en haut
-  //     this.initDeplacement('hauteur');
-  //   } else if (el.offsetLeft + this.deplaceX >= this.initialLeft + this.largeurMax) {  // dépassement à droite
-  //     this.initDeplacement('largeur');
-  //   } else if (el.offsetLeft + this.deplaceX <= this.initialLeft - this.largeurMax) {  // dépassement à gauche
-  //     this.initDeplacement('largeur');
-  //   } else {  // sinon on déplace
-  //     el.style.setProperty('top', (el.offsetTop + this.deplaceY) + 'px');
-  //     el.style.setProperty('left', (el.offsetLeft + this.deplaceX) + 'px');
-  //   }
-  // }
 }

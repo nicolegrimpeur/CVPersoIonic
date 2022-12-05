@@ -1,5 +1,7 @@
 <div class="{{position}}" (window:resize)="initPos()">
   <ion-img id="{{objet}}" class="{{position}}Img" style="position: fixed; background-size: cover;"
            (ionImgDidLoad)="initPos()"
-           src="../../../../assets/images/object-{{objet}}.png"></ion-img>
+           src="../../../../assets/images/object-{{objet}}.png"
+           #image
+  ></ion-img>
 </div>

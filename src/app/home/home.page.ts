@@ -1,9 +1,12 @@
 import {Component, ViewChild} from '@angular/core';
-import {Platform} from "@ionic/angular";
+import {Platform} from '@ionic/angular';
 import {experiencesPro} from '../shared/informations/experiencesPro';
 import {competences} from '../shared/informations/competences';
 import {loisirs} from '../shared/informations/loisirs';
 import {certificats} from '../shared/informations/certificats';
+import SwiperCore, {Swiper , Autoplay, Keyboard, Pagination, Scrollbar, Zoom, Navigation } from 'swiper';
+
+SwiperCore.use([Autoplay, Keyboard, Navigation, Pagination, Scrollbar, Zoom]);
 
 @Component({
   selector: 'app-home',
@@ -24,7 +27,15 @@ export class HomePage {
     clickable: true
   };
 
+  private swiper;
+
   constructor(public platform: Platform) {
+    // this.swiper = new Swiper('.swiper', {
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    // });
   }
 
   openUrl(url: string) {
@@ -34,10 +45,11 @@ export class HomePage {
   }
 
   clickSurSlide(event) {
-    if (event.x > window.innerWidth / 2) {
-      this.slides.slidePrev();
-    } else {
-      this.slides.slideNext();
-    }
+    // if (event.x > window.innerWidth / 2) {
+    //   this.slides.sl
+    //   this.slides.slidePrev();
+    // } else {
+    //   this.slides.slideNext();
+    // }
   }
 }

@@ -24,3 +24,10 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Pour les slides */
+@import 'swiper/scss';
+@import 'swiper/scss/keyboard';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import '@ionic/angular/css/ionic-swiper';

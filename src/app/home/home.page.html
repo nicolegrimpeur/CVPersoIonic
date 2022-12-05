@@ -54,8 +54,14 @@
               <ion-card-title class="title">Mes expériences professionnelles</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              <ion-slides pager="true" [options]="slideOpts" (ionSlideTap)="clickSurSlide($event)" #slides>
-                <ion-slide *ngFor="let experience of experiencesPro; let even = even; let index = index">
+              <swiper
+                (tap)="clickSurSlide($event)"
+                [config]="slideOpts"
+                [pagination]="true"
+                [keyboard]="true"
+                [navigation]="true"
+                #slides>
+                <ng-template swiperSlide *ngFor="let experience of experiencesPro; let even = even; let index = index">
                   <ion-card>
                     <ion-card-header>
                       <ion-card-title>{{experience.titre}}</ion-card-title>
@@ -68,8 +74,8 @@
                       <p *ngFor="let information of experience.informations">{{information}}</p>
                     </ion-card-content>
                   </ion-card>
-                </ion-slide>
-              </ion-slides>
+                </ng-template>
+              </swiper>
             </ion-card-content>
           </ion-card>
         </ion-col>

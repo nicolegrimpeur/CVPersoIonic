@@ -38,7 +38,8 @@
                   <ion-thumbnail slot="start">
                     <img alt="Logo {{certificat.nomLogo}}" src="assets/certificats/{{certificat.nomLogo}}.png"/>
                   </ion-thumbnail>
-                  <ion-label class="ion-text-wrap">{{certificat.description}} | {{certificat.date}}</ion-label>
+                  <ion-label class="ion-text-wrap" (click)="openUrl(certificat.site)">{{certificat.description}}
+                    | {{certificat.date}}</ion-label>
                 </ion-item>
               </ion-list>
             </ion-card-content>
@@ -53,8 +54,8 @@
               <ion-card-title class="title">Mes expériences professionnelles</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              <ion-row class="center">
-                <ion-col *ngFor="let experience of experiencesPro" size="12" size-md="6" size-lg="4" size-xl="2.4">
+              <ion-slides pager="true" [options]="slideOpts" (ionSlideTap)="clickSurSlide($event)" #slides>
+                <ion-slide *ngFor="let experience of experiencesPro; let even = even; let index = index">
                   <ion-card>
                     <ion-card-header>
                       <ion-card-title>{{experience.titre}}</ion-card-title>
@@ -67,8 +68,8 @@
                       <p *ngFor="let information of experience.informations">{{information}}</p>
                     </ion-card-content>
                   </ion-card>
-                </ion-col>
-              </ion-row>
+                </ion-slide>
+              </ion-slides>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -119,7 +120,6 @@
               <ion-list>
                 <ion-item *ngFor="let competence of competences; let last = last" [lines]="last ? 'none' : undefined">
                   <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
-                  <ion-progress-bar [value]="competence.pourcentage / 100" style="width: 25vw" color="medium"></ion-progress-bar>
                 </ion-item>
               </ion-list>
             </ion-card-content>
@@ -134,7 +134,6 @@
               <ion-list>
                 <ion-item *ngFor="let loisir of loisirs; let last = last" [lines]="last ? 'none' : undefined">
                   <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
-                  <ion-progress-bar [value]="loisir.pourcentage / 100" style="width: 25vw" color="medium"></ion-progress-bar>
                 </ion-item>
               </ion-list>
             </ion-card-content>

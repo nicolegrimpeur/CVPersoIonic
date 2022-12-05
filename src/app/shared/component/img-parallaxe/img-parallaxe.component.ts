@@ -64,7 +64,7 @@ export class ImgParallaxeComponent implements OnInit {
 
     // lance l'événement de déplacement
     if (this.eventTime === undefined) {
-      this.eventTime = setInterval(() => this.eventDeplacement(), 50);
+      this.eventTime = setInterval(() => this.eventDeplacement(), 100);
     }
   }
 

@@ -4,10 +4,10 @@ export const projetsEcole = [
     sousTitre: 'Projet d\'électronique de fin d\'année',
     date: 'Mai / Juin 2022',
     description: 'Réalisation d\'un capteur de température et d\'humidité envoyant ses données à une station mère. ' +
-      'Nous avons pour cela choisis nos composants, réaliser la carte électronique, ' +
-      'mais aussi écrire le code permettant de récupérer les données du capteurs pour l\'envoyer à la station mère',
+      'Nous avons pour cela choisis nos composants, réalisé la carte électronique, ' +
+      'mais aussi écris le code permettant de récupérer les données du capteurs pour l\'envoyer à la station mère',
     github: 'https://github.com/nicolegrimpeur/Elec_TempHum',
-    technologies: 'C, protocole LORA, micro contrôleur'
+    technologies: ['C', 'LoRa', 'Micro-contrôleur']
   },
   {
     titre: 'TPLC',
@@ -15,7 +15,7 @@ export const projetsEcole = [
     date: 'Janvier 2022',
     description: '',
     github: 'https://github.com/nicolegrimpeur/ProjetThl',
-    technologies: 'Ionic, Typescript, Fastify, MongoDB'
+    technologies: ['Ionic', 'Typescript', 'Fastify', 'MongoDB']
   },
   {
     titre: 'Calculatrice graphique',
@@ -23,7 +23,7 @@ export const projetsEcole = [
     date: 'Décembre 2021',
     description: '',
     github: 'https://github.com/nicolegrimpeur/ProjetThl',
-    technologies: 'C++, SFML, Bison, Flex, CMake'
+    technologies: ['C++', 'SFML', 'Bison', 'Flex', 'CMake']
   },
   {
     titre: 'HomeIO',
@@ -31,7 +31,7 @@ export const projetsEcole = [
     date: 'Avril / Mai 2021',
     description: '',
     github: 'https://github.com/Projet-CIR2/smartHome',
-    technologies: 'JavaScript, Phaser'
+    technologies: ['JavaScript', 'Phaser']
   },
   {
     titre: 'Stratego',
@@ -39,7 +39,7 @@ export const projetsEcole = [
     date: 'Mars / Avril 2021',
     description: '',
     github: 'https://github.com/Projet-CIR2/projetWebCIR2',
-    technologies: 'JavaScript, MySQL'
+    technologies: ['JavaScript', 'MySQL']
   },
   {
     titre: 'Simulation d\'un marathon',
@@ -47,7 +47,7 @@ export const projetsEcole = [
     date: 'Décembre 2020',
     description: '',
     github: '',
-    technologies: 'C++, Visual Studio, SFML'
+    technologies: ['C++', 'Visual Studio', 'SFML']
   },
   {
     titre: 'Santé',
@@ -55,7 +55,7 @@ export const projetsEcole = [
     date: 'Avril / Mai 2020',
     description: '',
     github: 'https://github.com/nicolegrimpeur/projetCIR2-1920',
-    technologies: 'JavaScript, Phaser'
+    technologies: ['JavaScript', 'Phaser']
   },
   {
     titre: 'Jeu d\'échec',
@@ -63,7 +63,7 @@ export const projetsEcole = [
     date: 'Mars / Avril 2020',
     description: '',
     github: 'https://github.com/nicolegrimpeur/projet_js_echec',
-    technologies: 'JavaScript'
+    technologies: ['JavaScript']
   },
   {
     titre: 'Gomoku',
@@ -71,6 +71,6 @@ export const projetsEcole = [
     date: 'Décembre 2019',
     description: '',
     github: 'https://github.com/nicolegrimpeur/Gomoku',
-    technologies: 'C++, Visual Studio, SFML'
+    technologies: ['C++', 'Visual Studio', 'SFML']
   },
 ];

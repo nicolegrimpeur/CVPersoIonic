@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {Animation, AnimationController} from '@ionic/angular';
+import {AnimationController} from '@ionic/angular';
 
 @Component({
   selector: 'app-img-parallaxe',
@@ -22,11 +22,12 @@ export class ImgParallaxeComponent implements OnInit {
     document.querySelector('ion-content').addEventListener('ionScroll', (e) => this.eventScroll(e));
   }
 
+  // sort un nombre entre 0 et 100 avec un pas de 10
   rand(): number {
     return Math.floor(Math.random() * 10) * 10;
   }
 
-  // initialise la position de l'objet
+  // initialise la position de l'objet et lance l'animation qui lui est associée
   initPos() {
     const el = document.getElementById(this.objet);
 
@@ -64,6 +65,7 @@ export class ImgParallaxeComponent implements OnInit {
     el.style.setProperty('top', this.initialTop + 'px');
     el.style.setProperty('left', this.initialLeft + 'px');
 
+    // lance l'animation
     this.animationCtrl.create()
       .addElement(this.image.el)
       .duration(15000)

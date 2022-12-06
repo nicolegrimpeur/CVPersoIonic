@@ -53,12 +53,10 @@
             </ion-card-header>
             <ion-card-content>
               <swiper
-                (tap)="clickSurSlide($event)"
-                [config]="slideOpts"
+                [config]="slideOptsExperiences"
                 [pagination]="true"
-                [navigation]="true"
-                #slides>
-                <ng-template swiperSlide *ngFor="let experience of experiencesPro; let even = even; let index = index">
+                [navigation]="platform.is('desktop')">
+                <ng-template swiperSlide *ngFor="let experience of experiencesPro">
                   <ion-card>
                     <ion-card-header>
                       <ion-card-title>{{experience.titre}}</ion-card-title>
@@ -87,17 +85,45 @@
             </ion-card-header>
             <ion-card-content>
               <ion-row>
-                <ion-col>
+                <ion-col size="12" size-lg="6">
                   <ion-card>
                     <ion-card-header>
                       <ion-card-title>Projets avec l'école ISEN Lille</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
+                      <swiper
+                        [loop]="true"
+                        [pagination]="true"
+                        [navigation]="platform.is('desktop')">
+                        <ng-template swiperSlide *ngFor="let projet of projetsEcole">
+                          <ion-card>
+                            <ion-header>
+                              <ion-card-title>{{projet.titre}}</ion-card-title>
+                              <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
+                            </ion-header>
+                            <ion-card-content>
+                              {{projet.description}}
+                            </ion-card-content>
+                            <ion-card-content>
+                              <img
+                                class="technologie"
+                                *ngFor="let technologie of projet.technologies"
+                                src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
+                                alt="Logo {{technologie}}">
+                              <br>
+                              <ion-button title="Lien vers le Github" target="_blank" href="{{projet.github}}"
+                                          color="medium" shape="round" fill="clear" size="large">
+                                <ion-icon name="logo-github"></ion-icon>
+                              </ion-button>
+                            </ion-card-content>
 
+                          </ion-card>
+                        </ng-template>
+                      </swiper>
                     </ion-card-content>
                   </ion-card>
                 </ion-col>
-                <ion-col>
+                <ion-col size="12" size-lg="6">
                   <ion-card>
                     <ion-card-header>
                       <ion-card-title>Projets personnels</ion-card-title>

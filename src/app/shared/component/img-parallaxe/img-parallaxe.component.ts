@@ -23,7 +23,7 @@ export class ImgParallaxeComponent implements OnInit {
   }
 
   rand(): number {
-    return Math.floor(Math.random() * 1920 / 200) * 1920 / 200;
+    return Math.floor(Math.random() * 10) * 10;
   }
 
   // initialise la position de l'objet

@@ -10,17 +10,15 @@
               <ion-card-title class="title">Formation</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              <ion-card>
-                <img src="assets/formation/ISEN-Lille.jpg" alt="Logo JUNIA ISEN">
+              <ion-card *ngFor="let formation of formations">
+                <img src="assets/formation/{{formation.image}}" alt="Logo {{formation.titre}}" style="max-height: 15vh">
                 <ion-card-header>
-                  <ion-card-title>JUNIA ISEN</ion-card-title>
-                  <ion-card-subtitle>2018 - Aujourd'hui | Lille</ion-card-subtitle>
+                  <ion-card-title>{{formation.titre}}</ion-card-title>
+                  <ion-card-subtitle>{{formation.dates}} | {{formation.lieu}}</ion-card-subtitle>
                 </ion-card-header>
 
                 <ion-card-content>
-                  Préparation au diplôme d’ingénieur <br>
-                  Cycle ingénieur deuxième année
-                  Spécialité Informatique, Réseaux et Cybersécurité
+                  <p *ngFor="let description of formation.description">{{description}}</p>
                 </ion-card-content>
               </ion-card>
             </ion-card-content>
@@ -58,7 +56,6 @@
                 (tap)="clickSurSlide($event)"
                 [config]="slideOpts"
                 [pagination]="true"
-                [keyboard]="true"
                 [navigation]="true"
                 #slides>
                 <ng-template swiperSlide *ngFor="let experience of experiencesPro; let even = even; let index = index">

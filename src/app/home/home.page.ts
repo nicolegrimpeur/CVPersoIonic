@@ -1,12 +1,13 @@
 import {Component, ViewChild} from '@angular/core';
 import {Platform} from '@ionic/angular';
+import {formations} from '../shared/informations/formations';
+import {certificats} from '../shared/informations/certificats';
 import {experiencesPro} from '../shared/informations/experiencesPro';
 import {competences} from '../shared/informations/competences';
 import {loisirs} from '../shared/informations/loisirs';
-import {certificats} from '../shared/informations/certificats';
-import SwiperCore, {Swiper , Autoplay, Keyboard, Pagination, Scrollbar, Zoom, Navigation } from 'swiper';
+import SwiperCore, {Pagination, Navigation } from 'swiper';
 
-SwiperCore.use([Autoplay, Keyboard, Navigation, Pagination, Scrollbar, Zoom]);
+SwiperCore.use([Navigation, Pagination]);
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ SwiperCore.use([Autoplay, Keyboard, Navigation, Pagination, Scrollbar, Zoom]);
 export class HomePage {
   @ViewChild('slides') slides;
 
+  public formations = formations;
   public certificats = certificats;
   public experiencesPro = experiencesPro;
   public competences = competences;

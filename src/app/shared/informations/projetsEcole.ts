@@ -7,7 +7,7 @@ export const projetsEcole = [
       'Nous avons pour cela choisis nos composants, réalisé la carte électronique, ' +
       'mais aussi écris le code permettant de récupérer les données du capteurs pour l\'envoyer à la station mère',
     github: 'https://github.com/nicolegrimpeur/Elec_TempHum',
-    technologies: ['C', 'LoRa', 'Micro-contrôleur']
+    technologies: ['C', 'LoRa', 'Microcontrôleur']
   },
   {
     titre: 'TPLC',

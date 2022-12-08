@@ -1,6 +1,4 @@
 .texture {
-  //position: absolute;
-  //z-index: -1;
   @apply bg-repeat;
   $interval-width: 15%;
   background-image: url(../../assets/bg.svg);
@@ -17,7 +15,7 @@ ion-card-header {
   flex-flow: column-reverse;
 }
 
-center {
+.center {
   display: grid;
   place-items: center;
 }

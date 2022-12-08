@@ -129,7 +129,34 @@
                       <ion-card-title>Projets personnels</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-
+                      <swiper
+                        [loop]="true"
+                        [pagination]="true"
+                        [navigation]="platform.is('desktop')">
+                        <ng-template swiperSlide *ngFor="let projet of projetsPerso">
+                          <ion-card>
+                            <ion-header>
+                              <ion-card-title>{{projet.titre}}</ion-card-title>
+                              <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
+                            </ion-header>
+                            <ion-card-content>
+                              {{projet.description}}
+                            </ion-card-content>
+                            <ion-card-content>
+                              <img
+                                class="technologie"
+                                *ngFor="let technologie of projet.technologies"
+                                src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
+                                alt="Logo {{technologie}}">
+                              <br>
+                              <ion-button title="Lien vers le Github" target="_blank" href="{{projet.github}}"
+                                          color="medium" shape="round" fill="clear" size="large">
+                                <ion-icon name="logo-github"></ion-icon>
+                              </ion-button>
+                            </ion-card-content>
+                          </ion-card>
+                        </ng-template>
+                      </swiper>
                     </ion-card-content>
                   </ion-card>
                 </ion-col>
@@ -145,13 +172,15 @@
             <ion-card-header>
               <ion-card-title class="title">Compétences</ion-card-title>
             </ion-card-header>
-            <ion-card-content>
-              <ion-list>
-                <ion-item *ngFor="let competence of competences; let last = last" [lines]="last ? 'none' : undefined">
-                  <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
-                </ion-item>
-              </ion-list>
-            </ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngFor="let competence of competences" size="12" size-lg="6">
+                  <ion-card-content>
+                    <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
+                  </ion-card-content>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
           </ion-card>
         </ion-col>
         <ion-col>
@@ -159,20 +188,32 @@
             <ion-card-header>
               <ion-card-title class="title">Loisirs</ion-card-title>
             </ion-card-header>
-            <ion-card-content>
-              <ion-list>
-                <ion-item *ngFor="let loisir of loisirs; let last = last" [lines]="last ? 'none' : undefined">
-                  <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
-                </ion-item>
-              </ion-list>
-            </ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngFor="let loisir of loisirs" size="12" size-lg="6">
+                  <ion-card-content>
+                    <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
+                  </ion-card-content>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
           </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
 
     <app-contact></app-contact>
+
+    <ion-toolbar>
+      <div class="center">
+        <ion-row>
+          <ion-label class="center">Réalisé par Nicolas Barrat, code source :</ion-label>
+          <ion-button fill="clear" color="medium" target="_blank" href="https://github.com/nicolegrimpeur/CVPersoIonic">
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-button>
+        </ion-row>
+      </div>
+
+    </ion-toolbar>
   </div>
-
-
 </ion-content>

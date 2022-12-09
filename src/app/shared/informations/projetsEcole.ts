@@ -8,6 +8,14 @@ export const projetsEcole = [
     technologies: ['Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Kubernetes']
   },
   {
+    titre: 'Python',
+    sousTitre: 'Projet de python',
+    date: 'Octobre / Novembre 2022',
+    description: 'Récupération de données sur le site de la NBA, puis visualisation des données, avant réalisation de deux modèles IA.',
+    github: '',
+    technologies: ['Python', 'Jupyter', 'Selenium']
+  },
+  {
     titre: 'Electronique 3ème année',
     sousTitre: 'Projet d\'électronique de fin d\'année',
     date: 'Mai / Juin 2022',

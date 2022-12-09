@@ -53,6 +53,7 @@ export class HomePage {
   getNomIconsFromText(nom: string) {
     nom = this.getLogoFromText(nom);
     nom = nom.replaceAll(' ', '');
+    nom = nom.replaceAll('.', 'dot');
     return nom.slice(0, 1).toUpperCase() + nom.slice(1, nom.length).toLowerCase();
   }
 

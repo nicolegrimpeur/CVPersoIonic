@@ -111,7 +111,8 @@
                                 src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
                                 alt="Logo {{technologie}}">
                               <br>
-                              <ion-button title="Lien vers le Github" target="_blank" href="{{projet.github}}"
+                              <ion-button *ngIf="projet.github !== ''"
+                                          title="Lien vers le Github" target="_blank" href="{{projet.github}}"
                                           color="medium" shape="round" fill="clear" size="large">
                                 <ion-icon name="logo-github"></ion-icon>
                               </ion-button>
@@ -149,7 +150,8 @@
                                 src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
                                 alt="Logo {{technologie}}">
                               <br>
-                              <ion-button title="Lien vers le Github" target="_blank" href="{{projet.github}}"
+                              <ion-button *ngIf="projet.github !== ''"
+                                          title="Lien vers le Github" target="_blank" href="{{projet.github}}"
                                           color="medium" shape="round" fill="clear" size="large">
                                 <ion-icon name="logo-github"></ion-icon>
                               </ion-button>

@@ -30,3 +30,12 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 @import '@ionic/angular/css/ionic-swiper';
+
+.header-md::after {
+  background-image: linear-gradient(
+      rgba(210, 106, 101, 0.5),
+      rgba(210, 106, 101, 0)
+  );
+  width: 90%;
+  margin: auto 5%;
+}

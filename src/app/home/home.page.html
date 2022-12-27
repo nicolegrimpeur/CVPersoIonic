@@ -4,6 +4,9 @@
 
     <ion-grid>
       <ion-row>
+        <ion-col size="12" size-lg="6" class="center" *ngIf="!platform.is('desktop')">
+          <img src="assets/storyset/graduation.svg" alt="Image formation" class="presentation">
+        </ion-col>
         <ion-col size="12" size-lg="6">
           <ion-card>
             <ion-card-header>
@@ -24,7 +27,7 @@
             </ion-card-content>
           </ion-card>
         </ion-col>
-        <ion-col size="12" size-lg="6" class="center">
+        <ion-col size="12" size-lg="6" class="center" *ngIf="platform.is('desktop')">
           <img src="assets/storyset/graduation.svg" alt="Image formation" class="presentation">
         </ion-col>
       </ion-row>
@@ -66,13 +69,13 @@
                 #swiperExperiencesPro>
                 <ng-template swiperSlide *ngFor="let experience of experiencesPro">
                   <ion-card>
-                    <ion-card-header>
+                    <ion-header>
                       <ion-card-title>{{experience.titre}}</ion-card-title>
-                      <ion-card-subtitle>
+                      <ion-card-subtitle class="ion-text-wrap">
                         {{experience.datesLieu}} <br>
                         {{experience.entreprise}}
                       </ion-card-subtitle>
-                    </ion-card-header>
+                    </ion-header>
                     <ion-card-content>
                       <p *ngFor="let information of experience.informations">{{information}}</p>
                     </ion-card-content>
@@ -186,34 +189,38 @@
             </ion-card-header>
             <ion-grid>
               <ion-row>
-                <ion-col *ngFor="let competence of competences" size="12" size-lg="6">
-                  <ion-card-content>
-                    <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
-                  </ion-card-content>
+                <ion-col *ngFor="let competence of competences" size="6" size-lg="3">
+                  <ion-row>
+                    <ion-col class="center">
+                      <img src="assets/storyset/{{competence.image}}.svg" alt="Image {{competence.titre}}" style="">
+                    </ion-col>
+                    <ion-col class="" style="display: flex; align-items: center">
+                      <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
+                    </ion-col>
+                  </ion-row>
                 </ion-col>
               </ion-row>
             </ion-grid>
           </ion-card>
         </ion-col>
-        <ion-col size="12" size-lg="6" class="center">
-          <img src="assets/storyset/problem%20solving.svg" alt="Image formation" class="petitePresentation">
-        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="12" size-lg="6" class="center">
-          <img src="assets/storyset/climbing.svg" alt="Image certification" class="petitePresentation">
-        </ion-col>
         <ion-col>
           <ion-card>
-            <ion-card-header>
+            <ion-card-header style="padding-bottom: inherit">
               <ion-card-title class="title">Loisirs</ion-card-title>
             </ion-card-header>
             <ion-grid>
               <ion-row>
-                <ion-col *ngFor="let loisir of loisirs" size="12" size-lg="6">
-                  <ion-card-content>
-                    <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
-                  </ion-card-content>
+                <ion-col *ngFor="let loisir of loisirs" size="6" size-lg="3">
+                  <ion-row>
+                    <ion-col class="center">
+                      <img src="assets/storyset/{{loisir.image}}.svg" alt="Image {{loisir.titre}}" style="">
+                    </ion-col>
+                    <ion-col class="" style="display: flex; align-items: center">
+                      <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
+                    </ion-col>
+                  </ion-row>
                 </ion-col>
               </ion-row>
             </ion-grid>
@@ -226,9 +233,12 @@
 
     <ion-toolbar>
       <div class="center">
-        <ion-row>
+        <ion-row class="{{platform.is('desktop') ? '' : 'center'}}">
           <ion-label class="ion-text-nowrap" style="display: flex; align-items: center">Illustrations par&nbsp;
             <a href="https://storyset.com" target="_blank" style="color: inherit; text-decoration: none">Storyset</a>.
+            &nbsp;
+          </ion-label>
+          <ion-label style="display: flex; align-items: center">
             Site réalisé par Nicolas Barrat, code source :
           </ion-label>
           <ion-button fill="clear" color="medium" target="_blank" href="https://github.com/nicolegrimpeur/CVPersoIonic">

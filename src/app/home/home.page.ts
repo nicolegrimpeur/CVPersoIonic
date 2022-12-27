@@ -7,10 +7,11 @@ import {projetsEcole} from '../shared/informations/projetsEcole';
 import {projetsPerso} from '../shared/informations/projetsPerso';
 import {competences} from '../shared/informations/competences';
 import {loisirs} from '../shared/informations/loisirs';
-import SwiperCore, {Pagination, Navigation } from 'swiper';
+import SwiperCore, {Pagination, Navigation, Autoplay} from 'swiper';
 import * as icons from 'simple-icons';
+import {SwiperComponent} from 'swiper/angular';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,10 @@ SwiperCore.use([Navigation, Pagination]);
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  @ViewChild('swiperExperiencesPro') swiperExperiencesPro: SwiperComponent;
+  @ViewChild('swiperProjetsEcole') swiperProjetsEcole: SwiperComponent;
+  @ViewChild('swiperProjetsPerso') swiperProjetsPerso: SwiperComponent;
+
   public formations = formations;
   public certificats = certificats;
   public experiencesPro = experiencesPro;
@@ -33,6 +38,16 @@ export class HomePage {
   };
 
   constructor(public platform: Platform) {
+  }
+
+  ionViewDidEnter() {
+    this.initSwiper();
+  }
+
+  initSwiper() {
+    this.swiperExperiencesPro.swiperRef.autoplay.start();
+    this.swiperProjetsEcole.swiperRef.autoplay.start();
+    this.swiperProjetsPerso.swiperRef.autoplay.start();
   }
 
   // permet d'ouvrir un lien dans un nouvel onglet (utilisé dans les certificats

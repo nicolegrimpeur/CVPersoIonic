@@ -55,7 +55,8 @@
               <swiper
                 [config]="slideOptsExperiences"
                 [pagination]="true"
-                [navigation]="platform.is('desktop')">
+                [navigation]="platform.is('desktop')"
+                #swiperExperiencesPro>
                 <ng-template swiperSlide *ngFor="let experience of experiencesPro">
                   <ion-card>
                     <ion-card-header>
@@ -94,7 +95,8 @@
                       <swiper
                         [loop]="true"
                         [pagination]="true"
-                        [navigation]="platform.is('desktop')">
+                        [navigation]="platform.is('desktop')"
+                        #swiperProjetsEcole>
                         <ng-template swiperSlide *ngFor="let projet of projetsEcole">
                           <ion-card>
                             <ion-header>
@@ -133,7 +135,8 @@
                       <swiper
                         [loop]="true"
                         [pagination]="true"
-                        [navigation]="platform.is('desktop')">
+                        [navigation]="platform.is('desktop')"
+                        #swiperProjetsPerso>
                         <ng-template swiperSlide *ngFor="let projet of projetsPerso">
                           <ion-card>
                             <ion-header>

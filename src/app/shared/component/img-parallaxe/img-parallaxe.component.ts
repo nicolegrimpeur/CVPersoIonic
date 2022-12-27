@@ -66,17 +66,17 @@ export class ImgParallaxeComponent implements OnInit {
     el.style.setProperty('left', this.initialLeft + 'px');
 
     // lance l'animation
-    this.animationCtrl.create()
-      .addElement(this.image.el)
-      .duration(15000)
-      .iterations(Infinity)
-      .keyframes([
-        {offset: 0, transform: 'translate(0px, 0px)'},
-        {offset: 0.25, transform: 'translate(' + this.rand() + 'px,' + this.rand() + 'px)'},
-        {offset: 0.5, transform: 'translate(' + this.rand() + 'px,' + this.rand() + 'px)'},
-        {offset: 0.75, transform: 'translate(' + this.rand() + 'px,' + -this.rand() + 'px)'},
-        {offset: 1, transform: 'translate(0px, 0px)'}
-      ]).play().then();
+    // this.animationCtrl.create()
+    //   .addElement(this.image.el)
+    //   .duration(15000)
+    //   .iterations(Infinity)
+    //   .keyframes([
+    //     {offset: 0, transform: 'translate(0px, 0px)'},
+    //     {offset: 0.25, transform: 'translate(' + this.rand() + 'px,' + this.rand() + 'px)'},
+    //     {offset: 0.5, transform: 'translate(' + this.rand() + 'px,' + this.rand() + 'px)'},
+    //     {offset: 0.75, transform: 'translate(' + this.rand() + 'px,' + -this.rand() + 'px)'},
+    //     {offset: 1, transform: 'translate(0px, 0px)'}
+    //   ]).play().then();
   }
 
   // déplacement de l'objet en fonction du scroll

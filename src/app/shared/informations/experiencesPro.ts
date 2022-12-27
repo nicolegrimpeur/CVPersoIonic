@@ -13,13 +13,13 @@ export const experiencesPro = [
     entreprise: 'All, tous les services de la vie étudiante',
     datesLieu: 'Aout 2021 - Aout 2022 | Lille',
     informations: [
-      'Création de 3 sites Web et 2 applications mobile'
+      'Création de 3 sites Web et 2 applications mobile publiées sur le Play Store',
     ]
   },
   {
     titre: 'Responsable d’une équipe de référents d’une résidence étudiante',
     entreprise: 'All, tous les services de la vie étudiante',
-    datesLieu: 'Septembre 2019 - Aout 2021 | Lille',
+    datesLieu: 'Septembre 2019 - Août 2021 | Lille',
     informations: [
       'Information, conseil et aide à près de 190 étudiants',
       'Organisation d’événements (soirée d’accueil, diners de résidences, événements avec des organismes externes)'

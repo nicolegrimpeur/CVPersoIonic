@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Platform} from '@ionic/angular';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {AnimationController, Platform} from '@ionic/angular';
 
 @Component({
   selector: 'app-accueil',
@@ -8,8 +8,10 @@ import {Platform} from '@ionic/angular';
 })
 export class AccueilComponent implements OnInit {
 
-  constructor(public platform: Platform) { }
+  constructor(public platform: Platform) {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

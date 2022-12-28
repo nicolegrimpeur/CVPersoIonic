@@ -32,7 +32,7 @@
 @import 'swiper/scss/autoplay';
 @import '@ionic/angular/css/ionic-swiper';
 
-.header-md::after {
+ion-card > .header-md::after {
   background-image: linear-gradient(
       rgba(210, 106, 101, 0.5),
       rgba(210, 106, 101, 0)

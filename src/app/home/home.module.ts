@@ -7,10 +7,11 @@ import {HomePage} from './home.page';
 import {HomePageRoutingModule} from './home-routing.module';
 import {AccueilComponent} from '../shared/component/accueil/accueil.component';
 import {ParallaxDirective} from '../shared/directive/parallax.directive';
-import {ImgParallaxeComponent} from '../shared/component/img-parallaxe/img-parallaxe.component';
 import {ContactComponent} from '../shared/component/contact/contact.component';
 
 import {SwiperModule} from 'swiper/angular';
+import {MenuComponent} from "../shared/component/menu/menu.component";
+import {HeaderComponent} from "../shared/component/header/header.component";
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import {SwiperModule} from 'swiper/angular';
     HomePageRoutingModule,
     SwiperModule
   ],
-  declarations: [HomePage, AccueilComponent, ParallaxDirective, ImgParallaxeComponent, ContactComponent]
+  declarations: [HomePage, AccueilComponent, ParallaxDirective, ContactComponent, MenuComponent, HeaderComponent]
 })
 export class HomePageModule {
 }

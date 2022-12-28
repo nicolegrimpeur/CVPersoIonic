@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {Platform} from '@ionic/angular';
+import {AnimationController, Platform} from '@ionic/angular';
 import {formations} from '../shared/informations/formations';
 import {certificats} from '../shared/informations/certificats';
 import {experiencesPro} from '../shared/informations/experiencesPro';
@@ -37,10 +37,22 @@ export class HomePage {
     slidesPerView: this.platform.is('desktop') ? 2 : 1
   };
 
-  constructor(public platform: Platform) {
+  constructor(
+    public platform: Platform,
+    private animation: AnimationController,) {
   }
 
   ionViewDidEnter() {
+    this.animation.create()
+      .addElement(document.querySelector('.fleche'))
+      .duration(2000)
+      .direction('alternate')
+      .iterations(Infinity)
+      .keyframes([
+        {offset: 0, transform: 'translateY(0px)', opacity: '1'},
+        {offset: 1, transform: 'translateY(25px)', opacity: '1'}
+      ]).play().then();
+
     this.initSwiper();
   }
 

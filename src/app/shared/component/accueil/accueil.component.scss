@@ -1,31 +1,7 @@
-//::ng-deep .mat-card{
-//  //border-color: red;
-//  //border-image: linear-gradient(0deg, red, blue);
-//  //border-radius: 30px;
-//}
-//
-//::ng-deep .mat-card:not([class*=mat-elevation-z]) {
-//  // position x y, flou, taille, couleur
-//  box-shadow: 0 0 3px 3px rgb(238, 0, 255, 0.5);
-//}
-
-//div {
-//  height: 100vh;
-//}
-
 .card {
   display: grid;
   place-items: center;
   height: 90vh;
-}
-
-.text-card {
-  text-align: center;
-  //color: black;
-  font-weight: bold;
-  // trouver un moyen de faire baisser la taille
-  font-size: 1.2rem;
-  letter-spacing: 2px;
 }
 
 .div_fleche {
@@ -35,16 +11,20 @@
 }
 
 .fleche {
-
-  //position: static;
-  //margin-top: 1%;
-  //margin-left: 49.5%;
   width: 1rem;
-  //margin-bottom: 5%;
-  //justify-content: center;
-  color: white;
+  color: black;
 }
 
-section{
-  margin: 10vh 0;
+section {
+  margin: 5vh 0;
+}
+
+ion-card {
+  width: 50vw;
+}
+
+img {
+  width: 10vmax;
+  border-radius: 100%;
+  border: white 2px solid;
 }

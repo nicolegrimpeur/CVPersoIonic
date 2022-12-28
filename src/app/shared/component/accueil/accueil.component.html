@@ -1,21 +1,17 @@
-<!--<mat-card class="card col-8 col-sm-6 col-md-4 col-lg-4 col-xl-4 mx-auto" [style.backgroundColor]="'transparent'">-->
-<!--  <mat-card-title class="text-card">Nicolegrimpeur</mat-card-title>-->
-<!--</mat-card>-->
 <div class="card">
-  <ion-card>
-    <ion-card-header class="text-card" color="primary">Nicolas Barrat</ion-card-header>
+  <ion-card color="primary" style="{{platform.is('desktop') ? 'width: 40vw' : 'width: 70vw'}}">
+    <ion-card-header class="center">
+      <img src="assets/pdp.jpg" alt="Photo de profil">
+      <ion-card-title>Nicolas Barrat</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">Actuellement étudiant en 4ème année à l'ISEN Lille, spécialisé en informatique et réalisant un master en cybersécurité,
+        je suis actuellement à la recherche d'un contrat de professionalisation pour l'année 2023/2024.</ion-card-subtitle>
+    </ion-card-header>
   </ion-card>
 </div>
 
-<app-img-parallaxe [ratio]="0.1" [objet]="'cursor'" [position]="'derrière'"></app-img-parallaxe>
-<app-img-parallaxe [ratio]="0.1" [objet]="'spring'" [position]="'derrière'"></app-img-parallaxe>
-<app-img-parallaxe [ratio]="0.2" [objet]="'photo'" [position]="'derrière'"></app-img-parallaxe>
-<app-img-parallaxe [ratio]="0.7" [objet]="'bulb'" [position]="'devant'"></app-img-parallaxe>
-<app-img-parallaxe [ratio]="0.8" [objet]="'lightning'" [position]="'devant'"></app-img-parallaxe>
-
 <div class="div_fleche">
   <svg class="fleche" viewBox="0 0 15.247 8.718">
-    <path fill="white"
+    <path fill="#CD5954"
           d="M7.626 6.09L13.391.32a1.085 1.085 0 011.539 0 1.1 1.1 0 010 1.543L8.398 8.4a1.088 1.088 0 01-1.5.032L.317 1.868A1.09 1.09 0 011.856.325z"></path>
   </svg>
 </div>

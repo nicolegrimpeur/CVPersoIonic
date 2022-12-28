@@ -31,6 +31,8 @@ export class HomePage {
   public competences = competences;
   public loisirs = loisirs;
 
+  public afficheNom = false;
+
   // options pour le slider sur les expériences
   public slideOptsExperiences = {
     loop: true,
@@ -88,5 +90,10 @@ export class HomePage {
   getColorFromText(nom: string) {
     const icon = icons['si' + this.getNomIconsFromText(nom)];
     return icon !== undefined ? icon.hex : '181717';
+  }
+
+  // événement lors du scroll
+  eventScroll(e) {
+    this.afficheNom = e.detail.scrollTop > 400;
   }
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Platform} from '@ionic/angular';
 
 @Component({
@@ -7,6 +7,7 @@ import {Platform} from '@ionic/angular';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() public afficheNom: boolean;
 
   constructor(public platform: Platform) {
   }

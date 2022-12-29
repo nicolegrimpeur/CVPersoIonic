@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit, OnChanges {
   @Input() public afficheNom: boolean;
 
   constructor(public platform: Platform,
-              private animation: AnimationController,) {
+              private animation: AnimationController) {
   }
 
   ngOnInit() {

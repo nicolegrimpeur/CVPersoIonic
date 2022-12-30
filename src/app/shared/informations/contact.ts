@@ -23,4 +23,10 @@ export const contact = [
     href: 'https://www.linkedin.com/in/nicolas-barrat/',
     icon: 'logo-linkedin'
   },
+  {
+    text: 'CV au format PDF',
+    info: 'nicob.ovh/cv/pdf',
+    href: 'https://nicob.ovh/cv/pdf',
+    icon: 'link'
+  },
 ];

@@ -7,7 +7,8 @@ export const formations = [
     description : [
       'Préparation au diplôme d’ingénieur',
       'Cycle ingénieur deuxième année spécialité Informatique, Réseaux et Cybersécurité'
-    ]
+    ],
+    url: 'https://www.junia.com/fr/formations-admissions/nos-domaines/numerique/domaine-cybersecurite/'
   },
   {
     titre : 'Lycée du Parc',
@@ -16,6 +17,7 @@ export const formations = [
     lieu: 'Lyon',
     description : [
       'Préparation au Baccalauréat Général, filière Scientifique. Option Latin et Informatique'
-    ]
+    ],
+    url: ''
   },
 ];

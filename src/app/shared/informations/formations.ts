@@ -6,7 +6,7 @@ export const formations = [
     lieu: 'Lille',
     description : [
       'Préparation au diplôme d’ingénieur',
-      'Cycle ingénieur deuxième année Spécialité Informatique, Réseaux et Cybersécurité'
+      'Cycle ingénieur deuxième année spécialité Informatique, Réseaux et Cybersécurité'
     ]
   },
   {

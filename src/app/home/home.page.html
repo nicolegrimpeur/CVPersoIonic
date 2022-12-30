@@ -128,7 +128,7 @@
                               <br>
                               <ion-button *ngIf="projet.github !== ''"
                                           title="Lien vers le Github" target="_blank" href="{{projet.github}}"
-                                          color="medium" shape="round" fill="clear" size="large">
+                                          color="primary-tint" shape="round" fill="clear" size="large">
                                 <ion-icon name="logo-github"></ion-icon>
                               </ion-button>
                             </ion-card-content>
@@ -168,8 +168,18 @@
                               <br>
                               <ion-button *ngIf="projet.github !== ''"
                                           title="Lien vers le Github" target="_blank" href="{{projet.github}}"
-                                          color="medium" shape="round" fill="clear" size="large">
+                                          color="primary-tint" shape="round" fill="clear" size="large">
                                 <ion-icon name="logo-github"></ion-icon>
+                              </ion-button>
+                              <ion-button *ngIf="projet.url !== ''"
+                                          title="Lien vers le site Web" target="_blank" href="{{projet.url}}"
+                                          color="primary-tint" shape="round" fill="clear" size="large">
+                                <ion-icon name="link"></ion-icon>
+                              </ion-button>
+                              <ion-button *ngIf="projet.playStore !== ''"
+                                          title="Lien vers le Google Play Store" target="_blank" href="{{projet.playStore}}"
+                                          color="primary-tint" shape="round" fill="clear" size="large">
+                                <ion-icon name="logo-google-playstore"></ion-icon>
                               </ion-button>
                             </ion-card-content>
                           </ion-card>
@@ -244,7 +254,7 @@
           <ion-label style="display: flex; align-items: center">
             Site réalisé par Nicolas Barrat, code source :
           </ion-label>
-          <ion-button fill="clear" color="medium" target="_blank" href="https://github.com/nicolegrimpeur/CVPersoIonic">
+          <ion-button fill="clear" color="primary-tint" target="_blank" href="https://github.com/nicolegrimpeur/CVPersoIonic">
             <ion-icon name="logo-github"></ion-icon>
           </ion-button>
         </ion-row>

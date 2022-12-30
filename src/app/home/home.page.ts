@@ -51,8 +51,8 @@ export class HomePage {
       .direction('alternate')
       .iterations(Infinity)
       .keyframes([
-        {offset: 0, transform: 'translateY(0px)', opacity: '1'},
-        {offset: 1, transform: 'translateY(25px)', opacity: '1'}
+        {offset: 0, transform: 'translateY(0px)'},
+        {offset: 1, transform: 'translateY(25px)'}
       ]).play().then();
 
     this.initSwiper();
@@ -94,6 +94,7 @@ export class HomePage {
 
   // événement lors du scroll
   eventScroll(e) {
-    this.afficheNom = e.detail.scrollTop > 400;
+    console.log(e.detail.scrollTop);
+    this.afficheNom = e.detail.scrollTop > 500;
   }
 }

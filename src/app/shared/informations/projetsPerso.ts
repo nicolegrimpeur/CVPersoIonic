@@ -5,6 +5,8 @@ export const projetsPerso = [
     date: 'Octobre 2022',
     description: 'Réalisation d\'un site et d\'une application mobile permettant le partage de citations entre amis.',
     github: 'https://github.com/nicolegrimpeur/Citations',
+    url: '',
+    playStore: '',
     technologies: ['Ionic', 'Angular', 'Typescript']
   },
   {
@@ -14,7 +16,9 @@ export const projetsPerso = [
     description: 'Création d\'une Api permettant d\'automatiser l\'importation de plannings de cours de l\'ISEN Lille ' +
       'sur des calendriers personnels',
     github: 'https://github.com/nicolegrimpeur/apiAurion',
-    technologies: ['PupPuppeteer', 'ICS']
+    url: '',
+    playStore: '',
+    technologies: ['Puppeteer', 'ICS']
   },
   {
     titre: 'Interface App All',
@@ -23,6 +27,8 @@ export const projetsPerso = [
     description: 'Création d\'un site permettant la modification par les responsables de résidence ' +
       'des informations présentes sur le site All Résidences.',
     github: 'https://github.com/nicolegrimpeur/interfaceAppAll',
+    url: '',
+    playStore: '',
     technologies: ['Ionic', 'Angular', 'Typescript']
   },
   {
@@ -32,6 +38,8 @@ export const projetsPerso = [
     description: 'Réalisation d\'un site Web et d\'une application mobile pour les plannings des laveries des résidences ' +
       'de l\'association All, tous les services de la vie étudiante.',
     github: 'https://github.com/nicolegrimpeur/Plannings',
+    url: 'https://nicob.ovh/plannings',
+    playStore: 'https://play.google.com/store/apps/details?id=plannings.ionic.all',
     technologies: ['Ionic', 'Angular', 'Typescript']
   },
   {
@@ -41,6 +49,8 @@ export const projetsPerso = [
     description: 'Ensemble d\'informations pour les étudiants des résidences de l\'association ' +
       'All, tous les services de la vie étudiante, avec un site Web ainsi qu\'une application Android.',
     github: 'https://github.com/nicolegrimpeur/appAll',
+    url: 'https://nicob.ovh/all',
+    playStore: 'https://play.google.com/store/apps/details?id=appAll.ionic.all',
     technologies: ['Ionic', 'Angular', 'Typescript']
   },
   {
@@ -49,6 +59,8 @@ export const projetsPerso = [
     date: '2019 - 2020',
     description: 'Site regroupant de nombreuses informations sur la résidence Saint-Omer dans laquelle j\'étais responsable',
     github: 'https://github.com/nicolegrimpeur/Site-STO',
+    url: 'https://nicob.ovh/old/',
+    playStore: '',
     technologies: ['Angular', 'Typescript']
   },
   {
@@ -58,6 +70,8 @@ export const projetsPerso = [
     description: 'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
       'et Api pour mes différents projets, personnels et écoles.',
     github: '',
+    url: '',
+    playStore: '',
     technologies: ['Ubuntu', 'Node.Js', 'Nginx', 'MySql', 'OpenSSL']
   },
 ];

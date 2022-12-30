@@ -13,13 +13,9 @@
   font-size: 2rem;
 }
 
-ion-card-subtitle {
-  margin: 0 1vw;
-}
-
 .swiper {
-  --bullet-background-active: var(--ion-color-medium);
-  --swiper-navigation-color: var(--ion-color-medium);
+  --bullet-background-active: var(--ion-color-primary);
+  --swiper-navigation-color: var(--ion-color-primary);
 }
 
 .technologie {

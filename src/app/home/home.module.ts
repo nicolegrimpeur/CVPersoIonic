@@ -11,6 +11,7 @@ import {ContactComponent} from '../shared/component/contact/contact.component';
 import {SwiperModule} from 'swiper/angular';
 import {MenuComponent} from '../shared/component/menu/menu.component';
 import {HeaderComponent} from '../shared/component/header/header.component';
+import {CreditsComponent} from "../shared/component/credits/credits.component";
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import {HeaderComponent} from '../shared/component/header/header.component';
     HomePageRoutingModule,
     SwiperModule
   ],
-  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent]
+    declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent]
 })
 export class HomePageModule {
 }

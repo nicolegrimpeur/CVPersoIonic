@@ -120,7 +120,7 @@
                             <ion-card-content>
                               {{projet.description}}
                             </ion-card-content>
-                            <ion-card-content>
+                            <ion-card-content *ngIf="afficheTechnologies">
                               <img
                                 class="technologie"
                                 *ngFor="let technologie of projet.technologies"
@@ -133,7 +133,6 @@
                                 <ion-icon name="logo-github"></ion-icon>
                               </ion-button>
                             </ion-card-content>
-
                           </ion-card>
                         </ng-template>
                       </swiper>
@@ -160,7 +159,7 @@
                             <ion-card-content>
                               {{projet.description}}
                             </ion-card-content>
-                            <ion-card-content>
+                            <ion-card-content *ngIf="afficheTechnologies">
                               <img
                                 class="technologie"
                                 *ngFor="let technologie of projet.technologies"

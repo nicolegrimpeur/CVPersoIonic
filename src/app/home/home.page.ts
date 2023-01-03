@@ -1,5 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {AnimationController, Platform} from '@ionic/angular';
+import {Network} from '@capacitor/network';
 import {formations} from '../shared/informations/formations';
 import {certificats} from '../shared/informations/certificats';
 import {experiencesPro} from '../shared/informations/experiencesPro';
@@ -32,6 +33,7 @@ export class HomePage {
   public loisirs = loisirs;
 
   public afficheNom = false;
+  public afficheTechnologies = false;
 
   // options pour le slider sur les expériences
   public slideOptsExperiences = {
@@ -45,6 +47,13 @@ export class HomePage {
   }
 
   ionViewDidEnter() {
+    Network.getStatus()
+      .then(status => {
+        if (status.connected) {
+          this.afficheTechnologies = true;
+        }
+      });
+
     this.animation.create()
       .addElement(document.querySelector('.fleche'))
       .duration(2000)
@@ -94,7 +103,6 @@ export class HomePage {
 
   // événement lors du scroll
   eventScroll(e) {
-    console.log(e.detail.scrollTop);
     this.afficheNom = e.detail.scrollTop > 500;
   }
 }

@@ -12,7 +12,7 @@ export const formations = [
   },
   {
     titre : 'Lycée du Parc',
-    image: 'Lycée-du-parc.png',
+    image: 'Lycee-parc.png',
     dates: '2015 - 2018',
     lieu: 'Lyon',
     description : [

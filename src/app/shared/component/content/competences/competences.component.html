@@ -1,0 +1,19 @@
+<ion-card id="compétences">
+  <ion-card-header>
+    <ion-card-title class="title">Compétences</ion-card-title>
+  </ion-card-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let competence of competences" size="6" size-lg="3">
+        <ion-row>
+          <ion-col class="center">
+            <img src="assets/storyset/{{competence.image}}.svg" alt="Image {{competence.titre}}" style="">
+          </ion-col>
+          <ion-col style="display: flex; align-items: center">
+            <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

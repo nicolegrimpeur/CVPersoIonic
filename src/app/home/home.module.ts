@@ -12,6 +12,12 @@ import {SwiperModule} from 'swiper/angular';
 import {MenuComponent} from '../shared/component/menu/menu.component';
 import {HeaderComponent} from '../shared/component/header/header.component';
 import {CreditsComponent} from "../shared/component/credits/credits.component";
+import {LoisirsComponent} from "../shared/component/content/loisirs/loisirs.component";
+import {FormationComponent} from "../shared/component/content/formation/formation.component";
+import {CertificatsComponent} from "../shared/component/content/certificats/certificats.component";
+import {ExperiencesComponent} from "../shared/component/content/experiences/experiences.component";
+import {ProjetsComponent} from "../shared/component/content/projets/projets.component";
+import {CompetencesComponent} from "../shared/component/content/competences/competences.component";
 
 
 @NgModule({
@@ -22,7 +28,7 @@ import {CreditsComponent} from "../shared/component/credits/credits.component";
     HomePageRoutingModule,
     SwiperModule
   ],
-    declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent]
+  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent, LoisirsComponent, FormationComponent, CertificatsComponent, ExperiencesComponent, ProjetsComponent, CompetencesComponent]
 })
 export class HomePageModule {
 }

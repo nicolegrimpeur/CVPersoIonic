@@ -1,0 +1,16 @@
+<ion-card id="certificats">
+  <ion-card-header>
+    <ion-card-title class="title">Certificats</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let certificat of certificats; let last = last" [lines]="last ? 'none' : undefined">
+        <ion-thumbnail slot="start">
+          <img alt="Logo {{certificat.nomLogo}}" src="assets/certificats/{{certificat.nomLogo}}.png"/>
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap" (click)="openUrl(certificat.site)">{{certificat.description}}
+          | {{certificat.date}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

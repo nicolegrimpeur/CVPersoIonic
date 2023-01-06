@@ -11,25 +11,7 @@
           <img src="assets/storyset/graduation.svg" alt="Image formation" class="presentation">
         </ion-col>
         <ion-col size="12" size-lg="6">
-          <ion-card id="formation">
-            <ion-card-header>
-              <ion-card-title class="title">Formation</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <ion-card *ngFor="let formation of formations">
-                <img src="assets/formation/{{formation.image}}" alt="Logo {{formation.titre}}" style="max-height: 15vh">
-                <ion-card-header>
-                  <ion-card-title>{{formation.titre}}</ion-card-title>
-                  <ion-card-subtitle>{{formation.dates}} | {{formation.lieu}}</ion-card-subtitle>
-                </ion-card-header>
-
-                <ion-card-content>
-                  <p *ngFor="let description of formation.description">{{description}}</p>
-                  <a *ngIf="formation.url !== ''" href="{{formation.url}}" target="_blank">Plus d'informations</a>
-                </ion-card-content>
-              </ion-card>
-            </ion-card-content>
-          </ion-card>
+          <app-formation></app-formation>
         </ion-col>
         <ion-col size="12" size-lg="6" class="center" *ngIf="platform.is('desktop')">
           <img src="assets/storyset/graduation.svg" alt="Image formation" class="presentation">
@@ -40,205 +22,30 @@
           <img src="assets/storyset/certification.svg" alt="Image certification" class="presentation certificats">
         </ion-col>
         <ion-col>
-          <ion-card id="certificats">
-            <ion-card-header>
-              <ion-card-title class="title">Certificats</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <ion-list>
-                <ion-item *ngFor="let certificat of certificats; let last = last" [lines]="last ? 'none' : undefined">
-                  <ion-thumbnail slot="start">
-                    <img alt="Logo {{certificat.nomLogo}}" src="assets/certificats/{{certificat.nomLogo}}.png"/>
-                  </ion-thumbnail>
-                  <ion-label class="ion-text-wrap" (click)="openUrl(certificat.site)">{{certificat.description}}
-                    | {{certificat.date}}</ion-label>
-                </ion-item>
-              </ion-list>
-            </ion-card-content>
-          </ion-card>
+          <app-certificats></app-certificats>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col>
-          <ion-card id="expériences">
-            <ion-card-header>
-              <ion-card-title class="title">Mes expériences professionnelles</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <swiper
-                [config]="slideOptsExperiences"
-                [pagination]="true"
-                [navigation]="platform.is('desktop')"
-                #swiperExperiencesPro>
-                <ng-template swiperSlide *ngFor="let experience of experiencesPro">
-                  <ion-card>
-                    <ion-header>
-                      <ion-card-title>{{experience.titre}}</ion-card-title>
-                      <ion-card-subtitle class="ion-text-wrap">
-                        {{experience.datesLieu}} <br>
-                        {{experience.entreprise}}
-                      </ion-card-subtitle>
-                    </ion-header>
-                    <ion-card-content>
-                      <p *ngFor="let information of experience.informations">{{information}}</p>
-                    </ion-card-content>
-                  </ion-card>
-                </ng-template>
-              </swiper>
-            </ion-card-content>
-          </ion-card>
+          <app-experiences></app-experiences>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col>
-          <ion-card id="projets">
-            <ion-card-header>
-              <ion-card-title class="title">Mes projets</ion-card-title>
-              <ion-card-subtitle>Triés du plus récent au plus vieux</ion-card-subtitle>
-            </ion-card-header>
-            <ion-card-content>
-              <ion-row>
-                <ion-col size="12" size-lg="6">
-                  <ion-card>
-                    <ion-card-header>
-                      <ion-card-title>Projets avec l'école ISEN Lille</ion-card-title>
-                    </ion-card-header>
-                    <ion-card-content>
-                      <swiper
-                        [loop]="true"
-                        [pagination]="true"
-                        [navigation]="platform.is('desktop')"
-                        #swiperProjetsEcole>
-                        <ng-template swiperSlide *ngFor="let projet of projetsEcole">
-                          <ion-card>
-                            <ion-header>
-                              <ion-card-title>{{projet.titre}}</ion-card-title>
-                              <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
-                            </ion-header>
-                            <ion-card-content>
-                              {{projet.description}}
-                            </ion-card-content>
-                            <ion-card-content *ngIf="afficheTechnologies">
-                              <img
-                                class="technologie"
-                                *ngFor="let technologie of projet.technologies"
-                                src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
-                                alt="Logo {{technologie}}">
-                              <br>
-                              <ion-button *ngIf="projet.github !== ''"
-                                          title="Lien vers le Github" target="_blank" href="{{projet.github}}"
-                                          color="primary-tint" shape="round" fill="clear" size="large">
-                                <ion-icon name="logo-github"></ion-icon>
-                              </ion-button>
-                            </ion-card-content>
-                          </ion-card>
-                        </ng-template>
-                      </swiper>
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-                <ion-col size="12" size-lg="6">
-                  <ion-card>
-                    <ion-card-header>
-                      <ion-card-title>Projets personnels</ion-card-title>
-                    </ion-card-header>
-                    <ion-card-content>
-                      <swiper
-                        [loop]="true"
-                        [pagination]="true"
-                        [navigation]="platform.is('desktop')"
-                        #swiperProjetsPerso>
-                        <ng-template swiperSlide *ngFor="let projet of projetsPerso">
-                          <ion-card>
-                            <ion-header>
-                              <ion-card-title>{{projet.titre}}</ion-card-title>
-                              <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
-                            </ion-header>
-                            <ion-card-content>
-                              {{projet.description}}
-                            </ion-card-content>
-                            <ion-card-content *ngIf="afficheTechnologies">
-                              <img
-                                class="technologie"
-                                *ngFor="let technologie of projet.technologies"
-                                src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
-                                alt="Logo {{technologie}}">
-                              <br>
-                              <ion-button *ngIf="projet.github !== ''"
-                                          title="Lien vers le Github" target="_blank" href="{{projet.github}}"
-                                          color="primary-tint" shape="round" fill="clear" size="large">
-                                <ion-icon name="logo-github"></ion-icon>
-                              </ion-button>
-                              <ion-button *ngIf="projet.url !== ''"
-                                          title="Lien vers le site Web" target="_blank" href="{{projet.url}}"
-                                          color="primary-tint" shape="round" fill="clear" size="large">
-                                <ion-icon name="link"></ion-icon>
-                              </ion-button>
-                              <ion-button *ngIf="projet.playStore !== ''"
-                                          title="Lien vers le Google Play Store" target="_blank"
-                                          href="{{projet.playStore}}"
-                                          color="primary-tint" shape="round" fill="clear" size="large">
-                                <ion-icon name="logo-google-playstore"></ion-icon>
-                              </ion-button>
-                            </ion-card-content>
-                          </ion-card>
-                        </ng-template>
-                      </swiper>
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-              </ion-row>
-            </ion-card-content>
-          </ion-card>
+          <app-projets></app-projets>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col>
-          <ion-card id="compétences">
-            <ion-card-header>
-              <ion-card-title class="title">Compétences</ion-card-title>
-            </ion-card-header>
-            <ion-grid>
-              <ion-row>
-                <ion-col *ngFor="let competence of competences" size="6" size-lg="3">
-                  <ion-row>
-                    <ion-col class="center">
-                      <img src="assets/storyset/{{competence.image}}.svg" alt="Image {{competence.titre}}" style="">
-                    </ion-col>
-                    <ion-col class="" style="display: flex; align-items: center">
-                      <ion-label class="ion-text-wrap">{{competence.titre}}</ion-label>
-                    </ion-col>
-                  </ion-row>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
+          <app-competences></app-competences>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card id="loisirs">
-            <ion-card-header style="padding-bottom: inherit">
-              <ion-card-title class="title">Loisirs</ion-card-title>
-            </ion-card-header>
-            <ion-grid>
-              <ion-row>
-                <ion-col *ngFor="let loisir of loisirs" size="6" size-lg="3">
-                  <ion-row>
-                    <ion-col class="center">
-                      <img src="assets/storyset/{{loisir.image}}.svg" alt="Image {{loisir.titre}}" style="">
-                    </ion-col>
-                    <ion-col class="" style="display: flex; align-items: center">
-                      <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
-                    </ion-col>
-                  </ion-row>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
+          <app-loisirs></app-loisirs>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -1,0 +1,99 @@
+<ion-card id="projets">
+  <ion-card-header>
+    <ion-card-title class="title">Mes projets</ion-card-title>
+    <ion-card-subtitle>Triés du plus récent au plus vieux</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row>
+      <ion-col size="12" size-lg="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Projets avec l'école ISEN Lille</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <swiper
+              [loop]="true"
+              [pagination]="true"
+              [navigation]="platform.is('desktop')"
+              #swiperProjetsEcole>
+              <ng-template swiperSlide *ngFor="let projet of projetsEcole">
+                <ion-card>
+                  <ion-header>
+                    <ion-card-title>{{projet.titre}}</ion-card-title>
+                    <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
+                  </ion-header>
+                  <ion-card-content>
+                    {{projet.description}}
+                  </ion-card-content>
+                  <ion-card-content *ngIf="afficheTechnologies">
+                    <img
+                      class="technologie"
+                      *ngFor="let technologie of projet.technologies"
+                      src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
+                      alt="Logo {{technologie}}">
+                    <br>
+                    <ion-button *ngIf="projet.github !== ''"
+                                title="Lien vers le Github" target="_blank" href="{{projet.github}}"
+                                color="primary-tint" shape="round" fill="clear" size="large">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </ion-button>
+                  </ion-card-content>
+                </ion-card>
+              </ng-template>
+            </swiper>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-lg="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Projets personnels</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <swiper
+              [loop]="true"
+              [pagination]="true"
+              [navigation]="platform.is('desktop')"
+              #swiperProjetsPerso>
+              <ng-template swiperSlide *ngFor="let projet of projetsPerso">
+                <ion-card>
+                  <ion-header>
+                    <ion-card-title>{{projet.titre}}</ion-card-title>
+                    <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
+                  </ion-header>
+                  <ion-card-content>
+                    {{projet.description}}
+                  </ion-card-content>
+                  <ion-card-content *ngIf="afficheTechnologies">
+                    <img
+                      class="technologie"
+                      *ngFor="let technologie of projet.technologies"
+                      src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
+                      alt="Logo {{technologie}}">
+                    <br>
+                    <ion-button *ngIf="projet.github !== ''"
+                                title="Lien vers le Github" target="_blank" href="{{projet.github}}"
+                                color="primary-tint" shape="round" fill="clear" size="large">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </ion-button>
+                    <ion-button *ngIf="projet.url !== ''"
+                                title="Lien vers le site Web" target="_blank" href="{{projet.url}}"
+                                color="primary-tint" shape="round" fill="clear" size="large">
+                      <ion-icon name="link"></ion-icon>
+                    </ion-button>
+                    <ion-button *ngIf="projet.playStore !== ''"
+                                title="Lien vers le Google Play Store" target="_blank"
+                                href="{{projet.playStore}}"
+                                color="primary-tint" shape="round" fill="clear" size="large">
+                      <ion-icon name="logo-google-playstore"></ion-icon>
+                    </ion-button>
+                  </ion-card-content>
+                </ion-card>
+              </ng-template>
+            </swiper>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,19 @@
+<ion-card id="loisirs">
+  <ion-card-header style="padding-bottom: inherit">
+    <ion-card-title class="title">Loisirs</ion-card-title>
+  </ion-card-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let loisir of loisirs" size="6" size-lg="3">
+        <ion-row>
+          <ion-col class="center">
+            <img src="assets/storyset/{{loisir.image}}.svg" alt="Image {{loisir.titre}}" style="">
+          </ion-col>
+          <ion-col class="" style="display: flex; align-items: center">
+            <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

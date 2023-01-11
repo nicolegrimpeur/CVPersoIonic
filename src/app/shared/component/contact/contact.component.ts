@@ -10,13 +10,12 @@ export class ContactComponent implements AfterViewInit {
   @ViewChild('h5') h5;
 
   public contact = contact;
-  public affiche = false;
 
   constructor() {
   }
 
   ngAfterViewInit() {
-    const texte = 'Cliquez pour afficher';
+    const texte = 'Cliquez pour voir les informations';
     for (const el of Array.from(document.getElementsByClassName('text') as HTMLCollectionOf<HTMLElement>)) {
       el.innerHTML = texte;
       el.style.setProperty('--characters', texte.length.toString());

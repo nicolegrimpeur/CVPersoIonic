@@ -25,6 +25,11 @@ ion-row {
 }
 
 // animation pour la disparition et l'apparition du texte de téléphone et de mail
+.typewriter-effect {
+  display: flex;
+  justify-content: center;
+}
+
 .typewriter-effect > .text {
   animation: typing 2s steps(var(--characters));
   overflow: hidden;

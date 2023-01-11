@@ -5,6 +5,7 @@ export const projetsEcole = [
     date: 'Décembre 2022 - En cours',
     description: 'Création d\'un service de location de serveurs à bas prix.',
     github: 'https://github.com/ISEN-Projet-M1',
+    role: 'Tech lead',
     technologies: ['Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Kubernetes']
   },
   {
@@ -13,6 +14,7 @@ export const projetsEcole = [
     date: 'Octobre / Novembre 2022',
     description: 'Récupération de données sur le site de la NBA, puis visualisation des données, avant réalisation de deux modèles IA.',
     github: '',
+    role: 'Chef de projet',
     technologies: ['Python', 'Jupyter', 'Selenium']
   },
   {
@@ -23,6 +25,7 @@ export const projetsEcole = [
       'Nous avons pour cela choisis nos composants, réalisé la carte électronique, ' +
       'mais aussi écris le code permettant de récupérer les données du capteurs pour l\'envoyer à la station mère',
     github: 'https://github.com/nicolegrimpeur/Elec_TempHum',
+    role: 'Chef de projet',
     technologies: ['C', 'LoRa', 'Microcontrôleur']
   },
   {
@@ -33,6 +36,7 @@ export const projetsEcole = [
       'Le serveur peut avec prendre les commandes des clients, passant la commande automatiquement en cuisine et au bar, ' +
       'qui peuvent alors marquer quand la commande est servi. Un système de facturation est de plus disponible.',
     github: 'https://github.com/nicolegrimpeur/ProjetJava',
+    role: 'Chef de projet',
     technologies: ['Java']
   },
   {
@@ -43,6 +47,7 @@ export const projetsEcole = [
       'sur tous les ordinateurs sous versions WEB et WEB App, ' +
       'mais aussi mobile avec une application mobile Android.',
     github: 'https://github.com/nicolegrimpeur/ProjetThl',
+    role: 'Tech lead',
     technologies: ['Ionic', 'Angular', 'Typescript', 'Fastify', 'MongoDB']
   },
   {
@@ -52,6 +57,7 @@ export const projetsEcole = [
     description: 'Création d\'un langage permettant la compréhension de calculs et formules mathématiques ' +
       'avec affichage dans une interface graphique.',
     github: 'https://github.com/nicolegrimpeur/ProjetThl',
+    role: 'Développeur',
     technologies: ['C++', 'SFML', 'Bison', 'Flex', 'CMake']
   },
   {
@@ -62,6 +68,7 @@ export const projetsEcole = [
       'L\'objectif du jeu est de réussir à équilibrer les équipements avec leur impact environnement, et leur consommation, ' +
       'tout en les maintenant à jour pour corriger des failles de sécurité.',
     github: 'https://github.com/Projet-CIR2/smartHome',
+    role: 'Tech lead',
     technologies: ['JavaScript', 'Phaser']
   },
   {
@@ -70,6 +77,7 @@ export const projetsEcole = [
     date: 'Mars / Avril 2021',
     description: 'Réalisation d\'un jeu de Stratego en Web, avec un système de score et de jeu multijoueur.',
     github: 'https://github.com/Projet-CIR2/projetWebCIR2',
+    role: 'Développeur',
     technologies: ['JavaScript', 'MySQL']
   },
   {
@@ -80,6 +88,7 @@ export const projetsEcole = [
       'l\'avancée des différents concurrents. Une des possibilités était notamment l\'utilisation de fichier GPX, ' +
       'permettant d\'importer des parcours existants pour réaliser la course.',
     github: '',
+    role: '',
     technologies: ['C++', 'Visual Studio', 'SFML']
   },
   {
@@ -90,6 +99,7 @@ export const projetsEcole = [
       'Le joueur avait pour objectif d\'aller sauver ses camarades handicapés, en se mettant dans la peau de différents personnages, ' +
       'possédant chacun un handicap différent ayant un impact sur le gameplay.',
     github: 'https://github.com/nicolegrimpeur/projetCIR2-1920',
+    role: 'Chef de projet',
     technologies: ['JavaScript', 'Phaser', 'Gitlab']
   },
   {
@@ -98,6 +108,7 @@ export const projetsEcole = [
     date: 'Mars / Avril 2020',
     description: 'Réalisation d\'un jeu d\'échec en multi joueur.',
     github: 'https://github.com/nicolegrimpeur/projet_js_echec',
+    role: 'Chef de projet',
     technologies: ['JavaScript']
   },
   {
@@ -106,6 +117,7 @@ export const projetsEcole = [
     date: 'Décembre 2019',
     description: 'Réalisation d\'un jeu de Gomoku en C++.',
     github: 'https://github.com/nicolegrimpeur/Gomoku',
+    role: '',
     technologies: ['C++', 'Visual Studio', 'SFML']
   },
 ];

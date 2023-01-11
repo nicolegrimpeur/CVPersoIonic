@@ -8,11 +8,16 @@ import {contact} from '../../informations/contact';
 })
 export class ContactComponent implements OnInit {
   public contact = contact;
+  public affiche = false;
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  click() {
+    this.affiche = true;
   }
 
 }

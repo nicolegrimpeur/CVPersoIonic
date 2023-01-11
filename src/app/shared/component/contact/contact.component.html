@@ -12,7 +12,8 @@
               <ion-card-title>{{carte.text}}</ion-card-title>
             </ion-card-header>
             <ion-card-content class="center">
-              <h5>{{carte.info}}</h5>
+              <h5 *ngIf="!affiche" (click)="click()">Cliquez pour voir les informations</h5>
+              <h5 *ngIf="affiche">{{carte.info}}</h5>
               <ion-button title="{{carte.text}}" target="_blank" href="{{carte.href}}"
                           color="primary-tint" shape="round" fill="clear" size="large">
                 <ion-icon name="{{carte.icon}}"></ion-icon>

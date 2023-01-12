@@ -10,6 +10,7 @@ export class ContactComponent implements AfterViewInit {
   @ViewChild('h5') h5;
 
   public contact = contact;
+  public affiche = [];
 
   constructor() {
   }
@@ -28,26 +29,30 @@ export class ContactComponent implements AfterViewInit {
 
   // au clic, on enlève les lettres, puis on met les nouvelles
   click(event, texte: string) {
-    // suppression du texte et ajout de la barre à côté
-    event.target.parentElement.classList.add('typewriter-effect-blink');
-    event.target.className = 'text-reverse';
+    if (!this.affiche.includes(texte)) {
+      this.affiche.push(texte);
 
-    // une fois le texte supprimé, on affiche le nouveau texte
-    setTimeout(() => {
-      event.target.innerHTML = texte;
-      event.target.style.setProperty('--characters', 0);
-      event.target.style.setProperty('max-width', 0);
-      event.target.style.setProperty('white-space', 'nowrap');
-      event.target.className = 'text';
-      event.target.style.setProperty('--characters', texte.length.toString());
+      // suppression du texte et ajout de la barre à côté
+      event.target.parentElement.classList.add('typewriter-effect-blink');
+      event.target.className = 'text-reverse';
 
-      // on enlève la barre à côté une fois l'animation terminée
+      // une fois le texte supprimé, on affiche le nouveau texte
       setTimeout(() => {
-        event.target.style.setProperty('max-width', '100%');
-        event.target.style.setProperty('white-space', 'normal');
-        event.target.parentElement.classList.remove('typewriter-effect-blink');
+        event.target.innerHTML = texte;
+        event.target.style.setProperty('--characters', 0);
+        event.target.style.setProperty('max-width', 0);
+        event.target.style.setProperty('white-space', 'nowrap');
+        event.target.className = 'text';
+        event.target.style.setProperty('--characters', texte.length.toString());
+
+        // on enlève la barre à côté une fois l'animation terminée
+        setTimeout(() => {
+          event.target.style.setProperty('max-width', '100%');
+          event.target.style.setProperty('white-space', 'normal');
+          event.target.parentElement.classList.remove('typewriter-effect-blink');
+        }, 2000);
       }, 2000);
-    }, 2000);
+    }
   }
 
 }

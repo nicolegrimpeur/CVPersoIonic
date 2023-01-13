@@ -31,18 +31,24 @@ export class ContactComponent implements AfterViewInit {
       this.affiche.push(texte);
 
       // on enlève les lettres
-      const tempsSuppression = 2000 / (event.target.innerHTML.length + 50);
-      for (const lettre of event.target.innerHTML) {
-        event.target.innerHTML = event.target.innerHTML.substring(0, event.target.innerHTML.length - 1);
+      let taille = event.target.innerHTML.length;
+      const tempsSuppression = 2000 / (taille + 50);
+      event.target.innerHTML += ' |';
+      for (let i = 0; i < taille; i++) {
+        event.target.innerHTML = event.target.innerHTML.substring(0, event.target.innerHTML.length - 3) + ' |';
         await this.delay(tempsSuppression);
       }
 
       // on met les nouvelles lettres
       const tempsAjout = 2000 / (texte.length + 50);
-      for (const lettre of texte) {
-        event.target.innerHTML += lettre;
+      taille = texte.length;
+      for (let i = 0; i < taille; i++) {
+        event.target.innerHTML = event.target.innerHTML.slice(0, i) + texte[i] + event.target.innerHTML.slice(i);
         await this.delay(tempsAjout);
       }
+
+      // on enlève le |
+      event.target.innerHTML = event.target.innerHTML.substring(0, event.target.innerHTML.length - 2);
     }
   }
 

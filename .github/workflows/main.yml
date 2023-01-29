@@ -7,8 +7,11 @@ jobs:
     steps:
       - name: Use coturiv/setup-ionic
         uses: coturiv/setup-ionic@v1
+      - name: ls
+        run: ls
       - name: Build
-        run: ionic build --prod
+        run: |
+          ionic build --prod
       - name: Rename www to cv
         run: mv www cv
       - name: Simple SFTP

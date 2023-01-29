@@ -1,0 +1,19 @@
+name: deploy
+on:
+  workflow_dispatch:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use coturiv/setup-ionic
+        uses: coturiv/setup-ionic@v1
+      - name: Build
+        run: ionic build --prod
+      - name: Rename www to cv
+        run: mv www cv
+      - name: Simple SFTP
+        uses: Atyn/simple-sftp-action@0.0.2
+        with:
+          url: sftp://${{ secrets.SSH_USER }}:${{ secrets.SSH_PASSWORD }}@${{ secrets.SSH_HOST }}/sites
+          localdir: cv
+

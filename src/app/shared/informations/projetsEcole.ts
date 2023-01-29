@@ -1,5 +1,23 @@
 export const projetsEcole = [
   {
+    titre: 'Snort',
+    sousTitre: 'Projet de 4ème année',
+    date: 'Janvier 2023 - En cours',
+    description: 'Mise en place d\'un système de détection d\'intrusion avec Snort.',
+    github: '',
+    role: '',
+    technologies: ['VirtualBox', 'Ubuntu', 'Snort']
+  },
+  {
+    titre: 'Proxy HTTP d\'authentification',
+    sousTitre: 'Projet de programmation réseau',
+    date: 'Janvier 2023 - En cours',
+    description: 'Réalisation d\'un proxy HTTP d\'authentification en C.',
+    github: '',
+    role: '',
+    technologies: ['C', 'Visual Studio Code', 'Linux']
+  },
+  {
     titre: 'Serveroo',
     sousTitre: 'Projet de 4ème année',
     date: 'Décembre 2022 - En cours',
@@ -78,7 +96,7 @@ export const projetsEcole = [
     description: 'Réalisation d\'un jeu de Stratego en Web, avec un système de score et de jeu multijoueur.',
     github: 'https://github.com/Projet-CIR2/projetWebCIR2',
     role: 'Développeur',
-    technologies: ['JavaScript', 'MySQL']
+    technologies: ['JavaScript', 'MySQL', "Node.Js"]
   },
   {
     titre: 'Simulation d\'un marathon',

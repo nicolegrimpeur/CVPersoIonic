@@ -7,7 +7,7 @@ export const projetsPerso = [
     github: 'https://github.com/nicolegrimpeur/Citations',
     url: '',
     playStore: '',
-    technologies: ['Ionic', 'Angular', 'Typescript']
+    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
   },
   {
     titre: 'Api Aurion',
@@ -36,22 +36,24 @@ export const projetsPerso = [
     sousTitre: 'Système de planning pour les résidences du All',
     date: 'Août 2021 - Aujourd\'hui',
     description: 'Réalisation d\'un site Web et d\'une application mobile pour les plannings des laveries des résidences ' +
-      'de l\'association All, tous les services de la vie étudiante.',
+      'de l\'association All, tous les services de la vie étudiante. Les étudiants peuvent alors s\'inscrire sur les plannings ' +
+      'des machines à laver, sèches linges et aspirateur de leur résidence, et les responsables de résidence peuvent les administrer.',
     github: 'https://github.com/nicolegrimpeur/Plannings',
     url: 'https://nicob.ovh/plannings',
     playStore: 'https://play.google.com/store/apps/details?id=plannings.ionic.all',
-    technologies: ['Ionic', 'Angular', 'Typescript']
+    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
   },
   {
     titre: 'All Résidences',
     sousTitre: 'Informations concernant les résidences du All',
     date: 'Juillet 2021 - Aujourd\'hui',
     description: 'Ensemble d\'informations pour les étudiants des résidences de l\'association ' +
-      'All, tous les services de la vie étudiante, avec un site Web ainsi qu\'une application Android.',
+      'All, tous les services de la vie étudiante, avec un site Web ainsi qu\'une application ' +
+      'Android disponible sur le Google Play Store.',
     github: 'https://github.com/nicolegrimpeur/appAll',
     url: 'https://nicob.ovh/all',
     playStore: 'https://play.google.com/store/apps/details?id=appAll.ionic.all',
-    technologies: ['Ionic', 'Angular', 'Typescript']
+    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
   },
   {
     titre: 'Site Saint-Omer',

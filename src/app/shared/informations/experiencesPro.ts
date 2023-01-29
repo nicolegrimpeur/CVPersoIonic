@@ -1,5 +1,17 @@
 export const experiencesPro = [
   {
+    titre: 'Stagiaire au Cyberlab de Thalès ',
+    entreprise: 'Thalès Belgique',
+    datesLieu: 'Mai 2023 - Juillet 2023 | Tubize, Belgique',
+    informations: [
+      'État de l\'art des logiciels de gestion des vulnérabilités',
+      'Création d\'une topologie de réseau virtuelle',
+      'Installation et configuration d\'un outil de gestion des vulnérabilités choisi',
+      'Mise en œuvre de différentes vulnérabilités',
+      'Test et vérification des capacités des vulnérabilités'
+    ]
+  },
+  {
     titre: 'Serveur dans un hôtel 4 étoiles',
     entreprise: 'Miramonte Hotel',
     datesLieu: 'Juillet 2022 - Aout 2022 | Bad Gastein, Autriche',

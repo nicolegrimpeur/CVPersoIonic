@@ -2,7 +2,7 @@ export const projetsEcole = [
   {
     titre: 'Snort',
     sousTitre: 'Projet de 4ème année',
-    date: 'Janvier 2023 - En cours',
+    date: 'Janvier 2023 - Mars 2023',
     description: 'Mise en place d\'un système de détection d\'intrusion avec Snort.',
     github: '',
     role: '',
@@ -11,7 +11,7 @@ export const projetsEcole = [
   {
     titre: 'Proxy HTTP d\'authentification',
     sousTitre: 'Projet de programmation réseau',
-    date: 'Janvier 2023 - En cours',
+    date: 'Janvier 2023 - Mars 2023',
     description: 'Réalisation d\'un proxy HTTP d\'authentification en C.',
     github: '',
     role: '',

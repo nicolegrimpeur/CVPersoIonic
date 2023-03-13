@@ -7,22 +7,14 @@ import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 
-import {MatomoModule} from 'ngx-matomo';
+import {NgxMatomoTrackerModule} from '@ngx-matomo/tracker';
+import {NgxMatomoRouterModule} from '@ngx-matomo/router';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    MatomoModule.forRoot({
-      trackers: [
-        {
-          trackerUrl: 'https://nicob.ovh/matomo/',
-          siteId: 3,
-        }
-      ],
-      routeTracking: {
-        enable: true,
-      }
-    })],
+    NgxMatomoTrackerModule.forRoot({ trackerUrl: 'https://nicob.ovh/matomo/', siteId: '3' }),
+    NgxMatomoRouterModule,],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent]
 })

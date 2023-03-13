@@ -7,7 +7,7 @@ export const certificats = [
   },
   {
     nomLogo: 'voltaire',
-    description: 'Certificat Voltaire, niveau Professionnel',
+    description: 'Certificat Voltaire, niveau professionnel',
     date: '2019',
     site: 'https://mon.certificat-voltaire.fr/verification-certificat?code=KCPDF9'
   },

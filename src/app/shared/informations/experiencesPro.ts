@@ -4,11 +4,11 @@ export const experiencesPro = [
     entreprise: 'Thalès Belgique',
     datesLieu: 'Mai 2023 - Juillet 2023 | Tubize, Belgique',
     informations: [
-      'État de l\'art des logiciels de gestion des vulnérabilités',
+      'État de l\'art des logiciels de gestion de vulnérabilités',
       'Création d\'une topologie de réseau virtuel',
-      'Installation et configuration d\'un outil de gestion des vulnérabilités choisi',
+      'Installation et configuration d\'un outil de gestion de vulnérabilités',
       'Mise en œuvre de différentes vulnérabilités',
-      'Test et vérification des capacités des outils de gestion des vulnérabilités'
+      'Test et vérification des capacités des outils de gestion de vulnérabilités'
     ]
   },
   {

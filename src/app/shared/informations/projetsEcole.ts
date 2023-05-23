@@ -1,5 +1,15 @@
 export const projetsEcole = [
   {
+    titre: 'Réalisation d\'une investigation Forensic',
+    sousTitre: 'Cours de Forensic',
+    date: 'Mars 2023',
+    description: 'Réalisation d\'une investigation à partir d\'une image de clé USB et d\'une capture réseau, ' +
+      'avec par la suite la réalisation d\'un rapport complet.',
+    github: '',
+    role: '',
+    technologies: ['VirtualBox', 'Kali Linux']
+  },
+  {
     titre: 'Snort',
     sousTitre: 'Projet de 4ème année',
     date: 'Janvier 2023 - Mars 2023',
@@ -98,7 +108,7 @@ export const projetsEcole = [
     description: 'Réalisation d\'un jeu de Stratego en Web, avec un système de score et de jeu multijoueur.',
     github: 'https://github.com/Projet-CIR2/projetWebCIR2',
     role: 'Développeur',
-    technologies: ['JavaScript', 'MySQL', "Node.Js"]
+    technologies: ['JavaScript', 'MySQL', 'Node.Js']
   },
   {
     titre: 'Simulation d\'un marathon',

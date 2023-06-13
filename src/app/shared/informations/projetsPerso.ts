@@ -5,7 +5,7 @@ export const projetsPerso = [
     date: 'Octobre 2022',
     description: 'Réalisation d\'un site et d\'une application mobile permettant le partage de citations entre amis.',
     github: 'https://github.com/nicolegrimpeur/Citations',
-    url: '',
+    url: 'https://nicob.ovh/citations',
     playStore: '',
     technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
   },
@@ -14,7 +14,7 @@ export const projetsPerso = [
     sousTitre: 'Api permettant d\'importer les plannings de cours de l\'ISEN',
     date: 'Avril 2022 - Aujourd\'hui',
     description: 'Création d\'une Api permettant d\'automatiser l\'importation de plannings de cours de l\'ISEN Lille ' +
-      'sur des calendriers personnels',
+      'sur des calendriers personnels.',
     github: 'https://github.com/nicolegrimpeur/apiAurion',
     url: '',
     playStore: '',
@@ -59,7 +59,7 @@ export const projetsPerso = [
     titre: 'Site Saint-Omer',
     sousTitre: 'Informations concernant la résidence',
     date: '2019 - 2020',
-    description: 'Site regroupant de nombreuses informations sur la résidence Saint-Omer dans laquelle j\'étais responsable',
+    description: 'Site regroupant de nombreuses informations sur la résidence Saint-Omer dans laquelle j\'étais responsable.',
     github: 'https://github.com/nicolegrimpeur/Site-STO',
     url: 'https://nicob.ovh/old/',
     playStore: '',
@@ -70,7 +70,7 @@ export const projetsPerso = [
     sousTitre: 'Serveur personnel sur Raspberry Pi',
     date: 'Novembre 2019 - Aujourd\'hui',
     description: 'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
-      'et Api pour mes différents projets, personnels et écoles.',
+      'et Api pour mes différents projets personnels et écoles.',
     github: '',
     url: '',
     playStore: '',

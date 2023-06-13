@@ -31,9 +31,9 @@ export const projetsEcole = [
     titre: 'Serveroo',
     sousTitre: 'Projet de 4ème année',
     date: 'Décembre 2022 - En cours',
-    description: 'L\'objectif de ce projet est la création d\'un service de location de serveurs à bas prix.' +
-      'Nous avons pour cela besoin de créer un site Web et une application mobile permettant de louer et gérer ses services.' +
-      'Ce site doit être relié à une API REST pour la gestion des utilisateurs et des services Kubernetes.',
+    description: 'L\'objectif de ce projet est la création d\'un service de location de serveurs à bas prix. ' +
+      'Nous avons pour cela eu besoin de créer un site Web et une application mobile permettant de louer et gérer ses services. ' +
+      'Ce site dû de plus être relié à une API REST pour la gestion des utilisateurs et des services Kubernetes.',
     github: 'https://github.com/ISEN-Projet-M1',
     role: 'Tech lead',
     technologies: ['Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Kubernetes']
@@ -53,7 +53,7 @@ export const projetsEcole = [
     date: 'Mai / Juin 2022',
     description: 'Réalisation d\'un capteur de température et d\'humidité envoyant ses données à une station mère. ' +
       'Nous avons pour cela choisis nos composants, réalisé la carte électronique, ' +
-      'mais aussi écris le code permettant de récupérer les données du capteurs pour l\'envoyer à la station mère',
+      'mais aussi écris le code permettant de récupérer les données du capteur pour l\'envoyer à la station mère',
     github: 'https://github.com/nicolegrimpeur/Elec_TempHum',
     role: 'Chef de projet',
     technologies: ['C', 'LoRa', 'Microcontrôleur']
@@ -62,9 +62,9 @@ export const projetsEcole = [
     titre: 'Mmhhhhh Resto !\n',
     sousTitre: 'Projet de Java',
     date: 'Avril / Mai 2022',
-    description: 'Réalisation d\'un système de gestion d\'un restaurant en Java avec interface graphiques.\n' +
+    description: 'Réalisation d\'un système de gestion d\'un restaurant en Java avec interface graphique.\n' +
       'Le serveur peut avec prendre les commandes des clients, passant la commande automatiquement en cuisine et au bar, ' +
-      'qui peuvent alors marquer quand la commande est servi. Un système de facturation est de plus disponible.',
+      'qui peuvent alors marquer quand la commande est prête à être servi. Un système de facturation est de plus disponible.',
     github: 'https://github.com/nicolegrimpeur/ProjetJava',
     role: 'Chef de projet',
     technologies: ['Java']
@@ -95,7 +95,7 @@ export const projetsEcole = [
     sousTitre: 'CIRious Game de deuxième année sur le thème de la maison intelligente',
     date: 'Avril / Mai 2021',
     description: 'Création d\'un jeu Web ayant pour objectif de sensibiliser à la sécurité et l\'impact environmental des objets connectés. \n' +
-      'L\'objectif du jeu est de réussir à équilibrer les équipements avec leur impact environnement, et leur consommation, ' +
+      'L\'objectif du jeu est de réussir à équilibrer les équipements avec leur impact environnemental, et leur consommation, ' +
       'tout en les maintenant à jour pour corriger des failles de sécurité.',
     github: 'https://github.com/Projet-CIR2/smartHome',
     role: 'Tech lead',

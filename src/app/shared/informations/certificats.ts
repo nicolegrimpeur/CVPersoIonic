@@ -1,5 +1,11 @@
 export const certificats = [
   {
+    nomLogo: 'udemy',
+    description: 'ISO 27001 : Systèmes de management de la sécurité des informations',
+    date: '2023',
+    site: 'https://ude.my/UC-ccec1821-7c30-49c1-adc1-4fe54cef94f2'
+  },
+  {
     nomLogo: 'cambridge',
     description: 'Cambridge First Certificate, score moyen 168',
     date: '2021',

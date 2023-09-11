@@ -6,7 +6,7 @@ export const formations = [
     lieu: 'Lille',
     description : [
       'Préparation au diplôme d’ingénieur',
-      'Cycle ingénieur deuxième année spécialité Informatique, Réseaux et Cybersécurité'
+      'Cycle ingénieur troisième année spécialité Informatique, Réseaux et Cybersécurité'
     ],
     url: 'https://www.junia.com/fr/formations-admissions/nos-domaines/numerique/domaine-cybersecurite/'
   },

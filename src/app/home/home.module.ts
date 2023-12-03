@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {FormsModule} from '@angular/forms';
@@ -8,7 +8,6 @@ import {HomePageRoutingModule} from './home-routing.module';
 import {AccueilComponent} from '../shared/component/accueil/accueil.component';
 import {ContactComponent} from '../shared/component/contact/contact.component';
 
-import {SwiperModule} from 'swiper/angular';
 import {MenuComponent} from '../shared/component/menu/menu.component';
 import {HeaderComponent} from '../shared/component/header/header.component';
 import {CreditsComponent} from '../shared/component/credits/credits.component';
@@ -26,10 +25,10 @@ import {CompetencesComponent} from '../shared/component/content/competences/comp
         FormsModule,
         IonicModule,
         HomePageRoutingModule,
-        SwiperModule,
         NgOptimizedImage
     ],
-  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent, LoisirsComponent, FormationComponent, CertificatsComponent, ExperiencesComponent, ProjetsComponent, CompetencesComponent]
+  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent, LoisirsComponent, FormationComponent, CertificatsComponent, ExperiencesComponent, ProjetsComponent, CompetencesComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {
 }

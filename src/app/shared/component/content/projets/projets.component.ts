@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {projetsPerso} from '../../../informations/projetsPerso';
 import {projetsEcole} from '../../../informations/projetsEcole';
-import {SwiperComponent} from 'swiper/angular';
 import {Platform} from '@ionic/angular';
 import {Network} from '@capacitor/network';
 import * as icons from 'simple-icons';
@@ -12,8 +11,8 @@ import * as icons from 'simple-icons';
   styleUrls: ['./projets.component.scss'],
 })
 export class ProjetsComponent implements AfterViewInit {
-  @ViewChild('swiperProjetsEcole') swiperProjetsEcole: SwiperComponent;
-  @ViewChild('swiperProjetsPerso') swiperProjetsPerso: SwiperComponent;
+  @ViewChild('swiperProjetsEcole') swiperProjetsEcole: any;
+  @ViewChild('swiperProjetsPerso') swiperProjetsPerso: any;
 
   public projetsPerso = projetsPerso;
   public projetsEcole = projetsEcole;

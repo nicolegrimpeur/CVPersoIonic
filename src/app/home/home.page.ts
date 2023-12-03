@@ -1,8 +1,5 @@
 import {Component} from '@angular/core';
 import {AnimationController, Platform} from '@ionic/angular';
-import SwiperCore, {Pagination, Navigation, Autoplay} from 'swiper';
-
-SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 @Component({
   selector: 'app-home',

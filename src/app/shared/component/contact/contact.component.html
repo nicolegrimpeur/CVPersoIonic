@@ -7,11 +7,11 @@
     <ion-grid>
       <ion-row>
         <ion-col *ngFor="let carte of contact" size="12" size-sm="6" size-lg="4" size-xl="2.4">
-          <ion-card class="info">
-            <ion-card-header class="center">
+          <ion-card class="info ion-text-center">
+            <ion-card-header>
               <ion-card-title>{{carte.text}}</ion-card-title>
             </ion-card-header>
-            <ion-card-content class="center">
+            <ion-card-content>
               <h5 *ngIf="testMailOrTel(carte.text)"
                   (click)="click($event, carte.info)">
                 Cliquez pour voir les informations

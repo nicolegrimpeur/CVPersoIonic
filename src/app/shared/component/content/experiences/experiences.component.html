@@ -3,13 +3,13 @@
     <ion-card-title class="title">Mes expériences professionnelles</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <swiper
-      [config]="slideOptsExperiences"
-      [pagination]="true"
-      [navigation]="platform.is('desktop')"
-      #swiperExperiencesPro>
-      <ng-template swiperSlide *ngFor="let experience of experiencesPro">
-        <ion-card class="no_box">
+    <swiper-container
+      [slidesPerView]="platform.is('desktop') ? 2 : 1"
+      [pagination]="{clickable: true}"
+      [navigation]="platform.is('desktop') ? {} : undefined"
+      [autoplay]="{delay: 2500, disableOnInteraction: true}">
+      <swiper-slide *ngFor="let experience of experiencesPro">
+        <ion-card class="no_box ion-text-center">
           <ion-header>
             <ion-card-title>{{experience.titre}}</ion-card-title>
             <ion-card-subtitle class="ion-text-wrap">
@@ -21,7 +21,7 @@
             <p *ngFor="let information of experience.informations">{{information}}</p>
           </ion-card-content>
         </ion-card>
-      </ng-template>
-    </swiper>
+      </swiper-slide>
+    </swiper-container>
   </ion-card-content>
 </ion-card>

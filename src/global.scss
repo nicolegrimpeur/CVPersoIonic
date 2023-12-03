@@ -10,20 +10,20 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import "@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
 
 /* Pour les slides */
 @import 'swiper/scss';
@@ -32,20 +32,20 @@
 @import 'swiper/scss/autoplay';
 @import '@ionic/angular/css/ionic-swiper';
 
-ion-card > .header-md::after {
-  background-image: linear-gradient(
-      rgba(210, 106, 101, 0.5),
-      rgba(210, 106, 101, 0)
-  );
+ion-card > .header-md {
+  box-shadow:
+    rgb(210 106 101 / 20%) 0 3px 1px -2px,
+    rgb(210 106 101 / 0) 0 2px 2px 0px,
+    rgb(210 106 101 / 0) 0 1px 5px 0px !important;
   width: 90%;
   margin: auto 5%;
 }
 
-.header-md::after {
-  background-image: linear-gradient(
-      rgba(210, 106, 101, 0.5),
-      rgba(210, 106, 101, 0)
-  );
+.header-md {
+  box-shadow:
+    rgb(210 106 101 / 20%) 0 3px 1px -2px,
+    rgb(210 106 101 / 14%) 0 2px 2px 0px,
+    rgb(210 106 101 / 12%) 0 1px 5px 0px !important;
 }
 
 ion-card {
@@ -61,7 +61,14 @@ ion-card {
   font-size: 2rem;
 }
 
-.swiper {
-  --bullet-background-active: var(--ion-color-primary);
-  --swiper-navigation-color: var(--ion-color-primary);
+swiper-container::part(bullet-active) {
+  background-color: var(--ion-color-primary);
+}
+
+swiper-container::part(button-prev) {
+  color: var(--ion-color-primary);
+}
+
+swiper-container::part(button-next) {
+  color: var(--ion-color-primary);
 }

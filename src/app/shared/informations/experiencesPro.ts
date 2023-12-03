@@ -1,5 +1,13 @@
 export const experiencesPro = [
   {
+    titre: 'Ingénieur en sécurité informatique',
+    entreprise: 'Maxxing',
+    datesLieu: 'Septembre 2023 - Aujourd\'hui | Marcq-en-Barœul',
+    informations: [
+      'En contrat de professionnalisation d\'un an',
+    ]
+  },
+  {
     titre: 'Stagiaire au Cyberlab de Thalès ',
     entreprise: 'Thalès Belgique',
     datesLieu: 'Mai 2023 - Juillet 2023 | Tubize, Belgique',

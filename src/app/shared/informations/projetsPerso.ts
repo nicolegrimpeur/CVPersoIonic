@@ -1,7 +1,17 @@
 export const projetsPerso = [
   {
+    titre: 'Timmeer',
+    sousTitre: 'Site de timers pour de la gestion de parole lors de débats',
+    date: 'Octobre 2023',
+    description: 'Réalisation d\'un site permettant de gérer des timers pour de la gestion de parole lors de débats, dans le cadre du cours sur la mondialisation.',
+    github: 'https://github.com/nicolegrimpeur/timmeer',
+    url: 'https://nicob.ovh/timmeer',
+    playStore: '',
+    technologies: ['Ionic', 'Angular', 'Typescript']
+  },
+  {
     titre: 'Citations',
-    sousTitre: 'Site pour publier des citations hors contexte entre amis',
+    sousTitre: 'Site et application pour publier des citations hors contexte entre amis',
     date: 'Octobre 2022',
     description: 'Réalisation d\'un site et d\'une application mobile permettant le partage de citations entre amis.',
     github: 'https://github.com/nicolegrimpeur/Citations',

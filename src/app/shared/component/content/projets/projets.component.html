@@ -11,13 +11,13 @@
             <ion-card-title>Projets avec l'école ISEN Lille</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <swiper
+            <swiper-container
               [loop]="true"
-              [pagination]="true"
-              [navigation]="platform.is('desktop')"
-              #swiperProjetsEcole>
-              <ng-template swiperSlide *ngFor="let projet of projetsEcole">
-                <ion-card class="no_box">
+              [pagination]="{clickable: true}"
+              [navigation]="platform.is('desktop') ? {} : undefined"
+              [autoplay]="platform.is('desktop') ? {delay: 3000, disableOnInteraction: false} : undefined">
+              <swiper-slide *ngFor="let projet of projetsEcole">
+                <ion-card class="no_box ion-text-center">
                   <ion-header>
                     <ion-card-title>{{projet.titre}}</ion-card-title>
                     <ion-card-subtitle style="margin: 0 10px">{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
@@ -40,8 +40,8 @@
                     </ion-button>
                   </ion-card-content>
                 </ion-card>
-              </ng-template>
-            </swiper>
+              </swiper-slide>
+            </swiper-container>
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -51,13 +51,13 @@
             <ion-card-title>Projets personnels</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <swiper
+            <swiper-container
               [loop]="true"
-              [pagination]="true"
-              [navigation]="platform.is('desktop')"
-              #swiperProjetsPerso>
-              <ng-template swiperSlide *ngFor="let projet of projetsPerso">
-                <ion-card class="no_box">
+              [pagination]="{clickable: true}"
+              [navigation]="platform.is('desktop') ? {} : undefined"
+              [autoplay]="platform.is('desktop') ? {delay: 3000, disableOnInteraction: false} : undefined">
+              <swiper-slide *ngFor="let projet of projetsPerso">
+                <ion-card class="no_box ion-text-center">
                   <ion-header>
                     <ion-card-title>{{projet.titre}}</ion-card-title>
                     <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
@@ -90,8 +90,8 @@
                     </ion-button>
                   </ion-card-content>
                 </ion-card>
-              </ng-template>
-            </swiper>
+              </swiper-slide>
+            </swiper-container>
           </ion-card-content>
         </ion-card>
       </ion-col>

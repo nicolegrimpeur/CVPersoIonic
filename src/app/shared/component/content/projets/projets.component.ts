@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {projetsPerso} from '../../../informations/projetsPerso';
 import {projetsEcole} from '../../../informations/projetsEcole';
 import {Platform} from '@ionic/angular';
@@ -11,9 +11,6 @@ import * as icons from 'simple-icons';
   styleUrls: ['./projets.component.scss'],
 })
 export class ProjetsComponent implements AfterViewInit {
-  @ViewChild('swiperProjetsEcole') swiperProjetsEcole: any;
-  @ViewChild('swiperProjetsPerso') swiperProjetsPerso: any;
-
   public projetsPerso = projetsPerso;
   public projetsEcole = projetsEcole;
   public afficheTechnologies = false;
@@ -28,11 +25,6 @@ export class ProjetsComponent implements AfterViewInit {
           this.afficheTechnologies = true;
         }
       });
-
-    this.swiperProjetsEcole.swiperRef.autoplay.start();
-    this.swiperProjetsEcole.swiperRef.autoplay.running = true;
-    this.swiperProjetsPerso.swiperRef.autoplay.start();
-    this.swiperProjetsPerso.swiperRef.autoplay.running = true;
   }
 
   // permet d'obtenir le long d'un logo à partir de son nom

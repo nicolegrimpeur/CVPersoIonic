@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import {projetsPerso} from '../../../informations/projetsPerso';
 import {projetsEcole} from '../../../informations/projetsEcole';
 import {Platform} from '@ionic/angular';
@@ -11,6 +11,8 @@ import * as icons from 'simple-icons';
   styleUrls: ['./projets.component.scss'],
 })
 export class ProjetsComponent implements AfterViewInit {
+  @Input() public isDesktop !: boolean;
+
   public projetsPerso = projetsPerso;
   public projetsEcole = projetsEcole;
   public afficheTechnologies = false;

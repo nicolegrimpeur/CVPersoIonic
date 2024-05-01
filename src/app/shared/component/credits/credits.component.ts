@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Platform} from '@ionic/angular';
 
 @Component({
@@ -6,10 +6,8 @@ import {Platform} from '@ionic/angular';
   templateUrl: './credits.component.html',
   styleUrls: ['./credits.component.scss'],
 })
-export class CreditsComponent implements OnInit {
+export class CreditsComponent {
 
   constructor(public platform: Platform) { }
-
-  ngOnInit() {}
 
 }

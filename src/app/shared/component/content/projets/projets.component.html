@@ -12,10 +12,9 @@
           </ion-card-header>
           <ion-card-content>
             <swiper-container
-              [loop]="true"
+              [navigation]="isDesktop ? {} : undefined"
               [pagination]="{clickable: true}"
-              [navigation]="platform.is('desktop') ? {} : undefined"
-              [autoplay]="platform.is('desktop') ? {delay: 3000, disableOnInteraction: false} : undefined">
+            >
               <swiper-slide *ngFor="let projet of projetsEcole">
                 <ion-card class="no_box ion-text-center">
                   <ion-header>
@@ -52,10 +51,9 @@
           </ion-card-header>
           <ion-card-content>
             <swiper-container
-              [loop]="true"
+              [navigation]="isDesktop ? {} : undefined"
               [pagination]="{clickable: true}"
-              [navigation]="platform.is('desktop') ? {} : undefined"
-              [autoplay]="platform.is('desktop') ? {delay: 3000, disableOnInteraction: false} : undefined">
+            >
               <swiper-slide *ngFor="let projet of projetsPerso">
                 <ion-card class="no_box ion-text-center">
                   <ion-header>

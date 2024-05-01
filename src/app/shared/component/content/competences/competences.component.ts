@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {competences} from '../../../informations/competences';
 
 @Component({
@@ -6,11 +6,9 @@ import {competences} from '../../../informations/competences';
   templateUrl: './competences.component.html',
   styleUrls: ['./competences.component.scss'],
 })
-export class CompetencesComponent implements OnInit {
+export class CompetencesComponent {
   public competences = competences;
 
   constructor() { }
-
-  ngOnInit() {}
 
 }

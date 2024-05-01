@@ -8,6 +8,7 @@ import {AnimationController, Platform} from '@ionic/angular';
 })
 export class HomePage {
   public afficheNom = false;
+  public isDesktop = this.platform.is('desktop');
 
   constructor(
     public platform: Platform,

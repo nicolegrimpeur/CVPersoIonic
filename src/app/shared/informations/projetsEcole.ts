@@ -1,5 +1,16 @@
 export const projetsEcole = [
   {
+    titre: 'Serveroo',
+    sousTitre: 'Projet de 4ème et 5ème année',
+    date: 'Décembre 2022 - En cours',
+    description: 'L\'objectif de ce projet est la création d\'un service de location de serveurs à bas prix. ' +
+      'Nous avons pour cela eu besoin de créer un site Web et une application mobile permettant de louer et gérer ses services. ' +
+      'Ce site dû de plus être relié à une API REST pour la gestion des utilisateurs et des services Kubernetes.',
+    github: 'https://github.com/ISEN-Projet-M1',
+    role: 'Tech lead',
+    technologies: ['Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Kubernetes']
+  },
+  {
     titre: 'Réalisation d\'une investigation Forensic',
     sousTitre: 'Cours de Forensic',
     date: 'Mars 2023',
@@ -26,17 +37,6 @@ export const projetsEcole = [
     github: '',
     role: '',
     technologies: ['C', 'Visual Studio Code', 'Linux']
-  },
-  {
-    titre: 'Serveroo',
-    sousTitre: 'Projet de 4ème année',
-    date: 'Décembre 2022 - En cours',
-    description: 'L\'objectif de ce projet est la création d\'un service de location de serveurs à bas prix. ' +
-      'Nous avons pour cela eu besoin de créer un site Web et une application mobile permettant de louer et gérer ses services. ' +
-      'Ce site dû de plus être relié à une API REST pour la gestion des utilisateurs et des services Kubernetes.',
-    github: 'https://github.com/ISEN-Projet-M1',
-    role: 'Tech lead',
-    technologies: ['Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Kubernetes']
   },
   {
     titre: 'Python',

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {Component} from '@angular/core';
 import {contact} from '../../informations/contact';
 
 @Component({
@@ -6,14 +6,11 @@ import {contact} from '../../informations/contact';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
-export class ContactComponent implements AfterViewInit {
+export class ContactComponent {
   public contact = contact;
   public affiche = [];
 
   constructor() {
-  }
-
-  ngAfterViewInit() {
   }
 
   testMailOrTel(texte: string) {

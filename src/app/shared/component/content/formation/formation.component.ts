@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {formations} from '../../../informations/formations';
 
 @Component({
@@ -6,11 +6,10 @@ import {formations} from '../../../informations/formations';
   templateUrl: './formation.component.html',
   styleUrls: ['./formation.component.scss'],
 })
-export class FormationComponent implements OnInit {
+export class FormationComponent {
   public formations = formations;
 
-  constructor() { }
-
-  ngOnInit() {}
+  constructor() {
+  }
 
 }

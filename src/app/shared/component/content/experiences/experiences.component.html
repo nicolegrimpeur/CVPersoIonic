@@ -4,11 +4,10 @@
   </ion-card-header>
   <ion-card-content>
     <swiper-container
-      [loop]="true"
-      [slidesPerView]="platform.is('desktop') ? 2 : 1"
+      [navigation]="isDesktop ? {} : undefined"
+      [slidesPerView]="isDesktop ? 2 : 1"
       [pagination]="{clickable: true}"
-      [navigation]="platform.is('desktop') ? {} : undefined"
-      [autoplay]="platform.is('desktop') ? {delay: 3000, disableOnInteraction: false} : undefined">
+      >
       <swiper-slide *ngFor="let experience of experiencesPro">
         <ion-card class="no_box ion-text-center">
           <ion-header>

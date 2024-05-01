@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {loisirs} from '../../../informations/loisirs';
 
 @Component({
@@ -6,13 +6,10 @@ import {loisirs} from '../../../informations/loisirs';
   templateUrl: './loisirs.component.html',
   styleUrls: ['./loisirs.component.scss'],
 })
-export class LoisirsComponent implements OnInit {
+export class LoisirsComponent {
   public loisirs = loisirs;
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
 }

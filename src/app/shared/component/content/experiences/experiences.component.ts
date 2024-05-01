@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {experiencesPro} from '../../../informations/experiencesPro';
 import {Platform} from '@ionic/angular';
 
@@ -9,6 +9,8 @@ import {Platform} from '@ionic/angular';
   styleUrls: ['./experiences.component.scss'],
 })
 export class ExperiencesComponent {
+  @Input() public isDesktop !: boolean;
+
   public experiencesPro = experiencesPro;
 
   constructor(public platform: Platform) {

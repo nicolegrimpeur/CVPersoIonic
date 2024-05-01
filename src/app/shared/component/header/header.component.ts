@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
 import {AnimationController, Platform} from '@ionic/angular';
 
 @Component({
@@ -6,14 +6,11 @@ import {AnimationController, Platform} from '@ionic/angular';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit, OnChanges {
+export class HeaderComponent implements OnChanges {
   @Input() public afficheNom: boolean;
 
   constructor(public platform: Platform,
               private animation: AnimationController) {
-  }
-
-  ngOnInit() {
   }
 
   ngOnChanges() {

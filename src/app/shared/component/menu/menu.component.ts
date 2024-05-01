@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Platform} from '@ionic/angular';
 
 @Component({
@@ -6,13 +6,10 @@ import {Platform} from '@ionic/angular';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent implements OnInit {
-  @ViewChild('menu') menu;
+export class MenuComponent {
+  @ViewChild('menu') menu: { el: { close: () => void; }; };
 
   constructor(public platform: Platform) {
-  }
-
-  ngOnInit() {
   }
 
   goTo(nom: string) {

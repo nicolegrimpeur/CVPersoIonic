@@ -4,15 +4,19 @@
   height: 82vh;
 }
 
-.div_fleche {
+#div_fleche {
   height: 10vh;
   display: flex;
   justify-content: center;
 }
 
-.fleche {
+#fleche {
   width: 47px;
   height: 50px;
+}
+
+#fleche:hover {
+  cursor: pointer;
 }
 
 section {

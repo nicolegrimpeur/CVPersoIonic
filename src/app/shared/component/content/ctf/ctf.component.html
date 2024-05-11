@@ -1,0 +1,16 @@
+<ion-card id="ctf">
+  <ion-card-header>
+    <ion-card-title class="title">CTF</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let ctf of ctfs; let last = last" [lines]="last ? 'none' : undefined">
+        <ion-thumbnail slot="start">
+          <img alt="Logo {{ctf.nomLogo}}" src="assets/ctf/{{ctf.nomLogo}}.png"/>
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap" (click)="openUrl(ctf.site)">{{ctf.description}}
+          | {{ctf.date}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

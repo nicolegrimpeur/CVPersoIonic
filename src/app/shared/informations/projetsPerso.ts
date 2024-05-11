@@ -1,5 +1,43 @@
 export const projetsPerso = [
   {
+    titre: 'Serveur personnel',
+    sousTitre: 'Serveur personnel sur Raspberry Pi',
+    date: 'Novembre 2020 - Aujourd\'hui',
+    description: 'En production, mises à jour et sécurités continues. ' +
+      'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
+      'et Api pour mes différents projets personnels et écoles.',
+    github: '',
+    url: '',
+    playStore: '',
+    technologies: ['Ubuntu', 'Node.Js', 'Nginx', 'MySql', 'OpenSSL', 'Grafana', 'Matomo']
+  },
+  {
+    titre: 'All Plannings',
+    sousTitre: 'Système de planning pour les résidences du All',
+    date: 'Août 2021 - Aujourd\'hui',
+    description: 'En production, montée de version des frameworks utilisés. ' +
+      'Réalisation d\'un site Web et d\'une application mobile pour les plannings des laveries des résidences ' +
+      'de l\'association All, tous les services de la vie étudiante. Les étudiants peuvent alors s\'inscrire sur les plannings ' +
+      'des machines à laver, sèches linges et aspirateur de leur résidence, et les responsables de résidence peuvent les administrer.',
+    github: 'https://github.com/nicolegrimpeur/Plannings',
+    url: 'https://nicob.ovh/plannings',
+    playStore: 'https://play.google.com/store/apps/details?id=plannings.ionic.all',
+    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio', 'Firebase']
+  },
+  {
+    titre: 'All Résidences',
+    sousTitre: 'Informations concernant les résidences du All',
+    date: 'Juillet 2021 - Aujourd\'hui',
+    description: 'En production, montée de version des frameworks utilisés. ' +
+      'Ensemble d\'informations pour les étudiants des résidences de l\'association ' +
+      'All, tous les services de la vie étudiante, avec un site Web ainsi qu\'une application ' +
+      'Android disponible sur le Google Play Store.',
+    github: 'https://github.com/nicolegrimpeur/appAll',
+    url: 'https://nicob.ovh/all',
+    playStore: 'https://play.google.com/store/apps/details?id=appAll.ionic.all',
+    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
+  },
+  {
     titre: 'Timmeer',
     sousTitre: 'Site de timers pour de la gestion de parole lors de débats',
     date: 'Octobre 2023',
@@ -32,7 +70,7 @@ export const projetsPerso = [
   },
   {
     titre: 'Interface App All',
-    sousTitre: 'Interface pour modifier les informations sur site All Résidences',
+    sousTitre: 'Interface pour modifier les informations sur le site All Résidences',
     date: 'Octobre 2021 - Août 2022',
     description: 'Création d\'un site permettant la modification par les responsables de résidence ' +
       'des informations présentes sur le site All Résidences.',
@@ -40,30 +78,6 @@ export const projetsPerso = [
     url: '',
     playStore: '',
     technologies: ['Ionic', 'Angular', 'Typescript']
-  },
-  {
-    titre: 'All Plannings',
-    sousTitre: 'Système de planning pour les résidences du All',
-    date: 'Août 2021 - Aujourd\'hui',
-    description: 'Réalisation d\'un site Web et d\'une application mobile pour les plannings des laveries des résidences ' +
-      'de l\'association All, tous les services de la vie étudiante. Les étudiants peuvent alors s\'inscrire sur les plannings ' +
-      'des machines à laver, sèches linges et aspirateur de leur résidence, et les responsables de résidence peuvent les administrer.',
-    github: 'https://github.com/nicolegrimpeur/Plannings',
-    url: 'https://nicob.ovh/plannings',
-    playStore: 'https://play.google.com/store/apps/details?id=plannings.ionic.all',
-    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
-  },
-  {
-    titre: 'All Résidences',
-    sousTitre: 'Informations concernant les résidences du All',
-    date: 'Juillet 2021 - Aujourd\'hui',
-    description: 'Ensemble d\'informations pour les étudiants des résidences de l\'association ' +
-      'All, tous les services de la vie étudiante, avec un site Web ainsi qu\'une application ' +
-      'Android disponible sur le Google Play Store.',
-    github: 'https://github.com/nicolegrimpeur/appAll',
-    url: 'https://nicob.ovh/all',
-    playStore: 'https://play.google.com/store/apps/details?id=appAll.ionic.all',
-    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
   },
   {
     titre: 'Site Saint-Omer',
@@ -74,16 +88,5 @@ export const projetsPerso = [
     url: 'https://nicob.ovh/old/',
     playStore: '',
     technologies: ['Angular', 'Typescript']
-  },
-  {
-    titre: 'Serveur personnel',
-    sousTitre: 'Serveur personnel sur Raspberry Pi',
-    date: 'Novembre 2019 - Aujourd\'hui',
-    description: 'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
-      'et Api pour mes différents projets personnels et écoles.',
-    github: '',
-    url: '',
-    playStore: '',
-    technologies: ['Ubuntu', 'Node.Js', 'Nginx', 'MySql', 'OpenSSL']
   },
 ];

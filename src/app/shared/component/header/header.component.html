@@ -2,7 +2,7 @@
   <ion-toolbar *ngIf="platform.is('desktop')">
     <ion-title color="primary" class="nom">Nicolas Barrat</ion-title>
     <ion-button slot="end" fill="clear" color="primary"
-                *ngFor="let item of ['formation', 'certificats', 'expériences', 'projets', 'compétences', 'loisirs', 'contact']"
+                *ngFor="let item of ['formation', 'certificats', 'expériences', 'projets', 'compétences', 'ctf', 'loisirs', 'contact']"
                 (click)="goTo(item)">
       {{item[0].toUpperCase() + item.slice(1, item.length)}}
     </ion-button>

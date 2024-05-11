@@ -17,17 +17,18 @@ import {CertificatsComponent} from '../shared/component/content/certificats/cert
 import {ExperiencesComponent} from '../shared/component/content/experiences/experiences.component';
 import {ProjetsComponent} from '../shared/component/content/projets/projets.component';
 import {CompetencesComponent} from '../shared/component/content/competences/competences.component';
+import {CtfComponent} from '../shared/component/content/ctf/ctf.component';
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        HomePageRoutingModule,
-        NgOptimizedImage
-    ],
-  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent, LoisirsComponent, FormationComponent, CertificatsComponent, ExperiencesComponent, ProjetsComponent, CompetencesComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule,
+    NgOptimizedImage
+  ],
+  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent, LoisirsComponent, FormationComponent, CertificatsComponent, ExperiencesComponent, ProjetsComponent, CtfComponent, CompetencesComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {

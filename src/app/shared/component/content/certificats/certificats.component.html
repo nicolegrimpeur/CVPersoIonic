@@ -6,7 +6,7 @@
     <ion-list>
       <ion-item *ngFor="let certificat of certificats; let last = last" [lines]="last ? 'none' : undefined">
         <ion-thumbnail slot="start">
-          <img alt="Logo {{certificat.nomLogo}}" src="assets/certificats/{{certificat.nomLogo}}.png"/>
+          <img alt="Logo {{certificat.nomLogo}}" ngSrc="assets/certificats/{{certificat.nomLogo}}.png" width="56" height="56"/>
         </ion-thumbnail>
         <ion-label class="ion-text-wrap" (click)="openUrl(certificat.site)">{{certificat.description}}
           | {{certificat.date}}</ion-label>

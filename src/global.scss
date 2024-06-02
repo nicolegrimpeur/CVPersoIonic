@@ -68,3 +68,7 @@ swiper-container::part(button-prev) {
 swiper-container::part(button-next) {
   color: var(--ion-color-primary);
 }
+
+.space-card-content {
+  margin: 0 11px;
+}

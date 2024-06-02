@@ -17,7 +17,7 @@
               {{experience.entreprise}}
             </ion-card-subtitle>
           </ion-header>
-          <ion-card-content>
+          <ion-card-content [class]="isDesktop ? 'space-card-content' : ''">
             <p *ngFor="let information of experience.informations">{{information}}</p>
           </ion-card-content>
         </ion-card>

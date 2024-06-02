@@ -1,0 +1,26 @@
+<ion-card id="technos">
+  <ion-card-header>
+    <ion-card-title class="title">Technologies manipulées</ion-card-title>
+    <ion-card-subtitle>Les plus importantes par secteur</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let techno of listeTechnos">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>{{ techno.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <img
+                class="technologie"
+                *ngFor="let technologie of techno.liste"
+                [src]="badge.getLink(technologie)"
+                alt="Logo {{technologie}}">
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

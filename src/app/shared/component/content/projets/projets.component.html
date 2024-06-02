@@ -21,14 +21,14 @@
                     <ion-card-subtitle style="margin: 0 10px">{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
                     <ion-card-subtitle *ngIf="projet.role !== ''">Rôle : {{projet.role}}</ion-card-subtitle>
                   </ion-header>
-                  <ion-card-content>
+                  <ion-card-content [class]="isDesktop ? 'space-card-content' : ''">
                     {{projet.description}}
                   </ion-card-content>
-                  <ion-card-content *ngIf="afficheTechnologies">
+                  <ion-card-content>
                     <img
                       class="technologie"
                       *ngFor="let technologie of projet.technologies"
-                      src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
+                      [src]="badge.getLink(technologie)"
                       alt="Logo {{technologie}}">
                     <br>
                     <ion-button *ngIf="projet.github !== ''"
@@ -59,14 +59,14 @@
                     <ion-card-title>{{projet.titre}}</ion-card-title>
                     <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
                   </ion-header>
-                  <ion-card-content>
+                  <ion-card-content [class]="isDesktop ? 'space-card-content' : ''">
                     {{projet.description}}
                   </ion-card-content>
-                  <ion-card-content *ngIf="afficheTechnologies">
+                  <ion-card-content>
                     <img
                       class="technologie"
                       *ngFor="let technologie of projet.technologies"
-                      src="https://img.shields.io/badge/{{technologie}}-{{getColorFromText(technologie)}}?logo={{getLogoFromText(technologie)}}&logoColor=white"
+                      [src]="badge.getLink(technologie)"
                       alt="Logo {{technologie}}">
                     <br>
                     <ion-button *ngIf="projet.github !== ''"

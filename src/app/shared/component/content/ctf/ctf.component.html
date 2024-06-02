@@ -6,7 +6,7 @@
     <ion-list>
       <ion-item *ngFor="let ctf of ctfs; let last = last" [lines]="last ? 'none' : undefined">
         <ion-thumbnail slot="start">
-          <img alt="Logo {{ctf.nomLogo}}" src="assets/ctf/{{ctf.nomLogo}}.png"/>
+          <img alt="Logo {{ctf.nomLogo}}" ngSrc="assets/ctf/{{ctf.nomLogo}}.png" width="56" height="56"/>
         </ion-thumbnail>
         <ion-label class="ion-text-wrap" (click)="openUrl(ctf.site)">{{ctf.description}}
           | {{ctf.date}}</ion-label>

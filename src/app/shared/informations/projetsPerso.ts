@@ -3,9 +3,9 @@ export const projetsPerso = [
     titre: 'Serveur personnel',
     sousTitre: 'Serveur personnel sur Raspberry Pi',
     date: 'Novembre 2020 - Aujourd\'hui',
-    description: 'En production, mises à jour et sécurités continues. ' +
-      'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
-      'et Api pour mes différents projets personnels et écoles.',
+    description: 'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
+      'et Api pour mes différents projets personnels et écoles. ' +
+      'En production, mises à jour et sécurités continues.',
     github: '',
     url: '',
     playStore: '',
@@ -15,10 +15,10 @@ export const projetsPerso = [
     titre: 'All Plannings',
     sousTitre: 'Système de planning pour les résidences du All',
     date: 'Août 2021 - Aujourd\'hui',
-    description: 'En production, montée de version des frameworks utilisés. ' +
-      'Réalisation d\'un site Web et d\'une application mobile pour les plannings des laveries des résidences ' +
+    description: 'Réalisation d\'un site Web et d\'une application mobile pour les plannings des laveries des résidences ' +
       'de l\'association All, tous les services de la vie étudiante. Les étudiants peuvent alors s\'inscrire sur les plannings ' +
-      'des machines à laver, sèches linges et aspirateur de leur résidence, et les responsables de résidence peuvent les administrer.',
+      'des machines à laver, sèches linges et aspirateur de leur résidence, et les responsables de résidence peuvent les administrer. ' +
+      'En production, montée de version des frameworks utilisés.',
     github: 'https://github.com/nicolegrimpeur/Plannings',
     url: 'https://nicob.ovh/plannings',
     playStore: 'https://play.google.com/store/apps/details?id=plannings.ionic.all',
@@ -28,10 +28,11 @@ export const projetsPerso = [
     titre: 'All Résidences',
     sousTitre: 'Informations concernant les résidences du All',
     date: 'Juillet 2021 - Aujourd\'hui',
-    description: 'En production, montée de version des frameworks utilisés. ' +
+    description:
       'Ensemble d\'informations pour les étudiants des résidences de l\'association ' +
       'All, tous les services de la vie étudiante, avec un site Web ainsi qu\'une application ' +
-      'Android disponible sur le Google Play Store.',
+      'Android disponible sur le Google Play Store. ' +
+      'En production, montée de version des frameworks utilisés.',
     github: 'https://github.com/nicolegrimpeur/appAll',
     url: 'https://nicob.ovh/all',
     playStore: 'https://play.google.com/store/apps/details?id=appAll.ionic.all',

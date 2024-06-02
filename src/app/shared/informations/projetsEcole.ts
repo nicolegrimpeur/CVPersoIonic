@@ -6,7 +6,7 @@ export const projetsEcole = [
     description: 'L\'objectif de ce projet est la création d\'un service de location de serveurs à bas prix. ' +
       'Nous avons pour cela eu besoin de créer un site Web et une application mobile permettant de louer et gérer ses services. ' +
       'Ce site dû de plus être relié à une API REST pour la gestion des utilisateurs et des services Kubernetes.',
-    github: 'https://github.com/ISEN-Projet-M1',
+    github: 'https://github.com/Serveroo',
     role: 'Tech lead',
     technologies: ['Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Kubernetes']
   },

@@ -18,6 +18,7 @@ import {ExperiencesComponent} from '../shared/component/content/experiences/expe
 import {ProjetsComponent} from '../shared/component/content/projets/projets.component';
 import {CompetencesComponent} from '../shared/component/content/competences/competences.component';
 import {CtfComponent} from '../shared/component/content/ctf/ctf.component';
+import {TechnosComponent} from "../shared/component/content/technos/technos.component";
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import {CtfComponent} from '../shared/component/content/ctf/ctf.component';
     HomePageRoutingModule,
     NgOptimizedImage
   ],
-  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent, LoisirsComponent, FormationComponent, CertificatsComponent, ExperiencesComponent, ProjetsComponent, CtfComponent, CompetencesComponent],
+  declarations: [HomePage, AccueilComponent, ContactComponent, MenuComponent, HeaderComponent, CreditsComponent, LoisirsComponent, FormationComponent, CertificatsComponent, ExperiencesComponent, ProjetsComponent, CtfComponent, CompetencesComponent, TechnosComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {

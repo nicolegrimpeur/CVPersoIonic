@@ -3,12 +3,11 @@ export const projetsEcole = [
     titre: 'Serveroo',
     sousTitre: 'Projet de 4ème et 5ème année',
     date: 'Décembre 2022 - En cours',
-    description: 'L\'objectif de ce projet est la création d\'un service de location de serveurs à bas prix. ' +
-      'Nous avons pour cela eu besoin de créer un site Web et une application mobile permettant de louer et gérer ses services. ' +
-      'Ce site dû de plus être relié à une API REST pour la gestion des utilisateurs et des services Kubernetes.',
+    description: 'L\'objectif de ce projet est la création d\'un service de location de services en "click and play" à bas prix. ' +
+      'Plus d\'informations sur la page Github ci-dessous.',
     github: 'https://github.com/Serveroo',
     role: 'Tech lead',
-    technologies: ['Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Kubernetes']
+    technologies: ['MicrosoftAzure', 'Kubernetes', 'Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Grafana']
   },
   {
     titre: 'Réalisation d\'une investigation Forensic',

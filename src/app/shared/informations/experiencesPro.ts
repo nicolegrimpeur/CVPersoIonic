@@ -4,7 +4,10 @@ export const experiencesPro = [
     entreprise: 'Maxxing',
     datesLieu: 'Septembre 2023 - Aujourd\'hui | Marcq-en-Barœul',
     informations: [
-      'En contrat de professionnalisation d\'un an',
+      'Prise en charge et analyse des évènements et des incidents de sécurité',
+      'Implémentation de nouveaux processus et procédures',
+      'Mise en place de solutions de sécurité',
+      'Soutien aux équipes IT sur les sujets liés à la cybersécurité',
     ]
   },
   {

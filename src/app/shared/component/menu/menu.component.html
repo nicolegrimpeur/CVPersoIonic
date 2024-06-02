@@ -6,7 +6,7 @@
   </ion-header>
   <ion-content class="ion-padding">
     <ion-list>
-      <ion-item *ngFor="let item of ['formation', 'certificats', 'expériences', 'projets', 'compétences', 'ctf', 'loisirs', 'contact']"
+      <ion-item *ngFor="let item of ['formation', 'certificats', 'expériences', 'projets', 'compétences', 'ctf', 'loisirs', 'technos', 'contact']"
                 (click)="goTo(item)">
         <ion-label color="primary">{{item[0].toUpperCase() + item.slice(1, item.length)}}</ion-label>
       </ion-item>

@@ -13,7 +13,7 @@ export const ctf = [
   },
   {
     nomLogo: 'esa',
-    description: 'Space Systems Security Challenge, organisé par l\ESA, réalisé en équipe de 5',
+    description: 'Space Systems Security Challenge, organisé par l\'ESA, réalisé en équipe de 5',
     date: '03-2024',
     site: 'https://atpi.eventsair.com/24a06---3s2024/space-systems-security-challenge'
   },

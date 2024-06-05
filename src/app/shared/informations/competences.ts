@@ -1,6 +1,6 @@
 export const competences = [
   {
-    titre: 'Dev WEB',
+    titre: 'Dev WEB et mobile',
     image: 'web',
   },
   {

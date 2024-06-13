@@ -73,3 +73,8 @@ swiper-container::part(button-next) {
   margin: 0 11px;
   line-height: 1.25;
 }
+
+// pour les textes cliquables
+.canClick {
+  cursor: pointer;
+}

@@ -8,8 +8,12 @@
         <ion-thumbnail slot="start">
           <img alt="Logo {{certificat.nomLogo}}" ngSrc="assets/certificats/{{certificat.nomLogo}}.png" width="56" height="56"/>
         </ion-thumbnail>
-        <ion-label class="ion-text-wrap" (click)="openUrl(certificat.site)">{{certificat.description}}
-          | {{certificat.date}}</ion-label>
+        <ion-label class="ion-text-wrap"
+                   (click)="openUrl(certificat.site)"
+                   [class]="certificat.site !== '' ? 'canClick' : ''"
+                   color="medium">
+          {{certificat.description}} | {{certificat.date}}
+        </ion-label>
       </ion-item>
     </ion-list>
   </ion-card-content>

@@ -9,7 +9,7 @@ export const projetsPerso = [
     github: '',
     url: '',
     playStore: '',
-    technologies: ['Ubuntu', 'Node.Js', 'Nginx', 'MySql', 'OpenSSL', 'Grafana', 'Matomo']
+    technologies: ['Ubuntu', 'Node.js', 'Nginx', 'MySQL', 'OpenSSL', 'Grafana', 'Matomo']
   },
   {
     titre: 'All Plannings',
@@ -22,7 +22,7 @@ export const projetsPerso = [
     github: 'https://github.com/nicolegrimpeur/Plannings',
     url: 'https://nicob.ovh/plannings',
     playStore: 'https://play.google.com/store/apps/details?id=plannings.ionic.all',
-    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio', 'Firebase']
+    technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio', 'Firebase']
   },
   {
     titre: 'All Résidences',
@@ -36,7 +36,7 @@ export const projetsPerso = [
     github: 'https://github.com/nicolegrimpeur/appAll',
     url: 'https://nicob.ovh/all',
     playStore: 'https://play.google.com/store/apps/details?id=appAll.ionic.all',
-    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
+    technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio']
   },
   {
     titre: 'Timmeer',
@@ -46,7 +46,7 @@ export const projetsPerso = [
     github: 'https://github.com/nicolegrimpeur/timmeer',
     url: 'https://nicob.ovh/timmeer',
     playStore: '',
-    technologies: ['Ionic', 'Angular', 'Typescript']
+    technologies: ['Ionic', 'Angular', 'TypeScript']
   },
   {
     titre: 'Citations',
@@ -56,7 +56,7 @@ export const projetsPerso = [
     github: 'https://github.com/nicolegrimpeur/Citations',
     url: 'https://nicob.ovh/citations',
     playStore: '',
-    technologies: ['Ionic', 'Angular', 'Typescript', 'Android Studio']
+    technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio']
   },
   {
     titre: 'Api Aurion',
@@ -78,7 +78,7 @@ export const projetsPerso = [
     github: 'https://github.com/nicolegrimpeur/interfaceAppAll',
     url: '',
     playStore: '',
-    technologies: ['Ionic', 'Angular', 'Typescript']
+    technologies: ['Ionic', 'Angular', 'TypeScript']
   },
   {
     titre: 'Site Saint-Omer',
@@ -88,6 +88,6 @@ export const projetsPerso = [
     github: 'https://github.com/nicolegrimpeur/Site-STO',
     url: 'https://nicob.ovh/old/',
     playStore: '',
-    technologies: ['Angular', 'Typescript']
+    technologies: ['Angular', 'TypeScript']
   },
 ];

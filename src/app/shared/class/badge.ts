@@ -1,5 +1,5 @@
-import * as icons from "simple-icons";
 import {Injectable} from '@angular/core';
+import {colorIcon} from "../colorIcon";
 
 @Injectable({
   providedIn: 'root'
@@ -20,17 +20,9 @@ export class Badge {
     return nom;
   }
 
-  // permet d'obtenir le nom d'une icône à partir de son nom
-  getNomIconsFromText(nom: string) {
-    nom = this.getLogoFromText(nom);
-    nom = nom.replaceAll(' ', '');
-    nom = nom.replaceAll('.', 'dot');
-    return nom.slice(0, 1).toUpperCase() + nom.slice(1, nom.length).toLowerCase();
-  }
-
   // permet d'obtenir la couleur d'une icône à partir de son nom
   getColorFromText(nom: string) {
-    const icon = icons['si' + this.getNomIconsFromText(nom)];
-    return icon !== undefined ? icon.hex : '181717';
+    const icon = colorIcon.find(icon => icon.name === nom);
+    return icon !== undefined ? (icon.color !== '-' ? icon.color : '181717') : '181717';
   }
 }

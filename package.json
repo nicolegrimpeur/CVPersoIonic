@@ -1,6 +1,6 @@
 {
   "name": "cv",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "Nicolas Barrat",
   "homepage": "https://nicob.ovh/",
   "scripts": {
@@ -23,7 +23,6 @@
     "@ionic/angular": "^8.2.5",
     "ngx-matomo-client": "^6.2.0",
     "rxjs": "~7.8.1",
-    "simple-icons": "^13.1.0",
     "swiper": "^11.1.5",
     "tslib": "^2.6.3",
     "zone.js": "~0.14.7"

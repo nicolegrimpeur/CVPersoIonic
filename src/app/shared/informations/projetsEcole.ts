@@ -7,7 +7,7 @@ export const projetsEcole = [
       'Plus d\'informations sur la page Github ci-dessous.',
     github: 'https://github.com/Serveroo',
     role: 'Tech lead',
-    technologies: ['MicrosoftAzure', 'Kubernetes', 'Fastify', 'Nginx', 'Node.Js', 'Linux', 'Ionic', 'React', 'Grafana']
+    technologies: ['MicrosoftAzure', 'Kubernetes', 'Fastify', 'Nginx', 'Node.js', 'Linux', 'Ionic', 'React', 'Grafana']
   },
   {
     titre: 'Réalisation d\'une investigation Forensic',
@@ -77,7 +77,7 @@ export const projetsEcole = [
       'mais aussi mobile avec une application mobile Android.',
     github: 'https://github.com/nicolegrimpeur/ProjetThl',
     role: 'Tech lead',
-    technologies: ['Ionic', 'Angular', 'Typescript', 'Fastify', 'MongoDB']
+    technologies: ['Ionic', 'Angular', 'TypeScript', 'Fastify', 'MongoDB']
   },
   {
     titre: 'Calculatrice graphique',
@@ -107,7 +107,7 @@ export const projetsEcole = [
     description: 'Réalisation d\'un jeu de Stratego en Web, avec un système de score et de jeu multijoueur.',
     github: 'https://github.com/Projet-CIR2/projetWebCIR2',
     role: 'Développeur',
-    technologies: ['JavaScript', 'MySQL', 'Node.Js']
+    technologies: ['JavaScript', 'MySQL', 'Node.js']
   },
   {
     titre: 'Simulation d\'un marathon',
@@ -129,7 +129,7 @@ export const projetsEcole = [
       'possédant chacun un handicap différent ayant un impact sur le gameplay.',
     github: 'https://github.com/nicolegrimpeur/projetCIR2-1920',
     role: 'Chef de projet',
-    technologies: ['JavaScript', 'Phaser', 'Gitlab']
+    technologies: ['JavaScript', 'Phaser', 'GitLab']
   },
   {
     titre: 'Jeu d\'échec',

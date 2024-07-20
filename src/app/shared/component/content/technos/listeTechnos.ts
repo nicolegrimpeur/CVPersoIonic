@@ -1,11 +1,11 @@
 export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   {
     title: 'Cybersécurité',
-    liste: ['Snort', 'Wireshark', 'GithubActions']
+    liste: ['Snort', 'Wireshark', 'Github Actions']
   },
   {
     title: 'Applications WEB / Mobiles',
-    liste: ['Ionic', 'Angular', 'React', 'AndroidStudio', 'Figma']
+    liste: ['Ionic', 'Angular', 'React', 'Android Studio', 'Figma']
   },
   {
     title: 'Bases de données',
@@ -13,7 +13,7 @@ export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   },
   {
     title: 'Serveurs',
-    liste: ['MicrosoftAzure', 'RaspberryPi', 'Ubuntu', 'Kubernetes', 'Nginx', 'Node.js']
+    liste: ['MicrosoftAzure', 'Raspberry Pi', 'Ubuntu', 'Kubernetes', 'Nginx', 'Node.js']
   },
   {
     title: 'SIEM / Collecte de données',
@@ -21,6 +21,6 @@ export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   },
   {
     title: 'Scripting',
-    liste: ['Python', 'GNUBash', 'Powershell', 'Javascript']
+    liste: ['Python', 'GNU Bash', 'Powershell', 'JavaScript']
   },
 ]

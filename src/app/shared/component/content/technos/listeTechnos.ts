@@ -1,7 +1,7 @@
 export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   {
     title: 'Cybersécurité',
-    liste: ['Snort', 'Wireshark', 'Github Actions']
+    liste: ['Snort', 'Wireshark', 'Github Actions', 'OpenVPN']
   },
   {
     title: 'Applications WEB / Mobiles',

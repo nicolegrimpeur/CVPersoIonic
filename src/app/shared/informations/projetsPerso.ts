@@ -5,11 +5,12 @@ export const projetsPerso = [
     date: 'Novembre 2020 - Aujourd\'hui',
     description: 'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
       'et Api pour mes différents projets personnels et écoles. ' +
-      'En production, mises à jour et sécurités continues.',
+      'En production, mises à jour et sécurités continues. ' +
+      'Mise en place d\'un serveur VPN pour protéger les connexions internes.',
     github: '',
     url: '',
     playStore: '',
-    technologies: ['Ubuntu', 'Node.js', 'Nginx', 'MySQL', 'OpenSSL', 'Grafana', 'Matomo']
+    technologies: ['Ubuntu', 'Node.js', 'Nginx', 'MySQL', 'OpenSSL', 'Grafana', 'Matomo', 'OpenVPN']
   },
   {
     titre: 'All Plannings',

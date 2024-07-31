@@ -32,6 +32,7 @@ export const colorIcon = [
   {name: "Nginx", color: "009639"},
   {name: "Node.js", color: "5FA04E"},
   {name: "OpenSSL", color: "721412"},
+  {name: "OpenVPN", color: "EA7E20"},
   {name: "Phaser", color: "-"},
   {name: "Powershell", color: "5391FE"},
   {name: "Prometheus", color: "E6522C"},

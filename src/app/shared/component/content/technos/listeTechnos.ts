@@ -5,7 +5,7 @@ export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   },
   {
     title: 'Applications WEB / Mobiles',
-    liste: ['Ionic', 'Angular', 'React', 'Android Studio', 'Figma']
+    liste: ['Ionic', 'Angular', 'React', 'Android Studio', 'Figma', 'Flutter', 'Dart']
   },
   {
     title: 'Bases de données',

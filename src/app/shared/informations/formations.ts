@@ -2,11 +2,11 @@ export const formations = [
   {
     titre : 'JUNIA ISEN',
     image: 'ISEN-Lille.jpg',
-    dates: '2018 - Aujourd\'hui',
+    dates: '2018 - 2024',
     lieu: 'Lille',
     description : [
-      'Préparation au diplôme d’ingénieur',
-      'Cycle ingénieur troisième année spécialité Informatique, Réseaux et Cybersécurité'
+      'Diplôme d’ingénieur CTI',
+      'Cycle ingénieur spécialité Informatique, Réseaux et Cybersécurité'
     ],
     url: 'https://www.junia.com/fr/formations-admissions/nos-domaines/numerique/domaine-cybersecurite/'
   },

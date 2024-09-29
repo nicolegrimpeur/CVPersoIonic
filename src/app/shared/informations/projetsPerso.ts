@@ -15,20 +15,20 @@ export const projetsPerso = [
   {
     titre: 'All Plannings',
     sousTitre: 'Système de planning pour les résidences du All',
-    date: 'Août 2021 - Aujourd\'hui',
+    date: 'Août 2021 - Septembre 2024',
     description: 'Réalisation d\'un site Web et d\'une application mobile pour les plannings des laveries des résidences ' +
       'de l\'association All, tous les services de la vie étudiante. Les étudiants peuvent alors s\'inscrire sur les plannings ' +
       'des machines à laver, sèches linges et aspirateur de leur résidence, et les responsables de résidence peuvent les administrer. ' +
       'En production, montée de version des frameworks utilisés.',
     github: 'https://github.com/nicolegrimpeur/Plannings',
     url: 'https://nicob.ovh/plannings',
-    playStore: 'https://play.google.com/store/apps/details?id=plannings.ionic.all',
+    playStore: '',
     technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio', 'Firebase']
   },
   {
     titre: 'All Résidences',
     sousTitre: 'Informations concernant les résidences du All',
-    date: 'Juillet 2021 - Aujourd\'hui',
+    date: 'Juillet 2021 - Septembre 2024',
     description:
       'Ensemble d\'informations pour les étudiants des résidences de l\'association ' +
       'All, tous les services de la vie étudiante, avec un site Web ainsi qu\'une application ' +
@@ -36,7 +36,7 @@ export const projetsPerso = [
       'En production, montée de version des frameworks utilisés.',
     github: 'https://github.com/nicolegrimpeur/appAll',
     url: 'https://nicob.ovh/all',
-    playStore: 'https://play.google.com/store/apps/details?id=appAll.ionic.all',
+    playStore: '',
     technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio']
   },
   {
@@ -62,7 +62,7 @@ export const projetsPerso = [
   {
     titre: 'Api Aurion',
     sousTitre: 'Api permettant d\'importer les plannings de cours de l\'ISEN',
-    date: 'Avril 2022 - Aujourd\'hui',
+    date: 'Avril 2022 - Septembre 2024',
     description: 'Création d\'une Api permettant d\'automatiser l\'importation de plannings de cours de l\'ISEN Lille ' +
       'sur des calendriers personnels.',
     github: 'https://github.com/nicolegrimpeur/apiAurion',
@@ -73,7 +73,7 @@ export const projetsPerso = [
   {
     titre: 'Interface App All',
     sousTitre: 'Interface pour modifier les informations sur le site All Résidences',
-    date: 'Octobre 2021 - Août 2022',
+    date: 'Octobre 2021 - Septembre 2024',
     description: 'Création d\'un site permettant la modification par les responsables de résidence ' +
       'des informations présentes sur le site All Résidences.',
     github: 'https://github.com/nicolegrimpeur/interfaceAppAll',

@@ -2,7 +2,7 @@ export const projetsEcole = [
   {
     titre: 'Serveroo',
     sousTitre: 'Projet de 4ème et 5ème année',
-    date: 'Décembre 2022 - En cours',
+    date: 'Décembre 2022 - Mai 2024',
     description: 'L\'objectif de ce projet est la création d\'un service de location de services en "click and play" à bas prix. ' +
       'Plus d\'informations sur la page Github ci-dessous.',
     github: 'https://github.com/Serveroo',

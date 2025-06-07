@@ -3,12 +3,17 @@ import { IonicModule, AnimationController } from '@ionic/angular';
 
 import { HeaderComponent } from './header.component';
 
+// Tests for HeaderComponent.
+// AnimationController is fully mocked to check the animation chain
+// and navigation logic is verified.
+
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
   let animationCtrlSpy: jasmine.SpyObj<AnimationController>;
   let animationSpy: any;
 
+  // Setup component with a mocked AnimationController
   beforeEach(waitForAsync(() => {
     animationSpy = {} as any;
     animationSpy.addElement = jasmine.createSpy('addElement').and.returnValue(animationSpy);
@@ -34,6 +39,7 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // ngOnChanges should trigger the correct animation
   it('should play animation on changes', () => {
     component.afficheNom = true;
     component.ngOnChanges();
@@ -56,6 +62,7 @@ describe('HeaderComponent', () => {
     ]);
   });
 
+  // goTo should scroll smoothly to the given element
   it('should scroll to section in goTo', () => {
     const scrollSpy = jasmine.createSpy('scrollIntoView');
     const realQuery = document.querySelector.bind(document);

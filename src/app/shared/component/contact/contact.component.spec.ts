@@ -3,6 +3,10 @@ import { IonicModule } from '@ionic/angular';
 
 import { ContactComponent } from './contact.component';
 
+// Unit tests for the ContactComponent.
+// The delay method is stubbed so tests run synchronously and
+// the click handler behaviour is verified.
+
 describe('ContactComponent', () => {
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
@@ -24,11 +28,13 @@ describe('ContactComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // testMailOrTel should return input for known value and undefined otherwise
   it('should test testMailOrTel', () => {
     expect(component.testMailOrTel('Téléphone')).toBe('Téléphone');
     expect(component.testMailOrTel('Autre')).toBeUndefined();
   });
 
+  // click should update innerHTML, store the value and await delay
   it('should handle click', async () => {
     const event = { target: { innerHTML: 'abc' } } as any;
     await component.click(event, 'test');

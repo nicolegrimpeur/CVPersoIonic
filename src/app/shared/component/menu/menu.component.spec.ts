@@ -3,10 +3,15 @@ import { IonicModule } from '@ionic/angular';
 
 import { MenuComponent } from './menu.component';
 
+// Tests for MenuComponent.
+// document.querySelector is partially mocked so scrolling can be
+// verified without interfering with Angular's internals.
+
 describe('MenuComponent', () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
 
+  // Initialize component and stub the menu close method
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MenuComponent ],
@@ -23,6 +28,7 @@ describe('MenuComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // goTo should scroll smoothly to the element and close the menu
   it('should scroll to element and close menu', () => {
     const scrollSpy = jasmine.createSpy('scrollIntoView');
     const realQuery = document.querySelector.bind(document);

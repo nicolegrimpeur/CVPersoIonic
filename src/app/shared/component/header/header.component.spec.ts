@@ -8,8 +8,6 @@ describe('HeaderComponent', () => {
   let fixture: ComponentFixture<HeaderComponent>;
   let animationCtrlSpy: jasmine.SpyObj<AnimationController>;
   let animationSpy: any;
-  let querySpy: jasmine.Spy;
-  let scrollSpy: jasmine.Spy;
 
   beforeEach(waitForAsync(() => {
     animationSpy = {} as any;
@@ -20,9 +18,6 @@ describe('HeaderComponent', () => {
 
     animationCtrlSpy = jasmine.createSpyObj('AnimationController', ['create']);
     animationCtrlSpy.create.and.returnValue(animationSpy);
-
-    scrollSpy = jasmine.createSpy('scrollIntoView');
-    querySpy = spyOn(document, 'querySelector').and.returnValue({scrollIntoView: scrollSpy} as any);
 
     TestBed.configureTestingModule({
       declarations: [ HeaderComponent ],
@@ -62,8 +57,17 @@ describe('HeaderComponent', () => {
   });
 
   it('should scroll to section in goTo', () => {
-    querySpy.calls.reset();
+    const scrollSpy = jasmine.createSpy('scrollIntoView');
+    const realQuery = document.querySelector.bind(document);
+    const querySpy = spyOn(document, 'querySelector').and.callFake((selector: string) => {
+      if (selector === '#test') {
+        return { scrollIntoView: scrollSpy } as any;
+      }
+      return realQuery(selector);
+    });
+
     component.goTo('test');
+
     expect(querySpy).toHaveBeenCalledWith('#test');
     expect(scrollSpy).toHaveBeenCalledWith({behavior: 'smooth'});
   });

@@ -6,13 +6,8 @@ import { MenuComponent } from './menu.component';
 describe('MenuComponent', () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
-  let querySpy: jasmine.Spy;
-  let scrollSpy: jasmine.Spy;
 
   beforeEach(waitForAsync(() => {
-    scrollSpy = jasmine.createSpy('scrollIntoView');
-    querySpy = spyOn(document, 'querySelector').and.returnValue({scrollIntoView: scrollSpy} as any);
-
     TestBed.configureTestingModule({
       declarations: [ MenuComponent ],
       imports: [IonicModule.forRoot()]
@@ -29,7 +24,17 @@ describe('MenuComponent', () => {
   });
 
   it('should scroll to element and close menu', () => {
+    const scrollSpy = jasmine.createSpy('scrollIntoView');
+    const realQuery = document.querySelector.bind(document);
+    const querySpy = spyOn(document, 'querySelector').and.callFake((selector: string) => {
+      if (selector === '#section') {
+        return { scrollIntoView: scrollSpy } as any;
+      }
+      return realQuery(selector);
+    });
+
     component.goTo('section');
+
     expect(querySpy).toHaveBeenCalledWith('#section');
     expect(scrollSpy).toHaveBeenCalledWith({behavior: 'smooth'});
     expect((component as any).menu.el.close).toHaveBeenCalled();

@@ -2,7 +2,7 @@ export const ctf = [
   {
     nomLogo: '404ctf',
     description: '404CTF, organisé par la DGSE. Classement : 662 / 3267 | 05-2024 - 538 / 2893 | 05-2025',
-    date: '05-2024',
+    date: '',
     site: 'https://www.404ctf.fr/'
   },
   {

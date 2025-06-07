@@ -9,8 +9,11 @@
           <ion-thumbnail slot="start">
             <img alt="Logo {{ctf.nomLogo}}" ngSrc="assets/ctf/{{ctf.nomLogo}}.png" width="56" height="56"/>
           </ion-thumbnail>
-          <ion-label class="ion-text-wrap" (click)="openUrl(ctf.site)" color="medium" [class]="ctf.site !== '' ? 'canClick' : ''">
-          {{ctf.description}} | {{ctf.date}}</ion-label>
+          <ion-label class="ion-text-wrap" (click)="openUrl(ctf.site)" color="medium"
+                     [class]="ctf.site !== '' ? 'canClick' : ''">
+            {{ ctf.description }}
+              @if (ctf.date) { | {{ ctf.date }} }
+          </ion-label>
         </ion-item>
       }
     </ion-list>

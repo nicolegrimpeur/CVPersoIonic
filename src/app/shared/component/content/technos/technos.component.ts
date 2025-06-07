@@ -3,9 +3,10 @@ import {listeTechnos} from "./listeTechnos";
 import {Badge} from "../../../class/badge";
 
 @Component({
-  selector: 'app-technos',
-  templateUrl: './technos.component.html',
-  styleUrls: ['./technos.component.scss'],
+    selector: 'app-technos',
+    templateUrl: './technos.component.html',
+    styleUrls: ['./technos.component.scss'],
+    standalone: false
 })
 export class TechnosComponent {
   public listeTechnos = listeTechnos;

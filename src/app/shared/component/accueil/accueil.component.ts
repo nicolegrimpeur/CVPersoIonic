@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {AnimationController} from '@ionic/angular';
 
 @Component({
-  selector: 'app-accueil',
-  templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.scss'],
+    selector: 'app-accueil',
+    templateUrl: './accueil.component.html',
+    styleUrls: ['./accueil.component.scss'],
+    standalone: false
 })
 export class AccueilComponent implements OnInit {
   constructor(private animation: AnimationController) {

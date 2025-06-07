@@ -2,9 +2,10 @@ import {Component} from '@angular/core';
 import {contact} from '../../informations/contact';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss'],
+    standalone: false
 })
 export class ContactComponent {
   public contact = contact;

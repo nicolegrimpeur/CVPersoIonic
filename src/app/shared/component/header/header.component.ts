@@ -2,9 +2,10 @@ import {Component, Input, OnChanges} from '@angular/core';
 import {AnimationController, Platform} from '@ionic/angular';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: false
 })
 export class HeaderComponent implements OnChanges {
   @Input() public afficheNom: boolean;

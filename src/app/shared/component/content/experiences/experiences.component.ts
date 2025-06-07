@@ -4,9 +4,10 @@ import {Platform} from '@ionic/angular';
 
 
 @Component({
-  selector: 'app-experiences',
-  templateUrl: './experiences.component.html',
-  styleUrls: ['./experiences.component.scss'],
+    selector: 'app-experiences',
+    templateUrl: './experiences.component.html',
+    styleUrls: ['./experiences.component.scss'],
+    standalone: false
 })
 export class ExperiencesComponent {
   @Input() public isDesktop !: boolean;

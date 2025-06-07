@@ -5,9 +5,10 @@ import {Platform} from '@ionic/angular';
 import {Badge} from "../../../class/badge";
 
 @Component({
-  selector: 'app-projets',
-  templateUrl: './projets.component.html',
-  styleUrls: ['./projets.component.scss'],
+    selector: 'app-projets',
+    templateUrl: './projets.component.html',
+    styleUrls: ['./projets.component.scss'],
+    standalone: false
 })
 export class ProjetsComponent {
   @Input() public isDesktop !: boolean;

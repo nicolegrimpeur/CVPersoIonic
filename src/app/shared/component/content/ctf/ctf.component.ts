@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import {ctf} from '../../../informations/ctf';
 
 @Component({
-  selector: 'app-ctf',
-  templateUrl: './ctf.component.html',
-  styleUrls: ['./ctf.component.scss'],
+    selector: 'app-ctf',
+    templateUrl: './ctf.component.html',
+    styleUrls: ['./ctf.component.scss'],
+    standalone: false
 })
 export class CtfComponent {
   public ctfs = ctf;

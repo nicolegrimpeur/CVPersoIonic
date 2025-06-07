@@ -2,9 +2,10 @@ import {Component} from '@angular/core';
 import {certificats} from '../../../informations/certificats';
 
 @Component({
-  selector: 'app-certificats',
-  templateUrl: './certificats.component.html',
-  styleUrls: ['./certificats.component.scss'],
+    selector: 'app-certificats',
+    templateUrl: './certificats.component.html',
+    styleUrls: ['./certificats.component.scss'],
+    standalone: false
 })
 export class CertificatsComponent {
   public certificats = certificats;

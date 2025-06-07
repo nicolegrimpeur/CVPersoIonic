@@ -6,20 +6,23 @@
   <ion-card-content>
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let techno of listeTechnos">
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>{{ techno.title }}</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <img
-                class="technologie"
-                *ngFor="let technologie of techno.liste"
-                [src]="badge.getLink(technologie)"
-                alt="Logo {{technologie}}">
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
+        @for (techno of listeTechnos; track techno) {
+          <ion-col>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>{{ techno.title }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                @for (technologie of techno.liste; track technologie) {
+                  <img
+                    class="technologie"
+                    [src]="badge.getLink(technologie)"
+                    alt="Logo {{technologie}}">
+                }
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
       </ion-row>
     </ion-grid>
   </ion-card-content>

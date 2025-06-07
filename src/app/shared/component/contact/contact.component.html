@@ -6,24 +6,30 @@
   <ion-card-content>
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let carte of contact" size="12" size-sm="6" size-lg="4" size-xl="2.4">
-          <ion-card class="info ion-text-center">
-            <ion-card-header>
-              <ion-card-title>{{carte.text}}</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <h5 *ngIf="testMailOrTel(carte.text)"
-                  (click)="click($event, carte.info)">
-                Cliquez pour voir les informations
-              </h5>
-              <h5 *ngIf="!testMailOrTel(carte.text)">{{carte.info}}</h5>
-              <ion-button title="{{carte.text}}" target="_blank" href="{{carte.href}}"
-                          color="primary-tint" shape="round" fill="clear" size="large">
-                <ion-icon name="{{carte.icon}}"></ion-icon>
-              </ion-button>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
+        @for (carte of contact; track carte) {
+          <ion-col size="12" size-sm="6" size-lg="4" size-xl="2.4">
+            <ion-card class="info ion-text-center">
+              <ion-card-header>
+                <ion-card-title>{{carte.text}}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                @if (testMailOrTel(carte.text)) {
+                  <h5
+                    (click)="click($event, carte.info)">
+                    Cliquez pour voir les informations
+                  </h5>
+                }
+                @if (!testMailOrTel(carte.text)) {
+                  <h5>{{carte.info}}</h5>
+                }
+                <ion-button title="{{carte.text}}" target="_blank" href="{{carte.href}}"
+                  color="primary-tint" shape="round" fill="clear" size="large">
+                  <ion-icon name="{{carte.icon}}"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
       </ion-row>
     </ion-grid>
   </ion-card-content>

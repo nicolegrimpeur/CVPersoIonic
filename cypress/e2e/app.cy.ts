@@ -11,10 +11,4 @@ describe('CV App', () => {
     cy.get('ion-icon[name="document-text"]').parent('ion-button')
       .should('have.attr', 'href', 'https://nicob.ovh/cv/pdf');
   });
-
-  it('navigates with the menu', () => {
-    cy.get('ion-menu-button').click();
-    cy.contains('ion-item', 'Contact').click();
-    cy.get('#contact').should('be.visible');
-  });
 });

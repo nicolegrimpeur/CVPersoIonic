@@ -51,8 +51,8 @@ export const projetsEcole = [
     sousTitre: 'Projet d\'électronique de fin d\'année',
     date: 'Mai / Juin 2022',
     description: 'Réalisation d\'un capteur de température et d\'humidité envoyant ses données à une station mère. ' +
-      'Nous avons pour cela choisis nos composants, réalisé la carte électronique, ' +
-      'mais aussi écris le code permettant de récupérer les données du capteur pour l\'envoyer à la station mère',
+      'Nous avons pour cela choisi nos composants, réalisé la carte électronique, ' +
+      'mais aussi écrit le code permettant de récupérer les données du capteur pour l\'envoyer à la station mère',
     github: 'https://github.com/nicolegrimpeur/Elec_TempHum',
     role: 'Chef de projet',
     technologies: ['C', 'LoRa', 'Microcontrôleur']

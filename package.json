@@ -9,7 +9,7 @@
     "build": "ng run app:build:production --base-href=/cv/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -37,7 +37,6 @@
     "@angular/language-service": "^18.1.0",
     "@ionic/angular-toolkit": "^11.0.1",
     "@types/jasmine": "~5.1.4",
-    "@types/jasminewd2": "~2.0.13",
     "@types/node": "^20.14.10",
     "@typescript-eslint/eslint-plugin": "7.16.0",
     "@typescript-eslint/parser": "7.16.0",
@@ -53,9 +52,9 @@
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
-    "protractor": "~7.0.0",
     "ts-node": "~10.9.2",
-    "typescript": "~5.5.3"
+    "typescript": "~5.5.3",
+    "cypress": "^13.7.3"
   },
   "description": "Projet Ionic avec pour objectif de construire mon CV en ligne"
 }

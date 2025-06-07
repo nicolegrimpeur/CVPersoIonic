@@ -1,12 +1,12 @@
 .texture {
+  background-repeat: no-repeat;
+  background-size: 100vw 96dvh;
   @media (max-width: 768px) {
     background-image: url(../../assets/fond/fondVertical.svg);
   }
   @media (min-width: 768px) {
     background-image: url(../../assets/fond/fondHorizontal.svg);
   }
-  background-repeat: no-repeat;
-  background-size: 100vw 96dvh;
 }
 
 .presentation {

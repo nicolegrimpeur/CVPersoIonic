@@ -15,8 +15,8 @@ describe('MenuComponent', () => {
 
     fixture = TestBed.createComponent(MenuComponent);
     component = fixture.componentInstance;
-    (component as any).menu = { el: { close: jasmine.createSpy('close') } };
     fixture.detectChanges();
+    component.menu = { el: { close: jasmine.createSpy('close') } } as any;
   }));
 
   it('should create', () => {

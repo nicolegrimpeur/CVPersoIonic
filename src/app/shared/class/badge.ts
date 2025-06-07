@@ -13,7 +13,7 @@ export class Badge {
     return 'https://img.shields.io/badge/' + nom + '-' + this.getColorFromText(nom) + '?logo=' + this.getLogoFromText(nom) + '&logoColor=white';
   }
 
-  // permet d'obtenir le long d'un logo à partir de son nom
+  // permet d'obtenir le nom d'un logo à partir de son nom
   getLogoFromText(nom: string) {
     nom = nom.toLowerCase();
     nom = nom.replaceAll('+', 'plus');

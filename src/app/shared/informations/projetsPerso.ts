@@ -21,7 +21,7 @@ export const projetsPerso = [
       'des machines à laver, sèches linges et aspirateur de leur résidence, et les responsables de résidence peuvent les administrer. ' +
       'En production, montée de version des frameworks utilisés.',
     github: 'https://github.com/nicolegrimpeur/Plannings',
-    url: 'https://nicob.ovh/plannings',
+    url: '',
     playStore: '',
     technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio', 'Firebase']
   },
@@ -35,7 +35,7 @@ export const projetsPerso = [
       'Android disponible sur le Google Play Store. ' +
       'En production, montée de version des frameworks utilisés.',
     github: 'https://github.com/nicolegrimpeur/appAll',
-    url: 'https://nicob.ovh/all',
+    url: '',
     playStore: '',
     technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio']
   },
@@ -45,7 +45,7 @@ export const projetsPerso = [
     date: 'Octobre 2023',
     description: 'Réalisation d\'un site permettant de gérer des timers pour de la gestion de parole lors de débats, dans le cadre du cours sur la mondialisation.',
     github: 'https://github.com/nicolegrimpeur/timmeer',
-    url: 'https://nicob.ovh/timmeer',
+    url: '',
     playStore: '',
     technologies: ['Ionic', 'Angular', 'TypeScript']
   },
@@ -55,7 +55,7 @@ export const projetsPerso = [
     date: 'Octobre 2022',
     description: 'Réalisation d\'un site et d\'une application mobile permettant le partage de citations entre amis.',
     github: 'https://github.com/nicolegrimpeur/Citations',
-    url: 'https://nicob.ovh/citations',
+    url: '',
     playStore: '',
     technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio']
   },
@@ -92,3 +92,4 @@ export const projetsPerso = [
     technologies: ['Angular', 'TypeScript']
   },
 ];
+

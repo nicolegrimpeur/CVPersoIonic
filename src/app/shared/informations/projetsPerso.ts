@@ -13,6 +13,21 @@ export const projetsPerso = [
     technologies: ['Ubuntu', 'Node.js', 'Nginx', 'MySQL', 'OpenSSL', 'Grafana', 'Matomo', 'OpenVPN']
   },
   {
+    titre: 'SecretLink',
+    sousTitre: 'Système de partage de données sensibles via des liens à usage unique',
+    date: 'Octobre 2025 - Aujourd\'hui',
+    description: 'Conception et développement complet d’une plateforme sécurisée de partage de mots de passe et de secrets, ' +
+      'permettant de générer des liens à usage unique supprimés après lecture. ' +
+      'Mise en place d’un chiffrement de bout en bout, d’une gestion des comptes utilisateurs et tokens d’accès personnels (PAT), ' +
+      'ainsi qu’une API REST pour automatiser la création de liens. ' +
+      'Développement du front avec Ionic et Angular standalone, intégration d’un back-end Node.js / Express relié à une base MySQL, ' +
+      'et déploiement sur serveur auto-hébergé Raspberry Pi avec supervision Grafana/Loki.',
+    github: 'https://github.com/nicolegrimpeur/SecretLink',
+    url: 'https://nicob.ovh/secret',
+    playStore: '',
+    technologies: ['Ionic', 'Angular', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Grafana', 'Loki']
+  },
+  {
     titre: 'All Plannings',
     sousTitre: 'Système de planning pour les résidences du All',
     date: 'Août 2021 - Septembre 2024',
@@ -92,4 +107,5 @@ export const projetsPerso = [
     technologies: ['Angular', 'TypeScript']
   },
 ];
+
 

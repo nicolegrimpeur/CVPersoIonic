@@ -8,7 +8,11 @@
         <ion-col size="6">
           <ion-row>
             <ion-col class="center">
-              <img src="assets/storyset/{{loisir.image}}.svg" alt="Image {{loisir.titre}}">
+              <img
+                src="assets/storyset/{{loisir.image}}.svg"
+                alt="Image {{loisir.titre}}"
+                loading="lazy"
+                decoding="async">
             </ion-col>
             <ion-col style="display: flex; align-items: center;">
               <ion-label class="ion-text-wrap">{{loisir.titre}}</ion-label>

@@ -32,7 +32,9 @@
                         <img
                           class="technologie"
                           [src]="badge.getLink(technologie)"
-                          alt="Logo {{technologie}}">
+                          alt="Logo {{technologie}}"
+                          loading="lazy"
+                          decoding="async">
                       }
                       <br>
                         @if (projet.github !== '') {
@@ -75,7 +77,9 @@
                           <img
                             class="technologie"
                             [src]="badge.getLink(technologie)"
-                            alt="Logo {{technologie}}">
+                            alt="Logo {{technologie}}"
+                            loading="lazy"
+                            decoding="async">
                         }
                         <br>
                           @if (projet.github !== '') {

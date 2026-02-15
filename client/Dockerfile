@@ -14,7 +14,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # Config nginx custom
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copie le build Angular dans Nginx
 COPY --from=builder /app/www/browser /usr/share/nginx/html/

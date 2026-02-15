@@ -5,7 +5,7 @@
   "homepage": "https://nicob.ovh/",
   "scripts": {
     "start": "ionic serve",
-    "build": "ng run app:build:production --base-href=/cv/",
+    "build": "ng run app:build:production",
     "e2e": "cypress run"
   },
   "private": true,

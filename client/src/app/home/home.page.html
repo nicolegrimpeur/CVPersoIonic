@@ -1,65 +1,64 @@
-<app-menu></app-menu>
-<app-header [afficheNom]="afficheNom"></app-header>
+<div class="ion-page">
+  <app-menu></app-menu>
+  <app-header [afficheNom]="afficheNom"></app-header>
 
-<ion-content [fullscreen]="false" [scrollEvents]="true" id="main-content" (ionScroll)="eventScroll($event)">
-  <div class="texture">
-    <app-accueil></app-accueil>
+  <ion-content [fullscreen]="false" [scrollEvents]="true" id="main-content" (ionScroll)="eventScroll($event)">
+    <div class="texture">
+      <app-accueil></app-accueil>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col size="12" size-lg="6">
-          <app-formation></app-formation>
-        </ion-col>
-        @if (isDesktop) {
-          <ion-col size-lg="6" class="center">
-            <img src="assets/storyset/graduation.svg" alt="Image formation" class="presentation">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-lg="6">
+            <app-formation></app-formation>
           </ion-col>
-        }
-      </ion-row>
-      <ion-row>
-        @if (isDesktop) {
-          <ion-col size-lg="6" class="center">
-            <img src="assets/storyset/certification.svg" alt="Image certification" class="presentation certificats">
+          @if (isDesktop) {
+            <ion-col size-lg="6" class="center">
+              <img src="assets/storyset/graduation.svg" alt="Image formation" class="presentation">
+            </ion-col>
+          }
+        </ion-row>
+        <ion-row>
+          @if (isDesktop) {
+            <ion-col size-lg="6" class="center">
+              <img src="assets/storyset/certification.svg" alt="Image certification" class="presentation certificats">
+            </ion-col>
+          }
+          <ion-col>
+            <app-certificats></app-certificats>
           </ion-col>
-        }
-        <ion-col>
-          <app-certificats></app-certificats>
-        </ion-col>
-      </ion-row>
+        </ion-row>
 
-      <ion-row>
-        <ion-col>
-          <app-experiences [isDesktop]="isDesktop"></app-experiences>
-        </ion-col>
-      </ion-row>
+        <ion-row>
+          <ion-col>
+            <app-experiences [isDesktop]="isDesktop"></app-experiences>
+          </ion-col>
+        </ion-row>
 
-      <ion-row>
-        <ion-col>
-          <app-projets [isDesktop]="isDesktop"></app-projets>
-        </ion-col>
-      </ion-row>
+        <ion-row>
+          <ion-col>
+            <app-projets [isDesktop]="isDesktop"></app-projets>
+          </ion-col>
+        </ion-row>
 
-      <ion-row>
-        <ion-col>
-          <app-competences></app-competences>
-        </ion-col>
-      </ion-row>
+        <ion-row>
+          <ion-col size="12" size-lg="6">
+            <app-ctf></app-ctf>
+          </ion-col>
+          <ion-col size="12" size-lg="6">
+            <app-competences></app-competences>
+          </ion-col>
+        </ion-row>
 
-      <ion-row>
-        <ion-col>
-          <app-ctf></app-ctf>
-        </ion-col>
-      </ion-row>
+        <ion-row>
+          <ion-col>
+            <app-technos></app-technos>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-      <ion-row>
-        <ion-col>
-          <app-technos></app-technos>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+      <app-contact id="contact"></app-contact>
 
-    <app-contact id="contact"></app-contact>
-
-    <app-credits></app-credits>
-  </div>
-</ion-content>
+      <app-credits></app-credits>
+    </div>
+  </ion-content>
+</div>

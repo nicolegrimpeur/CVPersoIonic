@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {listeTechnos} from "./listeTechnos";
-import {Badge} from "../../../class/badge";
 
 @Component({
     selector: 'app-technos',
@@ -11,7 +10,7 @@ import {Badge} from "../../../class/badge";
 export class TechnosComponent {
   public listeTechnos = listeTechnos;
 
-  constructor(public badge: Badge) {
+  constructor() {
   }
 
 }

@@ -23,12 +23,7 @@
             </ion-card-content>
             <ion-card-content>
               @for (technologie of projet.technologies; track technologie) {
-                <img
-                  class="technologie"
-                  [src]="badge.getLink(technologie)"
-                  alt="Logo {{technologie}}"
-                  loading="lazy"
-                  decoding="async">
+                <ion-chip>{{ technologie }}</ion-chip>
               }
               <br>
               @if (projet.github) {

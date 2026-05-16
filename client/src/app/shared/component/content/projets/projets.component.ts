@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {projets} from '../../../informations/projets';
 import {Platform} from '@ionic/angular';
-import {Badge} from "../../../class/badge";
 
 @Component({
     selector: 'app-projets',
@@ -14,7 +13,6 @@ export class ProjetsComponent {
 
   public projets = projets;
 
-  constructor(public platform: Platform,
-              public badge: Badge) {
+  constructor(public platform: Platform) {
   }
 }

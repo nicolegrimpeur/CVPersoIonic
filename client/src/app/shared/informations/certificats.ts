@@ -6,12 +6,6 @@ export const certificats = [
     site: 'https://media.licdn.com/dms/image/v2/D4E2DAQGVDdIrtdigDQ/profile-treasury-document-images_1280/B4EZ4xUSuPIcAg-/1/1778943864615?e=1779926400&v=beta&t=wQV6LoIqvIep7N-svlKKZUefQoG-p5WqON3bIZYEiBw'
   },
   {
-    nomLogo: 'anssi',
-    description: 'MOOC ANSSI : SecNumAcadémie - Les fondamentaux de la cybersécurité',
-    date: '2023',
-    site: 'https://nicob.ovh/public/pdf/ANSSI.pdf'
-  },
-  {
     nomLogo: 'udemy',
     description: 'ISO 27001 : Systèmes de management de la sécurité des informations',
     date: '2023',

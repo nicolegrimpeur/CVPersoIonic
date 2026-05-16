@@ -1,26 +1,26 @@
 export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   {
     title: 'Cybersécurité',
-    liste: ['Snort', 'Wireshark', 'Github Actions', 'OpenVPN']
+    liste: ['Snort', 'Wireshark', 'OpenVPN', 'nftables', 'Microsoft Intune', 'Microsoft Defender', 'Entra ID']
   },
   {
-    title: 'Applications WEB / Mobiles',
-    liste: ['Ionic', 'Angular', 'React', 'Android Studio', 'Figma', 'Flutter', 'Dart']
+    title: 'Infrastructure & DevOps',
+    liste: ['Ubuntu', 'Docker', 'Kubernetes', 'Dokploy', 'Traefik', 'Nginx', 'Raspberry Pi', 'MicrosoftAzure']
+  },
+  {
+    title: 'SIEM / Observabilité',
+    liste: ['Grafana', 'Prometheus', 'Loki', 'Alloy', 'Kibana']
+  },
+  {
+    title: 'Scripting & Backend',
+    liste: ['Python', 'GNU Bash', 'Powershell', 'Node.js', 'JavaScript']
   },
   {
     title: 'Bases de données',
-    liste: ['MySQL', 'MongoDB', 'Firebase', 'Prometheus']
+    liste: ['MySQL', 'MongoDB', 'Firebase']
   },
   {
-    title: 'Serveurs',
-    liste: ['MicrosoftAzure', 'Raspberry Pi', 'Ubuntu', 'Kubernetes', 'Nginx', 'Node.js']
-  },
-  {
-    title: 'SIEM / Collecte de données',
-    liste: ['Grafana', 'Loki', 'Kibana', 'Matomo']
-  },
-  {
-    title: 'Scripting',
-    liste: ['Python', 'GNU Bash', 'Powershell', 'JavaScript']
+    title: 'Applications WEB / Mobiles',
+    liste: ['Ionic', 'Angular', 'TypeScript', 'React', 'Android Studio']
   },
 ]

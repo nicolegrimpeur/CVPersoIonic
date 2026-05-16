@@ -51,4 +51,12 @@ export const colorIcon = [
   {name: "Visual Studio", color: "5C2D91"},
   {name: "Visual Studio Code", color: "007ACC"},
   {name: "Wireshark", color: "1679A7"},
+  {name: "Alloy", color: "F46800"},
+  {name: "Docker", color: "2496ED"},
+  {name: "Dokploy", color: "4B32C3"},
+  {name: "Entra ID", color: "0078D4"},
+  {name: "Microsoft Defender", color: "0078D4"},
+  {name: "Microsoft Intune", color: "0078D4"},
+  {name: "nftables", color: "E95420"},
+  {name: "Traefik Proxy", color: "24A1C1"},
 ]

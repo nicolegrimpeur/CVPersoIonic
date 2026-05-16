@@ -16,12 +16,12 @@ export const competences = [
     image: 'teamwork',
   },
   {
-    titre: 'Automatisation CI/CD',
-    image: 'adaptation',
+    titre: 'Tests d\'intrusion & audit',
+    image: 'problem solving',
   },
   {
-    titre: 'Développement backend',
-    image: 'autonomy',
+    titre: 'Gouvernance SSI & conformité',
+    image: 'certification',
   },
   {
     titre: 'Sécurisation réseau et applicatifs',

@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {projetsPerso} from '../../../informations/projetsPerso';
-import {projetsEcole} from '../../../informations/projetsEcole';
+import {projets} from '../../../informations/projets';
 import {Platform} from '@ionic/angular';
 import {Badge} from "../../../class/badge";
 
@@ -13,8 +12,7 @@ import {Badge} from "../../../class/badge";
 export class ProjetsComponent {
   @Input() public isDesktop !: boolean;
 
-  public projetsPerso = projetsPerso;
-  public projetsEcole = projetsEcole;
+  public projets = projets;
 
   constructor(public platform: Platform,
               public badge: Badge) {

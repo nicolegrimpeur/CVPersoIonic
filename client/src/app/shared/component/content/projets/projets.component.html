@@ -3,115 +3,59 @@
     <ion-card-title class="title">Mes projets</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <ion-row>
-      <ion-col size="12" size-lg="6">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Projets avec l'école ISEN Lille</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <swiper-container
-              [navigation]="isDesktop ? {} : undefined"
-              [pagination]="{clickable: true}"
-              >
-              @for (projet of projetsEcole; track projet) {
-                <swiper-slide>
-                  <ion-card class="no_box ion-text-center">
-                    <ion-header>
-                      <ion-card-title>{{projet.titre}}</ion-card-title>
-                      <ion-card-subtitle style="margin: 0 10px">{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
-                      @if (projet.role !== '') {
-                        <ion-card-subtitle>Rôle : {{projet.role}}</ion-card-subtitle>
-                      }
-                    </ion-header>
-                    <ion-card-content [class]="isDesktop ? 'space-card-content' : ''">
-                      {{projet.description}}
-                    </ion-card-content>
-                    <ion-card-content>
-                      @for (technologie of projet.technologies; track technologie) {
-                        <img
-                          class="technologie"
-                          [src]="badge.getLink(technologie)"
-                          alt="Logo {{technologie}}"
-                          loading="lazy"
-                          decoding="async">
-                      }
-                      <br>
-                        @if (projet.github !== '') {
-                          <ion-button
-                            title="Lien vers le Github" target="_blank" href="{{projet.github}}"
-                            color="primary-tint" shape="round" fill="clear" size="large">
-                            <ion-icon name="logo-github"></ion-icon>
-                          </ion-button>
-                        }
-                      </ion-card-content>
-                    </ion-card>
-                  </swiper-slide>
-                }
-              </swiper-container>
+    <swiper-container
+      [navigation]="isDesktop ? {} : undefined"
+      [slidesPerView]="isDesktop ? 2 : 1"
+      [pagination]="{clickable: true}"
+    >
+      @for (projet of projets; track projet) {
+        <swiper-slide>
+          <ion-card class="no_box ion-text-center">
+            <ion-header>
+              <ion-card-title>{{projet.titre}}</ion-card-title>
+              <ion-card-subtitle style="margin: 0 10px">{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
+              @if (projet.role) {
+                <ion-card-subtitle>Rôle : {{projet.role}}</ion-card-subtitle>
+              }
+            </ion-header>
+            <ion-card-content [class]="isDesktop ? 'space-card-content' : ''">
+              {{projet.description}}
+            </ion-card-content>
+            <ion-card-content>
+              @for (technologie of projet.technologies; track technologie) {
+                <img
+                  class="technologie"
+                  [src]="badge.getLink(technologie)"
+                  alt="Logo {{technologie}}"
+                  loading="lazy"
+                  decoding="async">
+              }
+              <br>
+              @if (projet.github) {
+                <ion-button
+                  title="Lien vers le Github" target="_blank" href="{{projet.github}}"
+                  color="primary-tint" shape="round" fill="clear" size="large">
+                  <ion-icon name="logo-github"></ion-icon>
+                </ion-button>
+              }
+              @if (projet.url) {
+                <ion-button
+                  title="Lien vers le site Web" target="_blank" href="{{projet.url}}"
+                  color="primary-tint" shape="round" fill="clear" size="large">
+                  <ion-icon name="link"></ion-icon>
+                </ion-button>
+              }
+              @if (projet.playStore) {
+                <ion-button
+                  title="Lien vers le Google Play Store" target="_blank" href="{{projet.playStore}}"
+                  color="primary-tint" shape="round" fill="clear" size="large">
+                  <ion-icon name="logo-google-playstore"></ion-icon>
+                </ion-button>
+              }
             </ion-card-content>
           </ion-card>
-        </ion-col>
-        <ion-col size="12" size-lg="6">
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>Projets personnels</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <swiper-container
-                [navigation]="isDesktop ? {} : undefined"
-                [pagination]="{clickable: true}"
-                >
-                @for (projet of projetsPerso; track projet) {
-                  <swiper-slide>
-                    <ion-card class="no_box ion-text-center">
-                      <ion-header>
-                        <ion-card-title>{{projet.titre}}</ion-card-title>
-                        <ion-card-subtitle>{{projet.sousTitre}} | {{projet.date}}</ion-card-subtitle>
-                      </ion-header>
-                      <ion-card-content [class]="isDesktop ? 'space-card-content' : ''">
-                        {{projet.description}}
-                      </ion-card-content>
-                      <ion-card-content>
-                        @for (technologie of projet.technologies; track technologie) {
-                          <img
-                            class="technologie"
-                            [src]="badge.getLink(technologie)"
-                            alt="Logo {{technologie}}"
-                            loading="lazy"
-                            decoding="async">
-                        }
-                        <br>
-                          @if (projet.github !== '') {
-                            <ion-button
-                              title="Lien vers le Github" target="_blank" href="{{projet.github}}"
-                              color="primary-tint" shape="round" fill="clear" size="large">
-                              <ion-icon name="logo-github"></ion-icon>
-                            </ion-button>
-                          }
-                          @if (projet.url !== '') {
-                            <ion-button
-                              title="Lien vers le site Web" target="_blank" href="{{projet.url}}"
-                              color="primary-tint" shape="round" fill="clear" size="large">
-                              <ion-icon name="link"></ion-icon>
-                            </ion-button>
-                          }
-                          @if (projet.playStore !== '') {
-                            <ion-button
-                              title="Lien vers le Google Play Store" target="_blank"
-                              href="{{projet.playStore}}"
-                              color="primary-tint" shape="round" fill="clear" size="large">
-                              <ion-icon name="logo-google-playstore"></ion-icon>
-                            </ion-button>
-                          }
-                        </ion-card-content>
-                      </ion-card>
-                    </swiper-slide>
-                  }
-                </swiper-container>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-card-content>
-    </ion-card>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </ion-card-content>
+</ion-card>

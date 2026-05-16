@@ -6,7 +6,7 @@
   </ion-header>
   <ion-content class="ion-padding">
     <ion-list>
-      @for (item of ['formation', 'certificats', 'expériences', 'projets', 'compétences', 'ctf', 'loisirs', 'technos', 'contact']; track item) {
+      @for (item of ['formation', 'certificats', 'expériences', 'projets', 'compétences', 'ctf', 'technos', 'contact']; track item) {
         <ion-item
           (click)="goTo(item)">
           <ion-label color="primary">{{item[0].toUpperCase() + item.slice(1, item.length)}}</ion-label>

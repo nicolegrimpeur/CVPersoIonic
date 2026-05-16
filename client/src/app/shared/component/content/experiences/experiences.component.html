@@ -4,10 +4,9 @@
   </ion-card-header>
   <ion-card-content>
     <swiper-container
-      [navigation]="isDesktop ? {} : undefined"
       [slidesPerView]="isDesktop ? 2 : 1"
-      [pagination]="{clickable: true}"
-      >
+      [pagination]="!isDesktop ? {clickable: true} : false"
+    >
       @for (experience of experiencesPro; track experience) {
         <swiper-slide>
           <ion-card class="no_box ion-text-center">
@@ -18,7 +17,7 @@
                 {{experience.entreprise}}
               </ion-card-subtitle>
             </ion-header>
-            <ion-card-content [class]="isDesktop ? 'space-card-content' : ''">
+            <ion-card-content>
               @for (information of experience.informations; track information) {
                 <p>{{information}}</p>
               }

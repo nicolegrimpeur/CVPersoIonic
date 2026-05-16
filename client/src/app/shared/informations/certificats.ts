@@ -1,5 +1,11 @@
 export const certificats = [
   {
+    nomLogo: 'pecb',
+    description: 'ISO/IEC 27005 Risk Manager',
+    date: '2026',
+    site: 'https://media.licdn.com/dms/image/v2/D4E2DAQGVDdIrtdigDQ/profile-treasury-document-images_1280/B4EZ4xUSuPIcAg-/1/1778943864615?e=1779926400&v=beta&t=wQV6LoIqvIep7N-svlKKZUefQoG-p5WqON3bIZYEiBw'
+  },
+  {
     nomLogo: 'anssi',
     description: 'MOOC ANSSI : SecNumAcadémie - Les fondamentaux de la cybersécurité',
     date: '2023',

@@ -1,31 +1,25 @@
 export const projetsPerso = [
   {
-    titre: 'Serveur personnel',
-    sousTitre: 'Serveur personnel sur Raspberry Pi',
-    date: 'Novembre 2020 - Aujourd\'hui',
-    description: 'Création d\'un serveur Ubuntu sur Raspberry Pi, hébergeant différents sites Web, bases de données, ' +
-      'et Api pour mes différents projets personnels et écoles. ' +
-      'En production, mises à jour et sécurités continues. ' +
-      'Mise en place d\'un serveur VPN pour protéger les connexions internes.',
-    github: '',
-    url: '',
-    playStore: '',
-    technologies: ['Ubuntu', 'Node.js', 'Nginx', 'MySQL', 'OpenSSL', 'Grafana', 'Matomo', 'OpenVPN']
+    titre: 'Infrastructure personnelle',
+    sousTitre: 'Plateforme auto-hébergée sur Raspberry Pi',
+    date: 'Novembre 2020 - Aujourd’hui',
+    description:
+      'Conception et administration d’une infrastructure auto-hébergée sous Ubuntu, utilisée pour héberger plusieurs services web, API et bases de données pour des projets personnels et académiques. ' +
+      'Mise en place d’un environnement sécurisé et supervisé avec monitoring, centralisation des logs, sauvegardes automatisées et durcissement réseau. ' +
+      'Exploitation continue en production avec automatisation des déploiements et maintenance de sécurité.',
+    technologies: ['Ubuntu', 'Dokploy', 'Docker', 'Traefik Proxy']
   },
   {
     titre: 'SecretLink',
-    sousTitre: 'Système de partage de données sensibles via des liens à usage unique',
-    date: 'Octobre 2025 - Aujourd\'hui',
-    description: 'Conception et développement complet d’une plateforme sécurisée de partage de mots de passe et de secrets, ' +
-      'permettant de générer des liens à usage unique supprimés après lecture. ' +
-      'Mise en place d’un chiffrement de bout en bout, d’une gestion des comptes utilisateurs et tokens d’accès personnels (PAT), ' +
-      'ainsi qu’une API REST pour automatiser la création de liens. ' +
-      'Développement du front avec Ionic et Angular standalone, intégration d’un back-end Node.js / Express relié à une base MySQL, ' +
-      'et déploiement sur serveur auto-hébergé Raspberry Pi avec supervision Grafana/Loki.',
+    sousTitre: 'Plateforme sécurisée de partage de secrets à usage unique',
+    date: 'Octobre 2025 - Aujourd’hui',
+    description:
+      'Conception et développement d’une plateforme sécurisée permettant le partage temporaire de données sensibles via des liens à usage unique. ' +
+      'Implémentation d’un système de chiffrement de bout en bout, de gestion des comptes utilisateurs et de tokens d’accès personnels (PAT), ainsi qu’une API REST pour l’automatisation des échanges. ' +
+      'Déploiement et exploitation sur infrastructure auto-hébergée avec supervision complète via Grafana, Loki et Alloy.',
     github: 'https://github.com/nicolegrimpeur/SecretLink',
-    url: 'https://nicob.ovh/secret',
-    playStore: '',
-    technologies: ['Ionic', 'Angular', 'TypeScript', 'Node.js', 'Express', 'MySQL', 'Grafana', 'Loki']
+    url: 'https://secret.nicob.ovh',
+    technologies: ['Docker', 'Angular', 'Node.js', 'MySQL', 'Grafana']
   },
   {
     titre: 'All Plannings',
@@ -69,7 +63,7 @@ export const projetsPerso = [
     sousTitre: 'Site et application pour publier des citations hors contexte entre amis',
     date: 'Octobre 2022',
     description: 'Réalisation d\'un site et d\'une application mobile permettant le partage de citations entre amis.',
-    github: 'https://github.com/nicolegrimpeur/Citations',
+    github: '',
     url: '',
     playStore: '',
     technologies: ['Ionic', 'Angular', 'TypeScript', 'Android Studio']

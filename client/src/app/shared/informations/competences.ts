@@ -1,34 +1,34 @@
 export const competences = [
   {
-    titre: 'Dev WEB et mobile',
+    titre: 'DevSecOps',
     image: 'web',
   },
   {
-    titre: 'Jupyter',
+    titre: 'Kubernetes & Docker',
     image: 'jupyter',
   },
   {
-    titre: 'Linux (bureau / serveur)',
+    titre: 'Administration système Linux',
     image: 'linux',
   },
   {
-    titre: 'Capacité à organiser le travail de groupe',
+    titre: 'Monitoring & observabilité',
     image: 'teamwork',
   },
   {
-    titre: 'Capacité à m\'adapter',
+    titre: 'Automatisation CI/CD',
     image: 'adaptation',
   },
   {
-    titre: 'Autonome',
+    titre: 'Développement backend',
     image: 'autonomy',
   },
   {
-    titre: 'Persévérant',
+    titre: 'Sécurisation réseau et applicatifs',
     image: 'perseverance',
   },
   {
-    titre: 'Curieux',
+    titre: 'Conception d\'infrastructures',
     image: 'curiosity',
   },
 ];

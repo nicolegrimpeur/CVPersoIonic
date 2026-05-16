@@ -1,14 +1,8 @@
 export const contact = [
   {
-    text: 'Téléphone',
-    info: '+33 7.81.70.66.63',
-    href: 'tel:+33781706663',
-    icon: 'call-outline'
-  },
-  {
     text: 'Mail',
-    info: 'nicolas.barrat@student.junia.com',
-    href: 'mailto:nicolas.barrat@student.junia.com',
+    info: 'nicolas.barrat@nicob.ovh',
+    href: 'mailto:nicolas.barrat@nicob.ovh',
     icon: 'mail-outline'
   },
   {

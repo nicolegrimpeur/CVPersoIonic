@@ -1,13 +1,15 @@
 export const projetsEcole = [
   {
     titre: 'Serveroo',
-    sousTitre: 'Projet de 4ème et 5ème année',
+    sousTitre: 'Plateforme d\'hébergement basée sur Kubernetes',
     date: 'Décembre 2022 - Mai 2024',
-    description: 'L\'objectif de ce projet est la création d\'un service de location de services en "click and play" à bas prix. ' +
-      'Plus d\'informations sur la page Github ci-dessous.',
+    description:
+      'Projet de fin d\'études réalisé sur deux années autour de la conception d\'une plateforme d\'hébergement basée sur Kubernetes, destinée au déploiement simplifié de services et projets étudiants. ' +
+      'Architecture et orchestration de services conteneurisés, supervision de l\'infrastructure et automatisation des déploiements. ' +
+      'Participation en tant que Tech Lead à la conception technique, au développement backend et à l\'administration de la plateforme.',
     github: 'https://github.com/Serveroo',
-    role: 'Tech lead',
-    technologies: ['MicrosoftAzure', 'Kubernetes', 'Fastify', 'Nginx', 'Node.js', 'Linux', 'Ionic', 'React', 'Grafana']
+    role: 'Tech Lead',
+    technologies: ['Azure', 'Kubernetes', 'Fastify', 'Nginx', 'Node.js', 'Linux', 'React', 'Grafana']
   },
   {
     titre: 'Réalisation d\'une investigation Forensic',

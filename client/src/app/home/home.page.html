@@ -8,6 +8,12 @@
 
       <ion-grid>
         <ion-row>
+          <ion-col>
+            <app-experiences [isDesktop]="isDesktop"></app-experiences>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
           <ion-col size="12" size-lg="6">
             <app-formation></app-formation>
           </ion-col>
@@ -25,12 +31,6 @@
           }
           <ion-col>
             <app-certificats></app-certificats>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col>
-            <app-experiences [isDesktop]="isDesktop"></app-experiences>
           </ion-col>
         </ion-row>
 

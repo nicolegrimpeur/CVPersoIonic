@@ -1,17 +1,18 @@
 export const experiencesPro = [
   {
     titre: 'Ingénieur en sécurité informatique',
-    entreprise: 'Maxxing',
+    entreprise: 'Op\'Team Group : Maxxing + Optimix',
     datesLieu: 'Septembre 2023 - Aujourd\'hui | Marcq-en-Barœul',
     informations: [
+      'Référent sécurité Groupe : de la gouvernance SSI et la mise en conformité aux tests d\'intrusion et à l\'administration de systèmes',
       'Administration de l\'environnement Microsoft 365 (Intune, Entra ID, Microsoft Defender)',
       'Mise en place des accès conditionnels et politiques de sécurité sur Entra ID et Intune',
-      'Gouvernance SSI : rédaction de politiques de sécurité, procédures internes et documentation des processus',
+      'Gouvernance SSI : rédaction et suivi de politiques de sécurité, procédures internes et documentation des processus',
       'Préparation et suivi de conformité ISO 27001 / SOC2 via contrôles récurrents et projet Jira',
       'Réalisation d\'audits de sécurité  sur les procédures internes et de tests d\'intrusion sur la solution logicielle',
       'Gestion des incidents et événements de sécurité : analyse, traitement et remédiation',
       'Administration de la flotte informatique et des outils internes',
-      'Réponse aux questionnaires sécurité clients',
+      'Réponse aux questionnaires sécurité clients / prospects',
     ]
   },
   {

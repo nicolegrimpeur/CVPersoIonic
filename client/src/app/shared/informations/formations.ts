@@ -5,7 +5,6 @@ export const formations = [
     dates: '2018 - 2024',
     lieu: 'Lille',
     description : [
-      'Diplôme d’ingénieur CTI',
       'Cycle ingénieur spécialité Informatique, Réseaux et Cybersécurité',
       'Major de la promotion 65 (2024)'
     ],

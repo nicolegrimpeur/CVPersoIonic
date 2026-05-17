@@ -4,15 +4,14 @@ export const experiencesPro = [
     entreprise: 'Maxxing',
     datesLieu: 'Septembre 2023 - Aujourd\'hui | Marcq-en-Barœul',
     informations: [
-      'Administration du tenant Microsoft (Intune, Entra ID, Microsoft Defender)',
-      'Mise en place des accès conditionnels Entra ID et des politiques de sécurité Intune',
+      'Administration de l\'environnement Microsoft 365 (Intune, Entra ID, Microsoft Defender)',
+      'Mise en place des accès conditionnels et politiques de sécurité sur Entra ID et Intune',
       'Gouvernance SSI : rédaction de politiques de sécurité, procédures internes et documentation des processus',
-      'Préparation ISO 27001 / SOC2 : mise en place et suivi de checks de conformité sur projet Jira',
-      'Réalisation de tests d\'intrusion (pentest) sur la solution logicielle',
-      'Conduite d\'audits de sécurité sur la solution et les procédures internes',
-      'Prise en charge, analyse et traitement des incidents et événements de sécurité',
-      'Suivi et administration de la flotte informatique',
-      'Administration des outils et logiciels internes mis à disposition des équipes',
+      'Préparation et suivi de conformité ISO 27001 / SOC2 via contrôles récurrents et projet Jira',
+      'Réalisation d\'audits de sécurité  sur les procédures internes et de tests d\'intrusion sur la solution logicielle',
+      'Gestion des incidents et événements de sécurité : analyse, traitement et remédiation',
+      'Administration de la flotte informatique et des outils internes',
+      'Réponse aux questionnaires sécurité clients',
     ]
   },
   {

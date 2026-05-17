@@ -4,8 +4,8 @@ export const experiencesPro = [
     entreprise: 'Maxxing',
     datesLieu: 'Septembre 2023 - Aujourd\'hui | Marcq-en-Barœul',
     informations: [
-      'Mise en place et administration du tenant Microsoft (Intune, Entra ID, Microsoft Defender)',
-      'Configuration des accès conditionnels Entra ID et des politiques de sécurité Intune',
+      'Administration du tenant Microsoft (Intune, Entra ID, Microsoft Defender)',
+      'Mise en place des accès conditionnels Entra ID et des politiques de sécurité Intune',
       'Gouvernance SSI : rédaction de politiques de sécurité, procédures internes et documentation des processus',
       'Préparation ISO 27001 / SOC2 : mise en place et suivi de checks de conformité sur projet Jira',
       'Réalisation de tests d\'intrusion (pentest) sur la solution logicielle',

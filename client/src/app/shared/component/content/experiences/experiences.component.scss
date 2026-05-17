@@ -6,3 +6,12 @@ p {
   margin: 0;
   line-height: 1.25;
 }
+
+.section-titre {
+  font-weight: 550;
+  color: var(--ion-color-primary-shade);
+  text-transform: uppercase;
+  font-size: 0.80em;
+  letter-spacing: 0.05em;
+  margin-top: 10px !important;
+}

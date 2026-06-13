@@ -19,5 +19,8 @@ COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 # Copie le build Angular dans Nginx
 COPY --from=builder /app/www/browser /usr/share/nginx/html/
 
+# Copie le CV PDF
+COPY nginx/CV_BARRAT_Nicolas.pdf /usr/share/nginx/html/CV_BARRAT_Nicolas.pdf
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

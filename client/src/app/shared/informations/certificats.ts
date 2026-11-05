@@ -1,5 +1,17 @@
 export const certificats = [
   {
+    nomLogo: 'openai',
+    description: 'Agents and workflows',
+    date: '2026',
+    site: 'https://oaiacademy.credential.net/d8367b38-9e48-4afd-875d-50689118c0de?key=b3f61d2c39de8bf2e8e10558ee177edfe16e1e72056f2826bdf400e87a2bc3af#acc.ZhnaNrJS'
+  },
+  {
+    nomLogo: 'openai',
+    description: 'Applied AI Foundations',
+    date: '2026',
+    site: 'https://oaiacademy.credential.net/0669e492-88da-4a71-b618-bc860f0b2e40?key=d227f0e3e8046c8c8701c566ae05c24761556d550739718c8980265badea271f#acc.EdHkn9AN'
+  },
+  {
     nomLogo: 'pecb',
     description: 'ISO/IEC 27005 Risk Manager',
     date: '2026',

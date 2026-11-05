@@ -18,7 +18,7 @@
     "@angular/router": "22.2.4",
     "@ionic/angular": "^9.0.10",
     "rxjs": "~7.8.2",
-    "swiper": "^12.1.4",
+    "swiper": "^14.4.0",
     "tslib": "^2.9.1",
     "zone.js": "~0.16.3"
   },

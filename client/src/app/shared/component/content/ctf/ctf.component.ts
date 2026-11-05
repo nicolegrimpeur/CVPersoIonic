@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {ctf} from '../../../informations/ctf';
+import {IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonItem, IonLabel, IonList, IonThumbnail} from '@ionic/angular';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'app-ctf',
     templateUrl: './ctf.component.html',
     styleUrls: ['./ctf.component.scss'],
-    standalone: false
+    changeDetection: ChangeDetectionStrategy.Eager,
+    imports: [IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonItem, IonLabel, IonList, IonThumbnail, NgOptimizedImage]
 })
 export class CtfComponent {
   public ctfs = ctf;

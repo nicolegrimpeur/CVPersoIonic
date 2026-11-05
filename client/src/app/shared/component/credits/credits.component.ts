@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
-import {Platform} from '@ionic/angular';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {Platform, IonButton, IonIcon, IonLabel, IonRow, IonToolbar} from '@ionic/angular';
+import {addIcons} from 'ionicons';
+import {logoGithub} from 'ionicons/icons';
+
+addIcons({logoGithub});
 
 @Component({
     selector: 'app-credits',
     templateUrl: './credits.component.html',
     styleUrls: ['./credits.component.scss'],
-    standalone: false
+    changeDetection: ChangeDetectionStrategy.Eager,
+    imports: [IonButton, IonIcon, IonLabel, IonRow, IonToolbar]
 })
 export class CreditsComponent {
 

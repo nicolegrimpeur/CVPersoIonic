@@ -69,6 +69,25 @@
             },
             "ci": {
               "progress": false
+            },
+            "testing": {
+              "assets": [
+                {
+                  "glob": "favicon.ico",
+                  "input": "src/",
+                  "output": "/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "/assets"
+                }
+              ],
+              "styles": [],
+              "polyfills": [
+                "src/polyfills.ts",
+                "zone.js/testing"
+              ]
             }
           }
         },
@@ -91,26 +110,18 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "styles": [],
-            "scripts": [],
-            "assets": [
-              {
-                "glob": "favicon.ico",
-                "input": "src/",
-                "output": "/"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/assets"
-              }
-            ]
+            "reporters": [
+              "default"
+            ],
+            "coverageReporters": [
+              "html",
+              "text-summary"
+            ],
+            "buildTarget": ":build:testing",
+            "runner": "vitest"
           },
           "configurations": {
             "ci": {

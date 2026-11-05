@@ -7,8 +7,10 @@ describe('CV App', () => {
     cy.get('app-header .nom').should('contain', 'Nicolas Barrat');
   });
 
-  it('opens external PDF link', () => {
-    cy.get('ion-icon[name="document-text"]').parent('ion-button')
-      .should('have.attr', 'href', 'https://nicob.ovh/cv/pdf');
+  // Le PDF est servi par nginx sur /pdf (cf. nginx/nginx.conf)
+  it('links to the PDF resume', () => {
+    cy.get('app-accueil ion-button[title="CV au format PDF"]')
+      .should('have.attr', 'href', '/pdf')
+      .and('have.attr', 'target', '_blank');
   });
 });

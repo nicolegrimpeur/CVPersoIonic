@@ -1,5 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule, AnimationController } from '@ionic/angular';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideIonicAngular, AnimationController } from '@ionic/angular';
+import { vi, type Mock } from 'vitest';
 
 import { HeaderComponent } from './header.component';
 
@@ -10,30 +11,32 @@ import { HeaderComponent } from './header.component';
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
-  let animationCtrlSpy: jasmine.SpyObj<AnimationController>;
-  let animationSpy: any;
+  let animationCtrlSpy: { create: Mock };
+  let animationSpy: Record<'addElement' | 'duration' | 'keyframes' | 'play', Mock>;
 
   // Setup component with a mocked AnimationController
-  beforeEach(waitForAsync(() => {
-    animationSpy = {} as any;
-    animationSpy.addElement = jasmine.createSpy('addElement').and.returnValue(animationSpy);
-    animationSpy.duration = jasmine.createSpy('duration').and.returnValue(animationSpy);
-    animationSpy.keyframes = jasmine.createSpy('keyframes').and.returnValue(animationSpy);
-    animationSpy.play = jasmine.createSpy('play').and.returnValue(Promise.resolve());
+  beforeEach(async () => {
+    animationSpy = {
+      addElement: vi.fn(),
+      duration: vi.fn(),
+      keyframes: vi.fn(),
+      play: vi.fn().mockReturnValue(Promise.resolve())
+    };
+    animationSpy.addElement.mockReturnValue(animationSpy);
+    animationSpy.duration.mockReturnValue(animationSpy);
+    animationSpy.keyframes.mockReturnValue(animationSpy);
 
-    animationCtrlSpy = jasmine.createSpyObj('AnimationController', ['create']);
-    animationCtrlSpy.create.and.returnValue(animationSpy);
+    animationCtrlSpy = { create: vi.fn().mockReturnValue(animationSpy) };
 
-    TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
-      imports: [IonicModule.forRoot()],
-      providers: [{ provide: AnimationController, useValue: animationCtrlSpy }]
+    await TestBed.configureTestingModule({
+      imports: [HeaderComponent],
+      providers: [provideIonicAngular(), { provide: AnimationController, useValue: animationCtrlSpy }]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -52,8 +55,8 @@ describe('HeaderComponent', () => {
     ]);
     expect(animationSpy.play).toHaveBeenCalled();
 
-    animationSpy.addElement.calls.reset();
-    animationSpy.keyframes.calls.reset();
+    animationSpy.addElement.mockClear();
+    animationSpy.keyframes.mockClear();
     component.afficheNom = false;
     component.ngOnChanges();
     expect(animationSpy.keyframes).toHaveBeenCalledWith([
@@ -64,11 +67,11 @@ describe('HeaderComponent', () => {
 
   // goTo should scroll smoothly to the given element
   it('should scroll to section in goTo', () => {
-    const scrollSpy = jasmine.createSpy('scrollIntoView');
+    const scrollSpy = vi.fn();
     const realQuery = document.querySelector.bind(document);
-    const querySpy = spyOn(document, 'querySelector').and.callFake((selector: string) => {
+    const querySpy = vi.spyOn(document, 'querySelector').mockImplementation((selector: string) => {
       if (selector === '#test') {
-        return { scrollIntoView: scrollSpy } as any;
+        return { scrollIntoView: scrollSpy } as unknown as Element;
       }
       return realQuery(selector);
     });
@@ -77,5 +80,6 @@ describe('HeaderComponent', () => {
 
     expect(querySpy).toHaveBeenCalledWith('#test');
     expect(scrollSpy).toHaveBeenCalledWith({behavior: 'smooth'});
+    querySpy.mockRestore();
   });
 });

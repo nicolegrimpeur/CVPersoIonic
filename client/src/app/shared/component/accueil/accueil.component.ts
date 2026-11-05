@@ -1,19 +1,29 @@
-import {Component, OnInit} from '@angular/core';
-import {AnimationController} from '@ionic/angular';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {AnimationController, IonButton, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonIcon, IonRow} from '@ionic/angular';
+import {addIcons} from 'ionicons';
+import {documentText} from 'ionicons/icons';
+import { NgOptimizedImage } from '@angular/common';
+
+addIcons({documentText});
 
 @Component({
     selector: 'app-accueil',
     templateUrl: './accueil.component.html',
     styleUrls: ['./accueil.component.scss'],
-    standalone: false
+    changeDetection: ChangeDetectionStrategy.Eager,
+    imports: [IonButton, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonIcon, IonRow, NgOptimizedImage]
 })
 export class AccueilComponent implements OnInit {
   constructor(private animation: AnimationController) {
   }
 
   ngOnInit() {
+    const fleche = document.querySelector('#fleche');
+    if (!fleche) {
+      return;
+    }
     this.animation.create()
-      .addElement(document.querySelector('#fleche'))
+      .addElement(fleche)
       .duration(2000)
       .direction('alternate')
       .iterations(Infinity)
@@ -25,6 +35,6 @@ export class AccueilComponent implements OnInit {
 
   onArrowClick() {
     const element = document.getElementById('formation');
-    element.scrollIntoView({behavior: 'smooth'});
+    element?.scrollIntoView({behavior: 'smooth'});
   }
 }

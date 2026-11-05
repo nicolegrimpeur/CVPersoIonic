@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideIonicAngular } from '@ionic/angular';
 
 import { CtfComponent } from './ctf.component';
 
@@ -7,16 +7,16 @@ describe('CtfComponent', () => {
   let component: CtfComponent;
   let fixture: ComponentFixture<CtfComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CtfComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+    imports: [CtfComponent],
+    providers: [provideIonicAngular()]
+}).compileComponents();
 
     fixture = TestBed.createComponent(CtfComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

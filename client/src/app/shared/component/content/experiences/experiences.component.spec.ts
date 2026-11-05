@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideIonicAngular } from '@ionic/angular';
 
 import { ExperiencesComponent } from './experiences.component';
 
@@ -7,16 +7,16 @@ describe('ExperiencesComponent', () => {
   let component: ExperiencesComponent;
   let fixture: ComponentFixture<ExperiencesComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ExperiencesComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+    imports: [ExperiencesComponent],
+    providers: [provideIonicAngular()]
+}).compileComponents();
 
     fixture = TestBed.createComponent(ExperiencesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

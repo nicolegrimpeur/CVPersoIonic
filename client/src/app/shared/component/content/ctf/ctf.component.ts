@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {ctf} from '../../../informations/ctf';
-import { IonicModule } from '@ionic/angular/lazy';
+import {IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonItem, IonLabel, IonList, IonThumbnail} from '@ionic/angular';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -8,7 +8,7 @@ import { NgOptimizedImage } from '@angular/common';
     templateUrl: './ctf.component.html',
     styleUrls: ['./ctf.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    imports: [IonicModule, NgOptimizedImage]
+    imports: [IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonItem, IonLabel, IonList, IonThumbnail, NgOptimizedImage]
 })
 export class CtfComponent {
   public ctfs = ctf;

@@ -84,7 +84,10 @@
                 }
               ],
               "styles": [],
-              "polyfills": "src/polyfills.ts"
+              "polyfills": [
+                "src/polyfills.ts",
+                "zone.js/testing"
+              ]
             }
           }
         },
@@ -116,9 +119,6 @@
             "coverageReporters": [
               "html",
               "text-summary"
-            ],
-            "setupFiles": [
-              "src/test.ts"
             ],
             "buildTarget": ":build:testing",
             "runner": "vitest"

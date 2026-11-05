@@ -1,24 +1,28 @@
 import {Component, Input, OnChanges, ChangeDetectionStrategy} from '@angular/core';
-import { AnimationController, Platform, IonicModule } from '@ionic/angular/lazy';
+import {AnimationController, Platform, IonButton, IonButtons, IonHeader, IonMenuButton, IonText, IonTitle, IonToolbar} from '@ionic/angular';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    imports: [IonicModule]
+    imports: [IonButton, IonButtons, IonHeader, IonMenuButton, IonText, IonTitle, IonToolbar]
 })
 export class HeaderComponent implements OnChanges {
-  @Input() public afficheNom: boolean;
+  @Input() public afficheNom = false;
 
   constructor(public platform: Platform,
               private animation: AnimationController) {
   }
 
   ngOnChanges() {
+    const nom = document.querySelector('.nom');
+    if (!nom) {
+      return;
+    }
     if (this.afficheNom) {
       this.animation.create()
-        .addElement(document.querySelector('.nom'))
+        .addElement(nom)
         .duration(500)
         .keyframes([
           {offset: 0, opacity: '0'},
@@ -26,7 +30,7 @@ export class HeaderComponent implements OnChanges {
         ]).play().then();
     } else {
       this.animation.create()
-        .addElement(document.querySelector('.nom'))
+        .addElement(nom)
         .duration(500)
         .keyframes([
           {offset: 0, opacity: '1'},
@@ -36,7 +40,7 @@ export class HeaderComponent implements OnChanges {
   }
 
   goTo(nom: string) {
-    document.querySelector('#' + nom).scrollIntoView({behavior: 'smooth'});
+    document.querySelector('#' + nom)?.scrollIntoView({behavior: 'smooth'});
   }
 
 }

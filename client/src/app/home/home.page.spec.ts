@@ -1,5 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule, Platform } from '@ionic/angular/lazy';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideIonicAngular, Platform } from '@ionic/angular';
+import { vi, type Mock } from 'vitest';
 
 import { HomePage } from './home.page';
 
@@ -11,22 +12,21 @@ import { HomePage } from './home.page';
 describe('HomePage', () => {
   let component: HomePage;
   let fixture: ComponentFixture<HomePage>;
-  let platformSpy: jasmine.SpyObj<Platform>;
+  let platformSpy: { is: Mock };
 
   // Configure the testing module and mock Platform
-  beforeEach(waitForAsync(() => {
-    platformSpy = jasmine.createSpyObj('Platform', ['is']);
-    platformSpy.is.and.returnValue(true);
+  beforeEach(async () => {
+    platformSpy = { is: vi.fn().mockReturnValue(true) };
 
-    TestBed.configureTestingModule({
-    imports: [IonicModule.forRoot(), HomePage],
-    providers: [{ provide: Platform, useValue: platformSpy }]
-}).compileComponents();
+    await TestBed.configureTestingModule({
+      imports: [HomePage],
+      providers: [provideIonicAngular(), { provide: Platform, useValue: platformSpy }]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -35,14 +35,14 @@ describe('HomePage', () => {
   // Platform.is('desktop') should be called and isDesktop flag set
   it('should detect desktop platform', () => {
     expect(platformSpy.is).toHaveBeenCalledWith('desktop');
-    expect(component.isDesktop).toBeTrue();
+    expect(component.isDesktop).toBe(true);
   });
 
   // The afficheNom flag should toggle based on scroll position
   it('should toggle afficheNom on scroll', () => {
-    component.eventScroll({detail: {scrollTop: 600}} as any);
-    expect(component.afficheNom).toBeTrue();
-    component.eventScroll({detail: {scrollTop: 400}} as any);
-    expect(component.afficheNom).toBeFalse();
+    component.eventScroll({detail: {scrollTop: 600}});
+    expect(component.afficheNom).toBe(true);
+    component.eventScroll({detail: {scrollTop: 400}});
+    expect(component.afficheNom).toBe(false);
   });
 });

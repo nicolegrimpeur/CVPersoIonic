@@ -1,5 +1,5 @@
 import {Component, ChangeDetectionStrategy} from '@angular/core';
-import { Platform, IonicModule } from '@ionic/angular/lazy';
+import {Platform, IonCol, IonContent, IonGrid, IonRow} from '@ionic/angular';
 import { MenuComponent } from '../shared/component/menu/menu.component';
 import { HeaderComponent } from '../shared/component/header/header.component';
 import { AccueilComponent } from '../shared/component/accueil/accueil.component';
@@ -18,7 +18,7 @@ import { CreditsComponent } from '../shared/component/credits/credits.component'
     templateUrl: 'home.page.html',
     styleUrls: ['home.page.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    imports: [MenuComponent, HeaderComponent, IonicModule, AccueilComponent, ExperiencesComponent, FormationComponent, CertificatsComponent, ProjetsComponent, CtfComponent, CompetencesComponent, TechnosComponent, ContactComponent, CreditsComponent]
+    imports: [MenuComponent, HeaderComponent, IonCol, IonContent, IonGrid, IonRow, AccueilComponent, ExperiencesComponent, FormationComponent, CertificatsComponent, ProjetsComponent, CtfComponent, CompetencesComponent, TechnosComponent, ContactComponent, CreditsComponent]
 })
 export class HomePage {
   public afficheNom = false;

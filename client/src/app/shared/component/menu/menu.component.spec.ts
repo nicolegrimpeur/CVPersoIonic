@@ -1,5 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular/lazy';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideIonicAngular, IonMenu } from '@ionic/angular';
+import { vi } from 'vitest';
 
 import { MenuComponent } from './menu.component';
 
@@ -10,18 +11,21 @@ import { MenuComponent } from './menu.component';
 describe('MenuComponent', () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
+  let closeSpy: ReturnType<typeof vi.fn>;
 
   // Initialize component and stub the menu close method
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-    imports: [IonicModule.forRoot(), MenuComponent]
-}).compileComponents();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [MenuComponent],
+      providers: [provideIonicAngular()]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    component.menu = { el: { close: jasmine.createSpy('close') } } as any;
-  }));
+    closeSpy = vi.fn();
+    component.menu = { close: closeSpy } as unknown as IonMenu;
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -29,11 +33,11 @@ describe('MenuComponent', () => {
 
   // goTo should scroll smoothly to the element and close the menu
   it('should scroll to element and close menu', () => {
-    const scrollSpy = jasmine.createSpy('scrollIntoView');
+    const scrollSpy = vi.fn();
     const realQuery = document.querySelector.bind(document);
-    const querySpy = spyOn(document, 'querySelector').and.callFake((selector: string) => {
+    const querySpy = vi.spyOn(document, 'querySelector').mockImplementation((selector: string) => {
       if (selector === '#section') {
-        return { scrollIntoView: scrollSpy } as any;
+        return { scrollIntoView: scrollSpy } as unknown as Element;
       }
       return realQuery(selector);
     });
@@ -42,6 +46,7 @@ describe('MenuComponent', () => {
 
     expect(querySpy).toHaveBeenCalledWith('#section');
     expect(scrollSpy).toHaveBeenCalledWith({behavior: 'smooth'});
-    expect((component as any).menu.el.close).toHaveBeenCalled();
+    expect(closeSpy).toHaveBeenCalled();
+    querySpy.mockRestore();
   });
 });

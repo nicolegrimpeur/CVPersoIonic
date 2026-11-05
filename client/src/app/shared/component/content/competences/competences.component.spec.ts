@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular/lazy';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideIonicAngular } from '@ionic/angular';
 
 import { CompetencesComponent } from './competences.component';
 
@@ -7,15 +7,16 @@ describe('CompetencesComponent', () => {
   let component: CompetencesComponent;
   let fixture: ComponentFixture<CompetencesComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-    imports: [IonicModule.forRoot(), CompetencesComponent]
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+    imports: [CompetencesComponent],
+    providers: [provideIonicAngular()]
 }).compileComponents();
 
     fixture = TestBed.createComponent(CompetencesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

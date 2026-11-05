@@ -25,10 +25,9 @@ describe('HeaderComponent', () => {
     animationCtrlSpy.create.and.returnValue(animationSpy);
 
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
-      imports: [IonicModule.forRoot()],
-      providers: [{ provide: AnimationController, useValue: animationCtrlSpy }]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), HeaderComponent],
+    providers: [{ provide: AnimationController, useValue: animationCtrlSpy }]
+}).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

@@ -1,6 +1,6 @@
 import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 import {experiencesPro} from '../../../informations/experiencesPro';
-import {Platform} from '@ionic/angular/lazy';
+import { Platform, IonicModule } from '@ionic/angular/lazy';
 
 
 @Component({
@@ -8,7 +8,7 @@ import {Platform} from '@ionic/angular/lazy';
     templateUrl: './experiences.component.html',
     styleUrls: ['./experiences.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [IonicModule]
 })
 export class ExperiencesComponent {
   @Input() public isDesktop !: boolean;

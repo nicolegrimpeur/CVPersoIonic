@@ -1,12 +1,13 @@
 import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
-import {AnimationController} from '@ionic/angular/lazy';
+import { AnimationController, IonicModule } from '@ionic/angular/lazy';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'app-accueil',
     templateUrl: './accueil.component.html',
     styleUrls: ['./accueil.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [IonicModule, NgOptimizedImage]
 })
 export class AccueilComponent implements OnInit {
   constructor(private animation: AnimationController) {

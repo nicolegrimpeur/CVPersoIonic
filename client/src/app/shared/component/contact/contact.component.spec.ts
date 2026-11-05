@@ -15,9 +15,8 @@ describe('ContactComponent', () => {
   beforeEach(waitForAsync(() => {
     delaySpy = spyOn(ContactComponent.prototype, 'delay').and.returnValue(Promise.resolve());
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), ContactComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(ContactComponent);
     component = fixture.componentInstance;

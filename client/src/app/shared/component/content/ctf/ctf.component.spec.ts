@@ -9,9 +9,8 @@ describe('CtfComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CtfComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), CtfComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(CtfComponent);
     component = fixture.componentInstance;

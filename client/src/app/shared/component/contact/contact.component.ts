@@ -1,12 +1,13 @@
 import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {contact} from '../../informations/contact';
+import { IonicModule } from '@ionic/angular/lazy';
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [IonicModule]
 })
 export class ContactComponent {
   public contact = contact;

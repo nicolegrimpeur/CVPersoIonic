@@ -1,12 +1,12 @@
 import {Component, Input, OnChanges, ChangeDetectionStrategy} from '@angular/core';
-import {AnimationController, Platform} from '@ionic/angular/lazy';
+import { AnimationController, Platform, IonicModule } from '@ionic/angular/lazy';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [IonicModule]
 })
 export class HeaderComponent implements OnChanges {
   @Input() public afficheNom: boolean;

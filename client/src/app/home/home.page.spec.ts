@@ -19,10 +19,9 @@ describe('HomePage', () => {
     platformSpy.is.and.returnValue(true);
 
     TestBed.configureTestingModule({
-      declarations: [ HomePage ],
-      imports: [IonicModule.forRoot()],
-      providers: [{ provide: Platform, useValue: platformSpy }]
-    }).compileComponents();
+    imports: [IonicModule.forRoot(), HomePage],
+    providers: [{ provide: Platform, useValue: platformSpy }]
+}).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
     component = fixture.componentInstance;

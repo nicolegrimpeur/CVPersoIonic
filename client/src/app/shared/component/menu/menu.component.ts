@@ -1,12 +1,12 @@
 import {Component, ViewChild, ChangeDetectionStrategy} from '@angular/core';
-import {Platform} from '@ionic/angular/lazy';
+import { Platform, IonicModule } from '@ionic/angular/lazy';
 
 @Component({
     selector: 'app-menu',
     templateUrl: './menu.component.html',
     styleUrls: ['./menu.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [IonicModule]
 })
 export class MenuComponent {
   @ViewChild('menu') menu: { el: { close: () => void; }; };

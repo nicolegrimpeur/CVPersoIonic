@@ -1,12 +1,14 @@
 import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {certificats} from '../../../informations/certificats';
+import { IonicModule } from '@ionic/angular/lazy';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'app-certificats',
     templateUrl: './certificats.component.html',
     styleUrls: ['./certificats.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    imports: [IonicModule, NgOptimizedImage]
 })
 export class CertificatsComponent {
   public certificats = certificats;

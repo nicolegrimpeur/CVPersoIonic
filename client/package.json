@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ionic serve",
     "build": "ng run app:build:production",
-    "e2e": "cypress run"
+    "e2e": "cypress run --browser chrome"
   },
   "private": true,
   "dependencies": {

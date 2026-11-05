@@ -19,8 +19,8 @@ export const contact = [
   },
   {
     text: 'CV au format PDF',
-    info: 'nicob.ovh/cv/pdf',
-    href: 'https://nicob.ovh/cv/pdf',
+    info: 'cv.nicob.ovh/pdf',
+    href: 'https://cv.nicob.ovh/pdf',
     icon: 'link'
   },
 ];

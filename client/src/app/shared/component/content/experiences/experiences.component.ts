@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 import {experiencesPro} from '../../../informations/experiencesPro';
 import {Platform} from '@ionic/angular/lazy';
 
@@ -7,6 +7,7 @@ import {Platform} from '@ionic/angular/lazy';
     selector: 'app-experiences',
     templateUrl: './experiences.component.html',
     styleUrls: ['./experiences.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ExperiencesComponent {

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {competences} from '../../../informations/competences';
 
 @Component({
     selector: 'app-competences',
     templateUrl: './competences.component.html',
     styleUrls: ['./competences.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CompetencesComponent {

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {ctf} from '../../../informations/ctf';
 
 @Component({
     selector: 'app-ctf',
     templateUrl: './ctf.component.html',
     styleUrls: ['./ctf.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CtfComponent {

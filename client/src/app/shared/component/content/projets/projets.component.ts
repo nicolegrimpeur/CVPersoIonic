@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 import {projets} from '../../../informations/projets';
 import {Platform} from '@ionic/angular/lazy';
 
@@ -6,6 +6,7 @@ import {Platform} from '@ionic/angular/lazy';
     selector: 'app-projets',
     templateUrl: './projets.component.html',
     styleUrls: ['./projets.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ProjetsComponent {

@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {Platform} from '@ionic/angular';
+import {Platform} from '@ionic/angular/lazy';
 
 @Component({
     selector: 'app-menu',

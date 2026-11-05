@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule, Platform } from '@ionic/angular';
+import { IonicModule, Platform } from '@ionic/angular/lazy';
 
 import { HomePage } from './home.page';
 

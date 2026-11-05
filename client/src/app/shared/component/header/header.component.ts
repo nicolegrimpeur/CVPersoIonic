@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges} from '@angular/core';
-import {AnimationController, Platform} from '@ionic/angular';
+import {AnimationController, Platform} from '@ionic/angular/lazy';
 
 @Component({
     selector: 'app-header',

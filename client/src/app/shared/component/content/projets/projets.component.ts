@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {projets} from '../../../informations/projets';
-import {Platform} from '@ionic/angular';
+import {Platform} from '@ionic/angular/lazy';
 
 @Component({
     selector: 'app-projets',

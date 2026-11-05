@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AnimationController} from '@ionic/angular';
+import {AnimationController} from '@ionic/angular/lazy';
 
 @Component({
     selector: 'app-accueil',

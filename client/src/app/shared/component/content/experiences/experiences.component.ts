@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {experiencesPro} from '../../../informations/experiencesPro';
-import {Platform} from '@ionic/angular';
+import {Platform} from '@ionic/angular/lazy';
 
 
 @Component({

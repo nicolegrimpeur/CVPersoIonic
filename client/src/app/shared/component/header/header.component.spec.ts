@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule, AnimationController } from '@ionic/angular';
+import { IonicModule, AnimationController } from '@ionic/angular/lazy';
 
 import { HeaderComponent } from './header.component';
 

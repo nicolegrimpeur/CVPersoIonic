@@ -1,6 +1,6 @@
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
+import {IonicModule} from '@ionic/angular/lazy';
 import {FormsModule} from '@angular/forms';
 import {HomePage} from './home.page';
 

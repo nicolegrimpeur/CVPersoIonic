@@ -4,7 +4,7 @@ export const projets = [
     sousTitre: 'Partage de secrets par lien à usage unique',
     date: 'Octobre 2025 - Aujourd\'hui',
     description:
-      'Conçu et développé seul, un service open source et auto-hébergeable pour remplacer l\'envoi de mots de passe par mail ou messagerie. ' +
+      'Conçu et développé seul un service open source et auto-hébergeable pour remplacer l\'envoi de mots de passe par mail ou messagerie. ' +
       'Chiffrement optionnel dans le navigateur, tableau de bord avec révocation des liens, comptes utilisateurs et tokens d\'accès personnels (PAT), API REST et extension Chrome. ' +
       'Développé avec l\'IA comme assistant et auditeur, chaque ligne relue ; tests et analyses de code publics sur GitHub. ' +
       'Hébergé sur mon infrastructure personnelle, avec supervision via Grafana, Loki et Alloy.',

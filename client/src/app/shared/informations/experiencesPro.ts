@@ -2,7 +2,7 @@ export const experiencesPro = [
   {
     titre: 'Ingénieur en sécurité informatique',
     entreprise: 'MAXXING / Op\'Team Group',
-    datesLieu: 'Septembre 2023 - Aujourd\'hui | Marcq-en-Barœul',
+    datesLieu: 'Septembre 2023 - Aujourd\'hui | Contrat pro puis CDI | Marcq-en-Barœul',
     sections: [
       {
         items: [
@@ -36,8 +36,8 @@ export const experiencesPro = [
       {
         titre: 'Encadrement de l\'IA',
         items: [
-          'Mise en conformité AI Act et rédaction de la charte IA du groupe',
-          'Déploiement et accompagnement des équipes sur Claude et Claude Code',
+          'Mené la mise en conformité AI Act et rédigé la charte IA du groupe',
+          'Déploie et accompagne les équipes sur Claude et Claude Code',
         ],
       },
     ],

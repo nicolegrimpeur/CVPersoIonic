@@ -1,10 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, inject, PLATFORM_ID } from '@angular/core';
 import {AnimationController, IonButton, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonIcon, IonRow} from '@ionic/angular';
-import {addIcons} from 'ionicons';
-import {documentText} from 'ionicons/icons';
-import { NgOptimizedImage } from '@angular/common';
-
-addIcons({documentText});
+import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'app-accueil',
@@ -15,8 +11,13 @@ addIcons({documentText});
 })
 export class AccueilComponent implements OnInit {
   private animation = inject(AnimationController);
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   ngOnInit() {
+    // pas d'animation lors du prérendu (pas de DOM navigateur)
+    if (!this.isBrowser) {
+      return;
+    }
     const fleche = document.querySelector('#fleche');
     if (!fleche) {
       return;

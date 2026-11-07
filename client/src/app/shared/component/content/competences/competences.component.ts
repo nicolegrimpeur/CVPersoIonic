@@ -1,10 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {competences} from '../../../informations/competences';
 import {IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonGrid, IonIcon, IonLabel, IonRow} from '@ionic/angular';
-import {addIcons} from 'ionicons';
-import {checkmarkCircle} from 'ionicons/icons';
-
-addIcons({checkmarkCircle});
 
 @Component({
     selector: 'app-competences',

@@ -1,10 +1,6 @@
 import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {contact} from '../../informations/contact';
 import {IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonGrid, IonIcon, IonRow} from '@ionic/angular';
-import {addIcons} from 'ionicons';
-import {link, logoGithub, logoLinkedin, mailOutline} from 'ionicons/icons';
-
-addIcons({link, logoGithub, logoLinkedin, mailOutline});
 
 @Component({
     selector: 'app-contact',

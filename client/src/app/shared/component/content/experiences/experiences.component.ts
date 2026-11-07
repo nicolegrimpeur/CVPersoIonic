@@ -1,10 +1,6 @@
 import { Component, Input, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import {experiencesPro} from '../../../informations/experiencesPro';
 import {Platform, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonHeader, IonIcon} from '@ionic/angular';
-import {addIcons} from 'ionicons';
-import {link} from 'ionicons/icons';
-
-addIcons({link});
 
 @Component({
     selector: 'app-experiences',

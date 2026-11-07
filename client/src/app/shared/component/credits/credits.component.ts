@@ -1,9 +1,5 @@
 import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import {Platform, IonButton, IonIcon, IonLabel, IonRow, IonToolbar} from '@ionic/angular';
-import {addIcons} from 'ionicons';
-import {logoGithub} from 'ionicons/icons';
-
-addIcons({logoGithub});
 
 @Component({
     selector: 'app-credits',

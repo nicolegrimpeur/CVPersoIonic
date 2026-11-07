@@ -1,10 +1,6 @@
 import { Component, Input, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import {projets} from '../../../informations/projets';
 import {Platform, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonChip, IonHeader, IonIcon} from '@ionic/angular';
-import {addIcons} from 'ionicons';
-import {link, logoGithub, logoGooglePlaystore} from 'ionicons/icons';
-
-addIcons({link, logoGithub, logoGooglePlaystore});
 
 @Component({
     selector: 'app-projets',

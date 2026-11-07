@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, Input, OnChanges, ChangeDetectionStrategy, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import {AnimationController, Platform, IonButton, IonButtons, IonHeader, IonMenuButton, IonText, IonTitle, IonToolbar} from '@ionic/angular';
 
 @Component({
@@ -11,10 +12,15 @@ import {AnimationController, Platform, IonButton, IonButtons, IonHeader, IonMenu
 export class HeaderComponent implements OnChanges {
   platform = inject(Platform);
   private animation = inject(AnimationController);
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   @Input() public afficheNom = false;
 
   ngOnChanges() {
+    // pas d'animation lors du prérendu (pas de DOM navigateur)
+    if (!this.isBrowser) {
+      return;
+    }
     const nom = document.querySelector('.nom');
     if (!nom) {
       return;

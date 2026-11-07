@@ -53,3 +53,7 @@ import 'zone.js';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+// Icônes enregistrées avant le chargement d'@ionic/angular : les <ion-icon> du HTML prérendu
+// sont activées dès son import, et ne doivent pas chercher une icône encore inconnue
+import './app/icons';

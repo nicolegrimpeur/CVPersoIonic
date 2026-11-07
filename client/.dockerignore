@@ -1,0 +1,25 @@
+# Dépendances et artefacts de build
+node_modules
+www
+dist
+.angular
+.nx
+out-tsc
+coverage
+
+# Tests e2e (non nécessaires au build)
+cypress
+cypress.config.ts
+
+# IDE / OS
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+
+# Divers
+.git
+.gitignore
+*.log
+Dockerfile
+.dockerignore

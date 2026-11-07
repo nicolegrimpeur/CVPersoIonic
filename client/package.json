@@ -1,6 +1,6 @@
 {
   "name": "cv",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "author": "Nicolas Barrat",
   "homepage": "https://nicob.ovh/",
   "scripts": {
@@ -30,6 +30,7 @@
     "@angular/compiler": "22.2.4",
     "@angular/compiler-cli": "22.2.4",
     "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.9",
     "angular-eslint": "22.6.0",
     "cypress": "^16.2.1",
     "eslint": "^10.12.0",

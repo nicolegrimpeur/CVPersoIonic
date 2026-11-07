@@ -12,7 +12,4 @@ import {IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, I
 export class TechnosComponent {
   public listeTechnos = listeTechnos;
 
-  constructor() {
-  }
-
 }

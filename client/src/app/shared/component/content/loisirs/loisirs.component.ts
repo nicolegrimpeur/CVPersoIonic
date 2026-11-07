@@ -12,7 +12,4 @@ import {IonCard, IonCardHeader, IonCardTitle, IonCol, IonGrid, IonLabel, IonRow}
 export class LoisirsComponent {
   public loisirs = loisirs;
 
-  constructor() {
-  }
-
 }

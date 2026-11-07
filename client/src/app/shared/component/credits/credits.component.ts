@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import {Platform, IonButton, IonIcon, IonLabel, IonRow, IonToolbar} from '@ionic/angular';
 import {addIcons} from 'ionicons';
 import {logoGithub} from 'ionicons/icons';
@@ -13,7 +13,5 @@ addIcons({logoGithub});
     imports: [IonButton, IonIcon, IonLabel, IonRow, IonToolbar]
 })
 export class CreditsComponent {
-
-  constructor(public platform: Platform) { }
-
+  platform = inject(Platform);
 }

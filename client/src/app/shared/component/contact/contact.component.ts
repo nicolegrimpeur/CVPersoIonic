@@ -17,9 +17,6 @@ export class ContactComponent {
   public contact = contact;
   public affiche: string[] = [];
 
-  constructor() {
-  }
-
   testMailOrTel(texte: string) {
     return ['Téléphone', 'Mail'].find(el => el === texte);
   }

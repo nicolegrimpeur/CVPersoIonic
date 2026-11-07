@@ -1,9 +1,8 @@
-import {Component, Input, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import {experiencesPro} from '../../../informations/experiencesPro';
 import {Platform, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonHeader, IonIcon} from '@ionic/angular';
 import {addIcons} from 'ionicons';
 import {link} from 'ionicons/icons';
-
 
 addIcons({link});
 
@@ -16,10 +15,9 @@ addIcons({link});
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ExperiencesComponent {
+  platform = inject(Platform);
+
   @Input() public isDesktop !: boolean;
 
   public experiencesPro = experiencesPro;
-
-  constructor(public platform: Platform) {
-  }
 }

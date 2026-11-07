@@ -1,4 +1,4 @@
-import {Component, ViewChild, ChangeDetectionStrategy} from '@angular/core';
+import { Component, ViewChild, ChangeDetectionStrategy, inject } from '@angular/core';
 import {Platform, IonContent, IonHeader, IonItem, IonLabel, IonList, IonMenu, IonTitle, IonToolbar} from '@ionic/angular';
 
 @Component({
@@ -9,10 +9,9 @@ import {Platform, IonContent, IonHeader, IonItem, IonLabel, IonList, IonMenu, Io
     imports: [IonContent, IonHeader, IonItem, IonLabel, IonList, IonMenu, IonTitle, IonToolbar]
 })
 export class MenuComponent {
-  @ViewChild('menu') menu?: IonMenu;
+  platform = inject(Platform);
 
-  constructor(public platform: Platform) {
-  }
+  @ViewChild('menu') menu?: IonMenu;
 
   goTo(nom: string) {
     document.querySelector('#' + nom)?.scrollIntoView({behavior: 'smooth'});

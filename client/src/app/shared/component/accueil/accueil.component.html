@@ -20,7 +20,7 @@
         <ion-card class="card-description">
           <ion-card-header>
             <ion-card-subtitle class="ion-text-center description">
-              Référent sécurité d'un groupe de 4 sociétés (~90 pers.) : je déploie les référentiels de sécurité (ISO 27001, SOC 2) et la conformité AI Act, sécurise le SI Microsoft 365 / Azure et intègre les sociétés rachetées. Major de promo JUNIA ISEN
+              GRC (ISO 27001, SOC 2, AI Act) · Microsoft 365 / Azure · DevSecOps · Certifié OpenAI
             </ion-card-subtitle>
           </ion-card-header>
         </ion-card>
@@ -43,7 +43,8 @@
 </div>
 
 <div id="div_fleche">
-  <img src="assets/doublefleche.svg" alt="Flèche vers le bas" id="fleche"
+  <img src="assets/doublefleche.svg" alt="Aller au contenu" id="fleche" role="button" tabindex="0"
+       (keydown.enter)="onArrowClick()"
        (click)="onArrowClick()">
 </div>
 

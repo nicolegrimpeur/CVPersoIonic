@@ -6,7 +6,7 @@ export const experiencesPro = [
     sections: [
       {
         items: [
-          'Référent sécurité d\'un groupe de 4 sociétés (~90 personnes) : référentiels de sécurité, conformité, sécurisation du SI Microsoft 365 / Azure et intégration des sociétés rachetées',
+          'Référent sécurité d\'un groupe de 4 sociétés (~90 personnes) : je déploie les référentiels de sécurité (ISO 27001, SOC 2) et la conformité AI Act, sécurise le SI Microsoft 365 / Azure et intègre les sociétés rachetées',
         ]
       },
       {

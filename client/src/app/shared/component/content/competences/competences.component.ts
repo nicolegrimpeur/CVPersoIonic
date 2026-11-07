@@ -16,6 +16,4 @@ addIcons({checkmarkCircle});
 export class CompetencesComponent {
   public competences = competences;
 
-  constructor() { }
-
 }

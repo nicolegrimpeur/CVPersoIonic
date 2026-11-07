@@ -1,4 +1,4 @@
-export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
+export const listeTechnos: { title: string, liste: string[] }[] = [
   {
     title: 'Microsoft',
     liste: ['Microsoft 365', 'Entra ID', 'Microsoft Intune', 'Microsoft Defender', 'Microsoft Azure', 'AKS']

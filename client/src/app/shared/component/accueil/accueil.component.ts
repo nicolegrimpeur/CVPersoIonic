@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, inject } from '@angular/core';
 import {AnimationController, IonButton, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonIcon, IonRow} from '@ionic/angular';
 import {addIcons} from 'ionicons';
 import {documentText} from 'ionicons/icons';
@@ -14,8 +14,7 @@ addIcons({documentText});
     imports: [IonButton, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonGrid, IonIcon, IonRow, NgOptimizedImage]
 })
 export class AccueilComponent implements OnInit {
-  constructor(private animation: AnimationController) {
-  }
+  private animation = inject(AnimationController);
 
   ngOnInit() {
     const fleche = document.querySelector('#fleche');

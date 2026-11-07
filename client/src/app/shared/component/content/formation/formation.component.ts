@@ -12,7 +12,4 @@ import {IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle} f
 export class FormationComponent {
   public formations = formations;
 
-  constructor() {
-  }
-
 }

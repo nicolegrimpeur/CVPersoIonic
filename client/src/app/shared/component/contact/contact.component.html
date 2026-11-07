@@ -14,8 +14,9 @@
               </ion-card-header>
               <ion-card-content>
                 @if (testMailOrTel(carte.text)) {
-                  <h5
-                    (click)="click($event, carte.info)">
+                  <h5 role="button" tabindex="0"
+                    (click)="click($event, carte.info)"
+                    (keydown.enter)="click($event, carte.info)">
                     Cliquez pour voir les informations
                   </h5>
                 }

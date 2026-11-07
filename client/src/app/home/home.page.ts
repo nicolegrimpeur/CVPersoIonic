@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy} from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import {Platform, IonCol, IonContent, IonGrid, IonRow} from '@ionic/angular';
 import { MenuComponent } from '../shared/component/menu/menu.component';
 import { HeaderComponent } from '../shared/component/header/header.component';
@@ -21,11 +21,10 @@ import { CreditsComponent } from '../shared/component/credits/credits.component'
     imports: [MenuComponent, HeaderComponent, IonCol, IonContent, IonGrid, IonRow, AccueilComponent, ExperiencesComponent, FormationComponent, CertificatsComponent, ProjetsComponent, CtfComponent, CompetencesComponent, TechnosComponent, ContactComponent, CreditsComponent]
 })
 export class HomePage {
+  platform = inject(Platform);
+
   public afficheNom = false;
   public isDesktop = this.platform.is('desktop');
-
-  constructor(public platform: Platform) {
-  }
 
   // événement lors du scroll
   eventScroll(e: { detail: { scrollTop: number; }; }) {

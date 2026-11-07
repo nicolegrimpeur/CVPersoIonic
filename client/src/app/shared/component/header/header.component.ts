@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, ChangeDetectionStrategy} from '@angular/core';
+import { Component, Input, OnChanges, ChangeDetectionStrategy, inject } from '@angular/core';
 import {AnimationController, Platform, IonButton, IonButtons, IonHeader, IonMenuButton, IonText, IonTitle, IonToolbar} from '@ionic/angular';
 
 @Component({
@@ -9,11 +9,10 @@ import {AnimationController, Platform, IonButton, IonButtons, IonHeader, IonMenu
     imports: [IonButton, IonButtons, IonHeader, IonMenuButton, IonText, IonTitle, IonToolbar]
 })
 export class HeaderComponent implements OnChanges {
-  @Input() public afficheNom = false;
+  platform = inject(Platform);
+  private animation = inject(AnimationController);
 
-  constructor(public platform: Platform,
-              private animation: AnimationController) {
-  }
+  @Input() public afficheNom = false;
 
   ngOnChanges() {
     const nom = document.querySelector('.nom');

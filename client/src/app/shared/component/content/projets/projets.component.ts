@@ -1,4 +1,4 @@
-import {Component, Input, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import {projets} from '../../../informations/projets';
 import {Platform, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonChip, IonHeader, IonIcon} from '@ionic/angular';
 import {addIcons} from 'ionicons';
@@ -15,10 +15,9 @@ addIcons({link, logoGithub, logoGooglePlaystore});
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProjetsComponent {
+  platform = inject(Platform);
+
   @Input() public isDesktop !: boolean;
 
   public projets = projets;
-
-  constructor(public platform: Platform) {
-  }
 }

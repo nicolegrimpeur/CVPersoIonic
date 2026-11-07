@@ -1,26 +1,26 @@
 export const competences = [
   {
-    titre: 'DevSecOps',
+    titre: 'Gouvernance, risques & conformité (ISO 27001, SOC 2, AI Act)',
   },
   {
-    titre: 'Kubernetes & Docker',
+    titre: 'Sécurité Microsoft 365 / Azure (Entra ID, Intune, Defender)',
   },
   {
-    titre: 'Administration système Linux',
+    titre: 'Intégration SI & migrations de tenants',
+  },
+  {
+    titre: 'Tests d\'intrusion & gestion d\'incidents',
+  },
+  {
+    titre: 'Encadrement de l\'usage de l\'IA',
+  },
+  {
+    titre: 'DevSecOps, Kubernetes & Docker',
+  },
+  {
+    titre: 'Administration système Linux & réseau',
   },
   {
     titre: 'Monitoring & observabilité',
-  },
-  {
-    titre: 'Tests d\'intrusion & audit',
-  },
-  {
-    titre: 'Gouvernance SSI & conformité',
-  },
-  {
-    titre: 'Sécurisation réseau et applicatifs',
-  },
-  {
-    titre: 'Conception d\'infrastructures',
   },
 ];

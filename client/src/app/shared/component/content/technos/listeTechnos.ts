@@ -1,11 +1,15 @@
 export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   {
-    title: 'Cybersécurité',
-    liste: ['nftables', 'OpenVPN', 'Snort', 'Microsoft Intune', 'Microsoft Defender', 'Entra ID']
+    title: 'Microsoft',
+    liste: ['Microsoft 365', 'Entra ID', 'Microsoft Intune', 'Microsoft Defender', 'Microsoft Azure', 'AKS']
   },
   {
-    title: 'Infrastructure & DevOps',
-    liste: ['Ubuntu', 'Docker', 'Kubernetes', 'Dokploy', 'Traefik', 'Nginx', 'MicrosoftAzure']
+    title: 'GRC',
+    liste: ['ISO 27001', 'SOC 2', 'AI Act', 'Vanta', 'Jira']
+  },
+  {
+    title: 'Infrastructure & DevSecOps',
+    liste: ['Ubuntu', 'Docker', 'Kubernetes', 'GitHub Enterprise', 'Dokploy', 'Traefik', 'Nginx', 'nftables', 'OpenVPN']
   },
   {
     title: 'SIEM / Observabilité',
@@ -13,6 +17,6 @@ export const listeTechnos: Array<{ title: string, liste: Array<string> }> = [
   },
   {
     title: 'Scripting & Développement',
-    liste: ['GNU Bash', 'Python', 'Powershell', 'Node.js', 'MySQL', 'TypeScript', 'Angular']
+    liste: ['GNU Bash', 'Python', 'Powershell', 'Node.js', 'MySQL', 'TypeScript', 'Angular', 'Claude Code']
   },
 ]

@@ -1,12 +1,13 @@
 export const projets = [
   {
     titre: 'SecretLink',
-    sousTitre: 'Plateforme sécurisée de partage de secrets à usage unique',
+    sousTitre: 'Partage de secrets par lien à usage unique',
     date: 'Octobre 2025 - Aujourd\'hui',
     description:
-      'Conception et développement d\'une plateforme sécurisée permettant le partage temporaire de données sensibles via des liens à usage unique. ' +
-      'Implémentation d\'un système de chiffrement de bout en bout, de gestion des comptes utilisateurs et de tokens d\'accès personnels (PAT), ainsi qu\'une API REST pour l\'automatisation des échanges. ' +
-      'Déploiement et exploitation sur infrastructure auto-hébergée avec supervision complète via Grafana, Loki et Alloy.',
+      'Conçu et développé seul, un service open source et auto-hébergeable pour remplacer l\'envoi de mots de passe par mail ou messagerie. ' +
+      'Chiffrement optionnel dans le navigateur, tableau de bord avec révocation des liens, comptes utilisateurs et tokens d\'accès personnels (PAT), API REST et extension Chrome. ' +
+      'Développé avec l\'IA comme assistant et auditeur, chaque ligne relue ; tests et analyses de code publics sur GitHub. ' +
+      'Hébergé sur mon infrastructure personnelle, avec supervision via Grafana, Loki et Alloy.',
     github: 'https://github.com/nicolegrimpeur/SecretLink',
     url: 'https://secret.nicob.ovh',
     technologies: ['Docker', 'Angular', 'Node.js', 'MySQL', 'Grafana']
@@ -16,10 +17,10 @@ export const projets = [
     sousTitre: 'Plateforme auto-hébergée sur Raspberry Pi',
     date: 'Novembre 2020 - Aujourd\'hui',
     description:
-      'Conception et administration d\'une infrastructure auto-hébergée, utilisée pour héberger plusieurs services web, API et bases de données pour des projets personnels. ' +
-      'Mise en place d\'un environnement sécurisé et supervisé avec monitoring, centralisation des logs, sauvegardes automatisées sur NAS et durcissement réseau. ' +
-      'Exploitation continue avec automatisation des déploiements et maintenance de sécurité.',
-    technologies: ['Ubuntu', 'Dokploy', 'Docker', 'Traefik Proxy', 'nftables', 'Grafana']
+      'Conçu et administre une infrastructure personnelle (Raspberry Pi, Dokploy) qui fait tourner mes services web, API et bases de données en production. ' +
+      'Sécurisée et supervisée : pare-feu nftables, accès distant par VPN (OpenVPN), monitoring et logs centralisés (Grafana), sauvegardes automatisées sur NAS. ' +
+      'Exploitation continue avec déploiements automatisés et maintenance de sécurité.',
+    technologies: ['Raspberry Pi', 'Ubuntu', 'Dokploy', 'Docker', 'Traefik Proxy', 'nftables', 'OpenVPN', 'Grafana']
   },
   {
     titre: 'Serveroo',

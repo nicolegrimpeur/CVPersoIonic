@@ -1,41 +1,55 @@
 export const experiencesPro = [
   {
     titre: 'Ingénieur en sécurité informatique',
-    entreprise: 'Op\'Team Group : Maxxing + Optimix',
+    entreprise: 'MAXXING / Op\'Team Group',
     datesLieu: 'Septembre 2023 - Aujourd\'hui | Marcq-en-Barœul',
     sections: [
       {
         items: [
-          'Référent sécurité Groupe : de la gouvernance SSI et la mise en conformité aux tests d\'intrusion et à l\'administration de systèmes',
+          'Référent sécurité d\'un groupe de 4 sociétés (~90 personnes) : référentiels de sécurité, conformité, sécurisation du SI Microsoft 365 / Azure et intégration des sociétés rachetées',
         ]
+      },
+      {
+        titre: 'Intégration SI & Microsoft 365',
+        items: [
+          'Pilote l\'intégration SI de Pricemoov, rachetée par le groupe : migration Google Workspace → Microsoft 365, de l\'organisation GitHub vers l\'Enterprise du groupe et des outils Atlassian',
+          'Évalue Vanta, la plateforme SOC 2 de Pricemoov, en vue de son extension au groupe',
+          'Conduit la migration d\'un tenant Microsoft 365 vers celui du groupe (OneDrive, SharePoint, Exchange) : validée et en production, sans interruption pour les utilisateurs',
+          'Déploie Intune et l\'accès conditionnel (conformité des postes et localisation) sur 33 postes d\'une nouvelle filiale, sur le modèle mis en place chez Maxxing',
+        ],
       },
       {
         titre: 'Gouvernance & Conformité',
         items: [
-          'Gouvernance SSI : rédaction et suivi de politiques de sécurité, procédures internes et documentation',
-          'Préparation et suivi de conformité ISO 27001 / SOC2 via contrôles récurrents et projet Jira',
-          'Réponse aux questionnaires sécurité clients / prospects',
+          'Aligne le groupe sur ISO 27001 et SOC 2, en vue d\'une certification : politiques, documentation, contrôles récurrents suivis dans Jira',
+          'Construis et suis le plan d\'action après l\'audit de sécurité d\'un client grand compte du retail (12 mesures : inventaire des actifs, délai de correction des vulnérabilités...)',
+          'Sécurise les ventes en répondant aux questionnaires sécurité des clients et prospects (une dizaine par an, appui à l\'avant-vente)',
         ],
       },
       {
-        titre: 'Administration des systèmes',
+        titre: 'Sécurité opérationnelle',
         items: [
-          'Administration de l\'environnement Microsoft 365 (Intune, Entra ID, Microsoft Defender)',
-          'Mise en place des accès conditionnels et politiques de sécurité sur Entra ID et Intune',
-          'Réalisation d\'audits de sécurité sur les procédures internes et de tests d\'intrusion sur la solution logicielle',
-          'Gestion des incidents et événements de sécurité : analyse, traitement et remédiation',
-          'Administration de la flotte informatique et des outils internes',
+          'Réalise les tests d\'intrusion de la solution SaaS',
+          'Gère les incidents de sécurité, de l\'analyse à la remédiation',
+        ],
+      },
+      {
+        titre: 'Encadrement de l\'IA',
+        items: [
+          'Mise en conformité AI Act et rédaction de la charte IA du groupe',
+          'Déploiement et accompagnement des équipes sur Claude et Claude Code',
         ],
       },
     ],
     liens: [
       { titre: 'Maxxing', url: 'https://maxxing.com' },
       { titre: 'Optimix', url: 'https://optimix-solutions.com' },
+      { titre: 'Pricemoov', url: 'https://pricemoov.com' },
     ],
   },
   {
-    titre: 'Stagiaire au Cyberlab de Thalès',
-    entreprise: 'Thalès Belgique',
+    titre: 'Stagiaire au Cyberlab de Thales',
+    entreprise: 'Thales Belgique',
     datesLieu: 'Mai 2023 - Juillet 2023 | Tubize, Belgique',
     informations: [
       'État de l\'art des logiciels de gestion de vulnérabilités',
@@ -46,4 +60,3 @@ export const experiencesPro = [
     ],
   },
 ];
-

@@ -1,7 +1,7 @@
 export const certificats = [
   {
     nomLogo: 'openai',
-    description: 'Agents and workflows',
+    description: 'Agents and Workflows',
     date: '2026',
     site: 'https://oaiacademy.credential.net/d8367b38-9e48-4afd-875d-50689118c0de?key=b3f61d2c39de8bf2e8e10558ee177edfe16e1e72056f2826bdf400e87a2bc3af#acc.ZhnaNrJS'
   },
@@ -25,7 +25,7 @@ export const certificats = [
   },
   {
     nomLogo: 'cambridge',
-    description: 'Cambridge First Certificate, score moyen 168',
+    description: 'Cambridge First Certificate, score moyen 168 (B2)',
     date: '2021',
     site: ''
   },
@@ -34,12 +34,6 @@ export const certificats = [
     description: 'Certificat Voltaire, niveau professionnel',
     date: '2019',
     site: 'https://mon.certificat-voltaire.fr/verification-certificat?code=KCPDF9'
-  },
-  {
-    nomLogo: 'psc1',
-    description: 'PSC1',
-    date: '2019',
-    site: ''
   },
   {
     nomLogo: 'permis',

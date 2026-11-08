@@ -4,6 +4,7 @@
   </ion-card-header>
   <ion-card-content>
     <swiper-container
+      [simulateTouch]="false"
       [navigation]="isDesktop ? {} : undefined"
       [slidesPerView]="isDesktop ? 2 : 1"
       [pagination]="{clickable: true}"

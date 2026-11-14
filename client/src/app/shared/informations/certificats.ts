@@ -1,6 +1,12 @@
 export const certificats = [
   {
     nomLogo: 'anthropic',
+    description: 'Deploying Claude Enterprise with confidence',
+    date: '2026',
+    site: 'https://academy.claude.com/verify/919ca8cc1b94411e9c36125ac2d5f69c'
+  },
+  {
+    nomLogo: 'anthropic',
     description: 'Building effective human-agent teams',
     date: '2026',
     site: 'https://academy.claude.com/verify/0d3666c4977e2427cb7c7b9dfea904ae'

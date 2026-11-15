@@ -10,34 +10,34 @@ export const experiencesPro = [
         ]
       },
       {
-        titre: 'Intégration SI & Microsoft 365',
+        titre: 'Gouvernance & Conformité',
         items: [
-          'Pilote l\'intégration SI de Pricemoov, rachetée par le groupe : migration Google Workspace → Microsoft 365, de l\'organisation GitHub vers l\'Enterprise du groupe et des outils Atlassian',
-          'Évalue Vanta, la plateforme SOC 2 de Pricemoov, en vue de son extension au groupe',
-          'Conduit la migration d\'un tenant Microsoft 365 vers celui du groupe (OneDrive, SharePoint, Exchange) : validée et en production, sans interruption pour les utilisateurs',
-          'Déploie Intune et l\'accès conditionnel (conformité des postes et localisation) sur 33 postes d\'une nouvelle filiale, sur le modèle mis en place chez Maxxing',
+          'Alignement du groupe sur ISO 27001 et SOC 2, en vue d\'une certification : politiques, documentation, contrôles récurrents suivis dans Jira',
+          'Construiction et suivi du plan d\'action après l\'audit de sécurité d\'un client grand compte du retail',
+          'Sécurisation des ventes en répondant aux questionnaires sécurité des clients et prospects (une dizaine par an, appui à l\'avant-vente)',
         ],
       },
       {
-        titre: 'Gouvernance & Conformité',
+        titre: 'Intégration SI & Microsoft 365',
         items: [
-          'Aligne le groupe sur ISO 27001 et SOC 2, en vue d\'une certification : politiques, documentation, contrôles récurrents suivis dans Jira',
-          'Construis et suis le plan d\'action après l\'audit de sécurité d\'un client grand compte du retail (12 mesures : inventaire des actifs, délai de correction des vulnérabilités...)',
-          'Sécurise les ventes en répondant aux questionnaires sécurité des clients et prospects (une dizaine par an, appui à l\'avant-vente)',
+          'Pilotage de l\'intégration SI de Pricemoov, rachetée par le groupe : migration Google Workspace → Microsoft 365, de l\'organisation GitHub vers l\'Enterprise du groupe et des outils Atlassian',
+          'Avaluation de Vanta, la plateforme SOC 2 de Pricemoov, en vue de son extension au groupe',
+          'Conduite de la migration d\'un tenant Microsoft 365 vers celui du groupe (OneDrive, SharePoint, Exchange) : validée et en production, sans interruption pour les utilisateurs',
+          'Déploiement de Intune et l\'accès conditionnel (conformité des postes et localisation) sur 33 postes d\'une nouvelle filiale, sur le modèle mis en place chez Maxxing',
         ],
       },
       {
         titre: 'Sécurité opérationnelle',
         items: [
-          'Réalise les tests d\'intrusion de la solution SaaS',
-          'Gère les incidents de sécurité, de l\'analyse à la remédiation',
+          'Réalisation des tests d\'intrusion de la solution SaaS',
+          'Gestion des incidents de sécurité, de l\'analyse à la remédiation',
         ],
       },
       {
         titre: 'Encadrement de l\'IA',
         items: [
-          'Mené la mise en conformité AI Act et rédigé la charte IA du groupe',
-          'Déploie et accompagne les équipes sur Claude et Claude Code',
+          'Encadrement de la mise en conformité AI Act et rédaction de la charte IA du groupe',
+          'Déploiement et accompagnement des équipes sur Claude et Claude Code',
         ],
       },
     ],

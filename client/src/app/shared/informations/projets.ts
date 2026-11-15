@@ -4,8 +4,8 @@ export const projets = [
     sousTitre: 'Partage de secrets par lien à usage unique',
     date: 'Octobre 2025 - Aujourd\'hui',
     description:
-      'Conçu et développé seul un service open source et auto-hébergeable pour remplacer l\'envoi de mots de passe par mail ou messagerie. ' +
-      'Chiffrement optionnel dans le navigateur, tableau de bord avec révocation des liens, comptes utilisateurs et tokens d\'accès personnels (PAT), API REST et extension Chrome. ' +
+      'Conception et développement d\'un service open source et auto-hébergeable pour remplacer l\'envoi de mots de passe par mail ou messagerie. ' +
+      'Chiffrement bout en bout, tableau de bord avec révocation des liens, comptes utilisateurs et tokens d\'accès personnels (PAT), API REST et extension Chrome. ' +
       'Développé avec l\'IA comme assistant et auditeur, chaque ligne relue ; tests et analyses de code publics sur GitHub. ' +
       'Hébergé sur mon infrastructure personnelle, avec supervision via Grafana, Loki et Alloy.',
     github: 'https://github.com/nicolegrimpeur/SecretLink',
@@ -17,7 +17,7 @@ export const projets = [
     sousTitre: 'Plateforme auto-hébergée sur Raspberry Pi',
     date: 'Novembre 2020 - Aujourd\'hui',
     description:
-      'Conçu et administre une infrastructure personnelle (Raspberry Pi, Dokploy) qui fait tourner mes services web, API et bases de données en production. ' +
+      'Conception et administration d\'une infrastructure personnelle (Raspberry Pi, Dokploy) qui fait tourner mes services web, API et bases de données en production. ' +
       'Sécurisée et supervisée : pare-feu nftables, accès distant par VPN (OpenVPN), monitoring et logs centralisés (Grafana), sauvegardes automatisées sur NAS. ' +
       'Exploitation continue avec déploiements automatisés et maintenance de sécurité.',
     technologies: ['Raspberry Pi', 'Ubuntu', 'Dokploy', 'Docker', 'Traefik Proxy', 'nftables', 'OpenVPN', 'Grafana']

@@ -1,5 +1,5 @@
 # ---------- Stage 1: build ----------
-FROM node:lts-alpine AS builder
+FROM node:26.13.1-alpine AS builder
 WORKDIR /app
 
 # Installe les deps
@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # ---------- Stage 2: serve ----------
-FROM nginx:stable-alpine
+FROM nginx:1.30.7-alpine-slim
 
 # Config nginx custom
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf

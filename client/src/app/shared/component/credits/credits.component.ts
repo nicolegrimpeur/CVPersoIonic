@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import {Platform, IonButton, IonIcon, IonLabel, IonRow, IonToolbar} from '@ionic/angular';
+import {dateMiseAJour, dateMiseAJourAffichee} from '../../informations/miseAJour';
 
 @Component({
     selector: 'app-credits',
@@ -10,4 +11,6 @@ import {Platform, IonButton, IonIcon, IonLabel, IonRow, IonToolbar} from '@ionic
 })
 export class CreditsComponent {
   platform = inject(Platform);
+  readonly dateMiseAJour = dateMiseAJour;
+  readonly dateMiseAJourAffichee = dateMiseAJourAffichee();
 }

@@ -11,6 +11,9 @@
       <ion-button fill="clear" color="primary-tint" target="_blank" href="https://github.com/nicolegrimpeur/CVPersoIonic">
         <ion-icon name="logo-github"></ion-icon>
       </ion-button>
+      <ion-label style="display: flex; align-items: center">
+        Dernière mise à jour :&nbsp;<time [attr.datetime]="dateMiseAJour">{{ dateMiseAJourAffichee }}</time>
+      </ion-label>
     </ion-row>
   </div>
 </ion-toolbar>

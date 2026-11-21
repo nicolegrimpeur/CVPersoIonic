@@ -3,6 +3,7 @@ import {competences} from '../informations/competences';
 import {contact} from '../informations/contact';
 import {experiencesPro} from '../informations/experiencesPro';
 import {formations} from '../informations/formations';
+import {dateMiseAJour} from '../informations/miseAJour';
 
 const URL_SITE = 'https://cv.nicob.ovh/';
 
@@ -29,6 +30,7 @@ export function donneesStructurees() {
     '@type': 'ProfilePage',
     url: URL_SITE,
     inLanguage: 'fr',
+    dateModified: dateMiseAJour,
     mainEntity: {
       '@type': 'Person',
       name: 'Nicolas Barrat',

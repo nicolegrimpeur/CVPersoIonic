@@ -13,7 +13,7 @@ export const experiencesPro = [
         titre: 'Gouvernance & Conformité',
         items: [
           'Alignement du groupe sur ISO 27001 et SOC 2, en vue d\'une certification : politiques, documentation, contrôles récurrents suivis dans Jira',
-          'Construiction et suivi du plan d\'action après l\'audit de sécurité d\'un client grand compte du retail',
+          'Construction et suivi du plan d\'action après l\'audit de sécurité d\'un client grand compte du retail',
           'Sécurisation des ventes en répondant aux questionnaires sécurité des clients et prospects (une dizaine par an, appui à l\'avant-vente)',
         ],
       },
@@ -21,7 +21,7 @@ export const experiencesPro = [
         titre: 'Intégration SI & Microsoft 365',
         items: [
           'Pilotage de l\'intégration SI de Pricemoov, rachetée par le groupe : migration Google Workspace → Microsoft 365, de l\'organisation GitHub vers l\'Enterprise du groupe et des outils Atlassian',
-          'Avaluation de Vanta, la plateforme SOC 2 de Pricemoov, en vue de son extension au groupe',
+          'Évaluation de Vanta, la plateforme SOC 2 de Pricemoov, en vue de son extension au groupe',
           'Conduite de la migration d\'un tenant Microsoft 365 vers celui du groupe (OneDrive, SharePoint, Exchange) : validée et en production, sans interruption pour les utilisateurs',
           'Déploiement de Intune et l\'accès conditionnel (conformité des postes et localisation) sur 33 postes d\'une nouvelle filiale, sur le modèle mis en place chez Maxxing',
         ],
